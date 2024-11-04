@@ -1,0 +1,10 @@
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\bin\Debug\HuellasDeEsperanzaC#.exe.config
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\bin\Debug\HuellasDeEsperanzaC#.exe
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\bin\Debug\HuellasDeEsperanzaC#.pdb
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC#.csproj.AssemblyReference.cache
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.Form1.resources
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.Properties.Resources.resources
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC#.csproj.GenerateResource.cache
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC#.csproj.CoreCompileInputs.cache
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC#.exe
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC#.pdb
