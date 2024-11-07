@@ -20,23 +20,18 @@ namespace HuellasDeEsperanzaC_
 
         private void Form1_MouseWheel(object sender, MouseEventArgs e)
         {
-            // Encuentra el panel desplazable dentro de la pestaña activa
             TabPage currentTab = tabControlMain.SelectedTab;
             Panel scrollablePanel = currentTab.Controls.OfType<Panel>().FirstOrDefault(p => p.AutoScroll);
 
             if (scrollablePanel != null)
             {
-                // Calcula la nueva posición de desplazamiento
                 int newY = scrollablePanel.VerticalScroll.Value - (e.Delta * SystemInformation.MouseWheelScrollLines / 120);
 
-                // Asegúrate de que la nueva posición esté dentro de los límites
                 newY = Math.Max(newY, scrollablePanel.VerticalScroll.Minimum);
                 newY = Math.Min(newY, scrollablePanel.VerticalScroll.Maximum);
 
-                // Establece la nueva posición de desplazamiento
                 scrollablePanel.VerticalScroll.Value = newY;
 
-                // Actualiza la posición de desplazamiento
                 scrollablePanel.PerformLayout();
             }
         }

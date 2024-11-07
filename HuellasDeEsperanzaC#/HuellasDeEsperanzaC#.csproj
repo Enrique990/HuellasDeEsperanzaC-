@@ -52,8 +52,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ActividadVoluntariado.cs" />
+    <Compile Include="Models\Donacion.cs" />
+    <Compile Include="Models\Mascota.cs" />
+    <Compile Include="Models\Organizacion.cs" />
+    <Compile Include="Models\SolicitudAdopcion.cs" />
+    <Compile Include="Models\Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicio\GestorAdopcion.cs" />
+    <Compile Include="Servicio\GestorAutenticacion.cs" />
+    <Compile Include="Servicio\GestorDatos.cs" />
+    <Compile Include="Servicio\GestorDonaciones.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -79,5 +89,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
