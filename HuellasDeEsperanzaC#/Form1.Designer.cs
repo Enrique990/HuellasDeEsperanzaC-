@@ -421,7 +421,7 @@
             this.labelFooter.Name = "labelFooter";
             this.labelFooter.Size = new System.Drawing.Size(800, 40);
             this.labelFooter.TabIndex = 0;
-            this.labelFooter.Text = "© 2023 Huellas de Esperanza. Todos los derechos reservados.";
+            this.labelFooter.Text = "© 2024 Huellas de Esperanza. Todos los derechos reservados.";
             this.labelFooter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
