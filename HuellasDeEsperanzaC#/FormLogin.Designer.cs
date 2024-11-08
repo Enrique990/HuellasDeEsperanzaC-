@@ -30,8 +30,8 @@ namespace HuellasDeEsperanzaC_
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.tbUsuario = new System.Windows.Forms.TextBox();
+            this.tbContraseña = new System.Windows.Forms.TextBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.btnCrearCuenta = new System.Windows.Forms.Button();
             this.lblUsuario = new System.Windows.Forms.Label();
@@ -44,22 +44,22 @@ namespace HuellasDeEsperanzaC_
             this.panelFooter.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtUsuario
+            // tbUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(300, 150);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(200, 27);
-            this.txtUsuario.TabIndex = 0;
+            this.tbUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsuario.Location = new System.Drawing.Point(300, 150);
+            this.tbUsuario.Name = "tbUsuario";
+            this.tbUsuario.Size = new System.Drawing.Size(200, 27);
+            this.tbUsuario.TabIndex = 0;
             // 
-            // txtContraseña
+            // tbContraseña
             // 
-            this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.Location = new System.Drawing.Point(300, 200);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(200, 27);
-            this.txtContraseña.TabIndex = 1;
+            this.tbContraseña.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbContraseña.Location = new System.Drawing.Point(300, 200);
+            this.tbContraseña.Name = "tbContraseña";
+            this.tbContraseña.PasswordChar = '*';
+            this.tbContraseña.Size = new System.Drawing.Size(200, 27);
+            this.tbContraseña.TabIndex = 1;
             // 
             // btnIniciarSesion
             // 
@@ -158,8 +158,8 @@ namespace HuellasDeEsperanzaC_
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnCrearCuenta);
             this.Controls.Add(this.btnIniciarSesion);
-            this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.tbContraseña);
+            this.Controls.Add(this.tbUsuario);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión - Huellas de Esperanza";
@@ -167,6 +167,7 @@ namespace HuellasDeEsperanzaC_
             this.panelFooter.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private void btnCrearCuenta_Click(object sender, EventArgs e)
@@ -181,8 +182,8 @@ namespace HuellasDeEsperanzaC_
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox tbUsuario;
+        private System.Windows.Forms.TextBox tbContraseña;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.Button btnCrearCuenta;
         private System.Windows.Forms.Label lblUsuario;
