@@ -15,19 +15,24 @@ namespace HuellasDeEsperanzaC_.Models
         public TimeSpan HoraInicio { get; set; }
         public TimeSpan HoraFin { get; set; }
         public int CupoMaximo { get; set; }
-        public int CupoActual { get; set; }
+        public List<Usuario> Participantes { get; set; }
         public int OrganizacionId { get; set; }
+
+        public ActividadVoluntariado()
+        {
+            Participantes = new List<Usuario>();
+        }
 
         public bool HayCupoDisponible()
         {
-            return CupoActual < CupoMaximo;
+            return Participantes.Count < CupoMaximo;
         }
 
-        public bool RegistrarVoluntario()
+        public bool RegistrarParticipante(Usuario usuario)
         {
-            if (HayCupoDisponible())
+            if (HayCupoDisponible() && usuario.PerfilCompleto)
             {
-                CupoActual++;
+                Participantes.Add(usuario);
                 return true;
             }
             return false;

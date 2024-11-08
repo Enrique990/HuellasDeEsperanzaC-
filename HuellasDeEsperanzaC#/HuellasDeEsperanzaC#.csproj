@@ -61,6 +61,8 @@
     <Compile Include="Models\ActividadVoluntariado.cs" />
     <Compile Include="Models\Donacion.cs" />
     <Compile Include="Models\Mascota.cs" />
+    <Compile Include="Models\Notificacion.cs" />
+    <Compile Include="Models\OpcionDonacion.cs" />
     <Compile Include="Models\Organizacion.cs" />
     <Compile Include="Models\SolicitudAdopcion.cs" />
     <Compile Include="Models\Usuario.cs" />
