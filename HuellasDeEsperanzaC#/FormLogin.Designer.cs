@@ -47,26 +47,29 @@ namespace HuellasDeEsperanzaC_
             // tbUsuario
             // 
             this.tbUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUsuario.Location = new System.Drawing.Point(300, 150);
+            this.tbUsuario.Location = new System.Drawing.Point(225, 122);
+            this.tbUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbUsuario.Name = "tbUsuario";
-            this.tbUsuario.Size = new System.Drawing.Size(200, 27);
+            this.tbUsuario.Size = new System.Drawing.Size(151, 23);
             this.tbUsuario.TabIndex = 0;
             // 
             // tbContraseña
             // 
             this.tbContraseña.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbContraseña.Location = new System.Drawing.Point(300, 200);
+            this.tbContraseña.Location = new System.Drawing.Point(225, 162);
+            this.tbContraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbContraseña.Name = "tbContraseña";
             this.tbContraseña.PasswordChar = '*';
-            this.tbContraseña.Size = new System.Drawing.Size(200, 27);
+            this.tbContraseña.Size = new System.Drawing.Size(151, 23);
             this.tbContraseña.TabIndex = 1;
             // 
             // btnIniciarSesion
             // 
             this.btnIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciarSesion.Location = new System.Drawing.Point(300, 250);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(225, 203);
+            this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(200, 35);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(150, 28);
             this.btnIniciarSesion.TabIndex = 2;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
@@ -75,9 +78,10 @@ namespace HuellasDeEsperanzaC_
             // btnCrearCuenta
             // 
             this.btnCrearCuenta.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearCuenta.Location = new System.Drawing.Point(300, 300);
+            this.btnCrearCuenta.Location = new System.Drawing.Point(225, 244);
+            this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
-            this.btnCrearCuenta.Size = new System.Drawing.Size(200, 35);
+            this.btnCrearCuenta.Size = new System.Drawing.Size(150, 28);
             this.btnCrearCuenta.TabIndex = 3;
             this.btnCrearCuenta.Text = "Crear Cuenta";
             this.btnCrearCuenta.UseVisualStyleBackColor = true;
@@ -87,9 +91,10 @@ namespace HuellasDeEsperanzaC_
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuario.Location = new System.Drawing.Point(230, 153);
+            this.lblUsuario.Location = new System.Drawing.Point(172, 124);
+            this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(62, 20);
+            this.lblUsuario.Size = new System.Drawing.Size(50, 15);
             this.lblUsuario.TabIndex = 4;
             this.lblUsuario.Text = "Usuario:";
             // 
@@ -97,9 +102,10 @@ namespace HuellasDeEsperanzaC_
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseña.Location = new System.Drawing.Point(210, 203);
+            this.lblContraseña.Location = new System.Drawing.Point(158, 165);
+            this.lblContraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(86, 20);
+            this.lblContraseña.Size = new System.Drawing.Size(70, 15);
             this.lblContraseña.TabIndex = 5;
             this.lblContraseña.Text = "Contraseña:";
             // 
@@ -109,8 +115,9 @@ namespace HuellasDeEsperanzaC_
             this.panelHeader.Controls.Add(this.lblTitulo);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(800, 60);
+            this.panelHeader.Size = new System.Drawing.Size(600, 49);
             this.panelHeader.TabIndex = 6;
             // 
             // lblTitulo
@@ -119,8 +126,9 @@ namespace HuellasDeEsperanzaC_
             this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(800, 60);
+            this.lblTitulo.Size = new System.Drawing.Size(600, 49);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Huellas de Esperanza";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -130,9 +138,10 @@ namespace HuellasDeEsperanzaC_
             this.panelFooter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(58)))), ((int)(((byte)(64)))));
             this.panelFooter.Controls.Add(this.labelFooter);
             this.panelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFooter.Location = new System.Drawing.Point(0, 410);
+            this.panelFooter.Location = new System.Drawing.Point(0, 334);
+            this.panelFooter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelFooter.Name = "panelFooter";
-            this.panelFooter.Size = new System.Drawing.Size(800, 40);
+            this.panelFooter.Size = new System.Drawing.Size(600, 32);
             this.panelFooter.TabIndex = 7;
             // 
             // labelFooter
@@ -141,17 +150,18 @@ namespace HuellasDeEsperanzaC_
             this.labelFooter.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFooter.ForeColor = System.Drawing.Color.White;
             this.labelFooter.Location = new System.Drawing.Point(0, 0);
+            this.labelFooter.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFooter.Name = "labelFooter";
-            this.labelFooter.Size = new System.Drawing.Size(800, 40);
+            this.labelFooter.Size = new System.Drawing.Size(600, 32);
             this.labelFooter.TabIndex = 0;
             this.labelFooter.Text = "© 2024 Huellas de Esperanza. Todos los derechos reservados.";
             this.labelFooter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panelFooter);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.lblContraseña);
@@ -160,9 +170,11 @@ namespace HuellasDeEsperanzaC_
             this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.tbContraseña);
             this.Controls.Add(this.tbUsuario);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesión - Huellas de Esperanza";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.panelHeader.ResumeLayout(false);
             this.panelFooter.ResumeLayout(false);
             this.ResumeLayout(false);
