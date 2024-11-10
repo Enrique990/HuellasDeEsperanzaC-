@@ -103,6 +103,13 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
             set { borderFocusColor = value; }
         }
 
+        public int MaxLength
+        {
+            get { return textBox1.MaxLength; }
+            set { textBox1.MaxLength = value; }
+        }
+
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);

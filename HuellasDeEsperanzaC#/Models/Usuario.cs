@@ -18,10 +18,11 @@ namespace HuellasDeEsperanzaC_.Models
         public int Id { get; set; }
         public string NombreUsuario { get; set; }
         public string CorreoElectronico { get; set; }
-        private string HashContraseña { get; set; }
+        public string HashContrasena { get; set; }
         public string NombreCompleto { get; set; }
         public string Direccion { get; set; }
         public string NumeroTelefono { get; set; }
+        public string Descripcion { get; set; }
         public string NumeroCedula { get; set; }
         public string Ocupacion { get; set; }
         public TipoUsuario Tipo { get; set; }
@@ -41,15 +42,15 @@ namespace HuellasDeEsperanzaC_.Models
 
         public void EstablecerContraseña(string contraseña)
         {
-            HashContraseña = HashPassword(contraseña);
+            HashContrasena = HashPassword(contraseña);
         }
 
         public bool VerificarContraseña(string contraseña)
         {
-            return HashContraseña == HashPassword(contraseña);
+            return HashContrasena == HashPassword(contraseña);
         }
 
-        private string HashPassword(string contraseña)
+        public string HashPassword(string contraseña)
         {
             using (SHA256 sha256Hash = SHA256.Create())
             {
