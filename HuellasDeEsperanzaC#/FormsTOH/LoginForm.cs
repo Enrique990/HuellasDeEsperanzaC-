@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HuellasDeEsperanzaC_.FormsTOH;
 
 namespace HuellasDeEsperanzaC_.FormsTOH
 {
@@ -15,6 +16,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void roundButton2_Click(object sender, EventArgs e)
+        {
+            RegisterForm RegisterForm = new RegisterForm();
+            RegisterForm.Show();
+            this.Hide();
         }
     }
 }
