@@ -91,6 +91,9 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             }
             else
             {
+                usuario.Direccion = string.Empty;
+                usuario.NumeroTelefono = string.Empty;
+                usuario.Descripcion = string.Empty;
                 usuario.Tipo = TipoUsuario.Comun;
             }
 
