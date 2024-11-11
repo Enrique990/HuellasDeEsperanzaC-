@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HuellasDeEsperanzaC_.Models
 {
-    internal class Notificacion
+    public class Notificacion
     {
         public int Id { get; set; }
         public int UsuarioId { get; set; }

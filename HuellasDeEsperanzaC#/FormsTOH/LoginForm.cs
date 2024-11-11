@@ -15,7 +15,6 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 {
     public partial class LoginForm : Form
     {
-        Usuario usuario = new Usuario();
         List<Usuario> usuarios = new List<Usuario>();
 
         public LoginForm()
@@ -47,7 +46,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 if (usuarios[i].CorreoElectronico == correoVerificar && usuarios[i].VerificarContraseña(contrasenaVerificar))
                 {
                     MetroFramework.MetroMessageBox.Show(this, "Bienvenido", "Inicio de Sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HomeGeneralForm Home = new HomeGeneralForm();
+                    HomeGeneralForm Home = new HomeGeneralForm(usuarios[i]);
                     Home.Show();
                     this.Hide();
                     return;
@@ -74,6 +73,8 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             {
                 while (mArchivoLector.Position < mArchivoLector.Length)
                 {
+                    Usuario usuario = new Usuario();
+
                     usuario.NombreCompleto = Lector.ReadString();
                     usuario.CorreoElectronico = Lector.ReadString();
                     usuario.HashContrasena = Lector.ReadString();

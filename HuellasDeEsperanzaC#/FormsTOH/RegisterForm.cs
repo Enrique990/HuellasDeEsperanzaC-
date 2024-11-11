@@ -133,7 +133,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 }
 
                 MetroFramework.MetroMessageBox.Show(this, "Usuario registrado exitosamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HomeGeneralForm Home = new HomeGeneralForm();
+                HomeGeneralForm Home = new HomeGeneralForm(usuario);
                 Home.Show();
                 this.Hide();
             }

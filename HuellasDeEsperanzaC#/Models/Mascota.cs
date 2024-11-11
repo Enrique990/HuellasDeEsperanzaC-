@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HuellasDeEsperanzaC_.Models
 {
-    internal class Mascota
+    public class Mascota
     {
         public int Id { get; set; }
         public string Nombre { get; set; }

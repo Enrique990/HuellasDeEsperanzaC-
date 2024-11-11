@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HuellasDeEsperanzaC_.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,14 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 {
     public partial class HomeGeneralForm : Form
     {
-        public HomeGeneralForm()
+        private Usuario usuarioActual;
+
+        public HomeGeneralForm(Usuario usuario)
         {
             InitializeComponent();
+            this.usuarioActual = usuario;
+            showUsuario();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -30,6 +36,28 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         private void button8_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundButton1_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Close();
+        }
+
+        public void showUsuario()
+        {
+            listBox1.Items.Add(usuarioActual.NombreCompleto);
+            listBox1.Items.Add(usuarioActual.CorreoElectronico);
+            listBox1.Items.Add(usuarioActual.Tipo);
+            listBox1.Items.Add(usuarioActual.NumeroTelefono);
+            listBox1.Items.Add(usuarioActual.Descripcion);
+            listBox1.Items.Add(usuarioActual.Direccion);
         }
     }
 }
