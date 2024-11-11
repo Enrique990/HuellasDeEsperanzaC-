@@ -18,6 +18,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         public RegisterForm()
         {
             InitializeComponent();
+            this.ActiveControl = tbNombreCompleto;
             this.Size = new Size(902, 430);
             roundButton1.Location = new Point(710, 332);
             
@@ -147,6 +148,59 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
             this.Hide();
+        }
+
+        private void tbNombreCompleto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                tbEmail.Focus();
+            }
+        }
+
+        private void tbEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                tbPass.Focus();
+            }
+        }
+
+        private void isORA_Click(object sender, EventArgs e)
+        {
+            tbOra1.Focus();
+        }
+
+        private void tbOra2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                tbOra3.Focus();
+            }
+        }
+
+        private void tbOra3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                roundButton1.PerformClick();
+            }
+        }
+
+        private void tbPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                roundButton1.PerformClick();
+            }
+        }
+
+        private void tbOra1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                tbOra2.Focus();
+            }
         }
     }
 }

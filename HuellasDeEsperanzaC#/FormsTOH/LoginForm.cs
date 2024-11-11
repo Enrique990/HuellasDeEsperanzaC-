@@ -20,6 +20,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         public LoginForm()
         {
             InitializeComponent();
+            this.ActiveControl = tbCorreo;
         }
 
         private void roundButton2_Click(object sender, EventArgs e)
@@ -109,6 +110,22 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
                     //usuarios.Add(usuario);
                 }
+            }
+        }
+
+        private void tbCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                tbContrasena.Focus();
+            }
+        }
+
+        private void tbContrasena_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                roundButton1_Click(sender, e);
             }
         }
     }

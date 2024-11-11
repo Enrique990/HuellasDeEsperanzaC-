@@ -99,7 +99,7 @@
             this.label1.Location = new System.Drawing.Point(39, 214);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(231, 30);
+            this.label1.Size = new System.Drawing.Size(300, 37);
             this.label1.TabIndex = 1;
             this.label1.Text = "¿Ya tienes una cuenta?";
             // 
@@ -111,7 +111,7 @@
             this.label3.Location = new System.Drawing.Point(361, 29);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 37);
+            this.label3.Size = new System.Drawing.Size(215, 46);
             this.label3.TabIndex = 2;
             this.label3.Text = "¡Regístrate!";
             // 
@@ -122,18 +122,19 @@
             this.isORA.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.isORA.Location = new System.Drawing.Point(395, 275);
             this.isORA.Name = "isORA";
-            this.isORA.Size = new System.Drawing.Size(447, 23);
+            this.isORA.Size = new System.Drawing.Size(544, 30);
             this.isORA.TabIndex = 4;
             this.isORA.Text = "¿Registrar como Organización de Rescate Animal?";
             this.isORA.UseVisualStyleBackColor = true;
             this.isORA.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.isORA.Click += new System.EventHandler(this.isORA_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(368, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 18);
+            this.label2.Size = new System.Drawing.Size(192, 23);
             this.label2.TabIndex = 11;
             this.label2.Text = "Nombre Completo:";
             // 
@@ -142,7 +143,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(368, 171);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 18);
+            this.label4.Size = new System.Drawing.Size(196, 23);
             this.label4.TabIndex = 12;
             this.label4.Text = "Correo Electrónico:";
             // 
@@ -151,7 +152,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(368, 222);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 18);
+            this.label5.Size = new System.Drawing.Size(126, 23);
             this.label5.TabIndex = 13;
             this.label5.Text = "Contraseña:";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -161,7 +162,7 @@
             this.lblORA3.AutoSize = true;
             this.lblORA3.Location = new System.Drawing.Point(370, 428);
             this.lblORA3.Name = "lblORA3";
-            this.lblORA3.Size = new System.Drawing.Size(99, 18);
+            this.lblORA3.Size = new System.Drawing.Size(131, 23);
             this.lblORA3.TabIndex = 19;
             this.lblORA3.Text = "Descripción:";
             this.lblORA3.Visible = false;
@@ -171,7 +172,7 @@
             this.lblORA2.AutoSize = true;
             this.lblORA2.Location = new System.Drawing.Point(370, 374);
             this.lblORA2.Name = "lblORA2";
-            this.lblORA2.Size = new System.Drawing.Size(153, 18);
+            this.lblORA2.Size = new System.Drawing.Size(198, 23);
             this.lblORA2.TabIndex = 18;
             this.lblORA2.Text = "Número Telefónico:";
             this.lblORA2.Visible = false;
@@ -181,7 +182,7 @@
             this.lblORA1.AutoSize = true;
             this.lblORA1.Location = new System.Drawing.Point(370, 328);
             this.lblORA1.Name = "lblORA1";
-            this.lblORA1.Size = new System.Drawing.Size(82, 18);
+            this.lblORA1.Size = new System.Drawing.Size(109, 23);
             this.lblORA1.TabIndex = 17;
             this.lblORA1.Text = "Dirección:";
             this.lblORA1.Visible = false;
@@ -216,10 +217,11 @@
             this.tbNombreCompleto.Name = "tbNombreCompleto";
             this.tbNombreCompleto.Padding = new System.Windows.Forms.Padding(7);
             this.tbNombreCompleto.PasswordChar = false;
-            this.tbNombreCompleto.Size = new System.Drawing.Size(327, 33);
+            this.tbNombreCompleto.Size = new System.Drawing.Size(327, 38);
             this.tbNombreCompleto.TabIndex = 1;
             this.tbNombreCompleto.Texts = "";
             this.tbNombreCompleto.UnderlinedStyle = true;
+            this.tbNombreCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbNombreCompleto_KeyPress);
             // 
             // tbEmail
             // 
@@ -236,10 +238,11 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Padding = new System.Windows.Forms.Padding(7);
             this.tbEmail.PasswordChar = false;
-            this.tbEmail.Size = new System.Drawing.Size(327, 33);
+            this.tbEmail.Size = new System.Drawing.Size(327, 38);
             this.tbEmail.TabIndex = 2;
             this.tbEmail.Texts = "";
             this.tbEmail.UnderlinedStyle = true;
+            this.tbEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEmail_KeyPress);
             // 
             // tbPass
             // 
@@ -256,10 +259,11 @@
             this.tbPass.Name = "tbPass";
             this.tbPass.Padding = new System.Windows.Forms.Padding(7);
             this.tbPass.PasswordChar = true;
-            this.tbPass.Size = new System.Drawing.Size(327, 33);
+            this.tbPass.Size = new System.Drawing.Size(327, 38);
             this.tbPass.TabIndex = 20;
             this.tbPass.Texts = "";
             this.tbPass.UnderlinedStyle = true;
+            this.tbPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPass_KeyPress);
             // 
             // tbOra1
             // 
@@ -276,11 +280,12 @@
             this.tbOra1.Name = "tbOra1";
             this.tbOra1.Padding = new System.Windows.Forms.Padding(7);
             this.tbOra1.PasswordChar = false;
-            this.tbOra1.Size = new System.Drawing.Size(327, 33);
+            this.tbOra1.Size = new System.Drawing.Size(327, 38);
             this.tbOra1.TabIndex = 5;
             this.tbOra1.Texts = "";
             this.tbOra1.UnderlinedStyle = true;
             this.tbOra1.Visible = false;
+            this.tbOra1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbOra1_KeyPress);
             // 
             // tbOra2
             // 
@@ -297,11 +302,12 @@
             this.tbOra2.Name = "tbOra2";
             this.tbOra2.Padding = new System.Windows.Forms.Padding(7);
             this.tbOra2.PasswordChar = false;
-            this.tbOra2.Size = new System.Drawing.Size(327, 33);
+            this.tbOra2.Size = new System.Drawing.Size(327, 38);
             this.tbOra2.TabIndex = 6;
             this.tbOra2.Texts = "";
             this.tbOra2.UnderlinedStyle = true;
             this.tbOra2.Visible = false;
+            this.tbOra2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbOra2_KeyPress);
             // 
             // tbOra3
             // 
@@ -323,10 +329,11 @@
             this.tbOra3.Texts = "";
             this.tbOra3.UnderlinedStyle = true;
             this.tbOra3.Visible = false;
+            this.tbOra3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbOra3_KeyPress);
             // 
             // RegisterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.ClientSize = new System.Drawing.Size(902, 653);
