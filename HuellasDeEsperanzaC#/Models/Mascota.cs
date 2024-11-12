@@ -13,6 +13,7 @@ namespace HuellasDeEsperanzaC_.Models
         public string Raza { get; set; }
         public string Sexo { get; set; }
         public DateTime FechaNacimiento { get; set; }
+        public int Edad { get { return CalcularEdad(); } }
         public string Especie { get; set; }
         public string Tamaño { get; set; }
         public string Descripcion { get; set; }
@@ -22,12 +23,36 @@ namespace HuellasDeEsperanzaC_.Models
 
         public Mascota()
         {
+            Nombre = string.Empty;
+            Raza = string.Empty;
+            Sexo = string.Empty;
+            FechaNacimiento = DateTime.MinValue;
+            Especie = string.Empty;
+            Tamaño = string.Empty;
+            Descripcion = string.Empty;
+            RutaImagen = string.Empty;
             EstaAdoptado = false;
+            OrganizacionId = 0;
         }
 
         public int CalcularEdad()
         {
             return DateTime.Now.Year - FechaNacimiento.Year;
+        }
+
+        public string ObtenerEdad()
+        {
+            int años = CalcularEdad();
+            if (años == 0)
+            {
+                int meses = DateTime.Now.Month - FechaNacimiento.Month;
+                if (meses == 0)
+                {
+                    return "1 mes";
+                }
+                return meses + " meses";
+            }
+            return años + " años";
         }
     }
 }

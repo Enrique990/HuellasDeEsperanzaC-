@@ -64,5 +64,12 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddMascot addMascot = new AddMascot(usuarioActual);
+            addMascot.Show();
+            this.Hide();
+        }
     }
 }

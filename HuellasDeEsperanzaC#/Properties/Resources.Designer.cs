@@ -103,6 +103,36 @@ namespace HuellasDeEsperanzaC_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_añadir_imagen_100__6_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8_añadir_imagen_100__6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_añadir_imagen_100__8_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8_añadir_imagen_100__8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_añadir_imagen_HD {
+            get {
+                object obj = ResourceManager.GetObject("icons8_añadir_imagen_HD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_animal_folder_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_animal_folder_50", resourceCulture);
