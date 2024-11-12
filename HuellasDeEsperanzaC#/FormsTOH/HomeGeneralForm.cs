@@ -59,5 +59,10 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             listBox1.Items.Add(usuarioActual.Descripcion);
             listBox1.Items.Add(usuarioActual.Direccion);
         }
+
+        private void HomeGeneralForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HuellasDeEsperanzaC_.FormsTOH;
 using HuellasDeEsperanzaC_.Models;
+using HuellasDeEsperanzaC_.Servicio;
 
 namespace HuellasDeEsperanzaC_.FormsTOH
 {
@@ -77,7 +78,10 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void roundButton1_Click(object sender, EventArgs e)
         {
+            // TODO: Verificar si usuario existe
+
             Usuario usuario = new Usuario();
+            GestorUsuario GestorUsuario = new GestorUsuario();
 
             usuario.NombreCompleto = tbNombreCompleto.Texts;
             usuario.CorreoElectronico = tbEmail.Texts;
@@ -108,38 +112,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             }
             else
             {
-                using (FileStream mArchivoEscritor = new FileStream("datos.dat", FileMode.Append, FileAccess.Write)) //OpenOrCreate
-                using (BinaryWriter Escritor = new BinaryWriter(mArchivoEscritor))
-                {
-                    Escritor.Write(usuario.NombreCompleto);
-                    Escritor.Write(usuario.CorreoElectronico);
-                    Escritor.Write(usuario.HashContrasena);
-                    Escritor.Write(usuario.Direccion);
-                    Escritor.Write(usuario.NumeroTelefono);
-                    Escritor.Write(usuario.Descripcion);
-                    Escritor.Write(usuario.Tipo.ToString());
-
-
-                    //Escritor.Write(usuario.NombreCompleto.Length);
-                    //Escritor.Write(usuario.NombreCompleto);
-                    //Escritor.Write(usuario.CorreoElectronico.Length);
-                    //Escritor.Write(usuario.CorreoElectronico);
-                    //Escritor.Write(usuario.HashContrasena.Length);
-                    //Escritor.Write(usuario.HashContrasena);
-                    //Escritor.Write(usuario.Direccion.Length);
-                    //Escritor.Write(usuario.Direccion);
-                    //Escritor.Write(usuario.NumeroTelefono.Length);
-                    //Escritor.Write(usuario.NumeroTelefono);
-                    //Escritor.Write(usuario.Descripcion.Length);
-                    //Escritor.Write(usuario.Descripcion);
-                    //Escritor.Write(usuario.Tipo.ToString().Length);
-                    //Escritor.Write(usuario.Tipo.ToString());
-                }
-
-                MetroFramework.MetroMessageBox.Show(this, "Usuario registrado exitosamente", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HomeGeneralForm Home = new HomeGeneralForm(usuario);
-                Home.Show();
-                this.Hide();
+                GestorUsuario.RegistrarUsuario(usuario, this);
             }
         }
 
