@@ -20,12 +20,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             InitializeComponent();
             this.usuarioActual = usuario;
             showUsuario();
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            AdoptMascot adoptMascot = new AdoptMascot(usuarioActual);
+            adoptMascot.Show();
+            this.Hide();
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)

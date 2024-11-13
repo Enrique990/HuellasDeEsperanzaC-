@@ -55,6 +55,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomUserControls\Card.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomUserControls\Card.Designer.cs">
+      <DependentUpon>Card.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomUserControls\CirclePictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -78,6 +84,12 @@
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsTOH\AdoptMascot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsTOH\AdoptMascot.Designer.cs">
+      <DependentUpon>AdoptMascot.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsTOH\HomeGeneralForm.cs">
       <SubType>Form</SubType>
@@ -118,6 +130,9 @@
     <Compile Include="Servicio\GestorDonaciones.cs" />
     <Compile Include="Servicio\GestorMascota.cs" />
     <Compile Include="Servicio\GestorUsuario.cs" />
+    <EmbeddedResource Include="CustomUserControls\Card.resx">
+      <DependentUpon>Card.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomUserControls\CustomTextBox.resx">
       <DependentUpon>CustomTextBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsTOH\AdoptMascot.resx">
+      <DependentUpon>AdoptMascot.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsTOH\HomeGeneralForm.resx">
       <DependentUpon>HomeGeneralForm.cs</DependentUpon>

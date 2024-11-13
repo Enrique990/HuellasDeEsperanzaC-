@@ -92,5 +92,19 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             homeGeneralForm.Show();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AdoptMascot adoptMascot = new AdoptMascot(usuarioActual);
+            adoptMascot.Show();
+            this.Close();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Close();
+        }
     }
 }

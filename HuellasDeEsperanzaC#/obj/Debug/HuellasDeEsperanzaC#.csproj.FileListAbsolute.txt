@@ -55,5 +55,6 @@ C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\
 C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.LoginForm.resources
 C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.RegisterForm.resources
 C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasD.21EB94C9.Up2Date
-C:\Users\Lenovo\Desktop\Huellas de Esperanza CSharp\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.AddMascotTemp.resources
 C:\Users\Lenovo\Desktop\Huellas de Esperanza CSharp\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.AddMascot.resources
+C:\Users\Lenovo\Desktop\Huellas de Esperanza CSharp\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.CustomUserControls.Card.resources
+C:\Users\Lenovo\Desktop\Huellas de Esperanza CSharp\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.AdoptMascot.resources

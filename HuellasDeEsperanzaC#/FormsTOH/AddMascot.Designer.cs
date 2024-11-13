@@ -29,9 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblORA3 = new System.Windows.Forms.Label();
             this.lblORA2 = new System.Windows.Forms.Label();
@@ -40,15 +49,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dtFechaMascota = new MetroFramework.Controls.MetroDateTime();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.tbDescripcionMascota = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.tbRazaMascota = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.tbSexoMascota = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
@@ -56,6 +56,7 @@
             this.tbNombreMascota = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.btnGuardarMascota = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.pbCircle = new HuellasDeEsperanzaC_.CustomUserControls.CirclePictureBox();
+            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,6 +66,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(110)))), ((int)(((byte)(125)))));
+            this.panel1.Controls.Add(this.btnCerrarSesion);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.button7);
@@ -80,133 +82,6 @@
             this.panel1.Size = new System.Drawing.Size(280, 760);
             this.panel1.TabIndex = 1;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.panel4.Location = new System.Drawing.Point(0, 185);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(17, 67);
-            this.panel4.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(240)))), ((int)(((byte)(197)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(280, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1031, 22);
-            this.panel2.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(192)))), ((int)(((byte)(184)))));
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(332, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(136, 116);
-            this.panel3.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.label1.Location = new System.Drawing.Point(488, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 32);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Agregar Mascota para Adopción";
-            // 
-            // lblORA3
-            // 
-            this.lblORA3.AutoSize = true;
-            this.lblORA3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblORA3.ForeColor = System.Drawing.Color.White;
-            this.lblORA3.Location = new System.Drawing.Point(769, 460);
-            this.lblORA3.Name = "lblORA3";
-            this.lblORA3.Size = new System.Drawing.Size(106, 18);
-            this.lblORA3.TabIndex = 33;
-            this.lblORA3.Text = "Descripción:";
-            // 
-            // lblORA2
-            // 
-            this.lblORA2.AutoSize = true;
-            this.lblORA2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblORA2.ForeColor = System.Drawing.Color.White;
-            this.lblORA2.Location = new System.Drawing.Point(769, 208);
-            this.lblORA2.Name = "lblORA2";
-            this.lblORA2.Size = new System.Drawing.Size(75, 18);
-            this.lblORA2.TabIndex = 32;
-            this.lblORA2.Text = "Especie:";
-            // 
-            // lblORA1
-            // 
-            this.lblORA1.AutoSize = true;
-            this.lblORA1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblORA1.ForeColor = System.Drawing.Color.White;
-            this.lblORA1.Location = new System.Drawing.Point(769, 397);
-            this.lblORA1.Name = "lblORA1";
-            this.lblORA1.Size = new System.Drawing.Size(183, 18);
-            this.lblORA1.TabIndex = 31;
-            this.lblORA1.Text = "Fecha de Nacimiento:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(769, 271);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 18);
-            this.label5.TabIndex = 30;
-            this.label5.Text = "Sexo:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(769, 334);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 18);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Raza:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(769, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 18);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Nombre:";
-            // 
-            // dtFechaMascota
-            // 
-            this.dtFechaMascota.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.dtFechaMascota.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.dtFechaMascota.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.dtFechaMascota.Location = new System.Drawing.Point(769, 421);
-            this.dtFechaMascota.MinimumSize = new System.Drawing.Size(0, 29);
-            this.dtFechaMascota.Name = "dtFechaMascota";
-            this.dtFechaMascota.Size = new System.Drawing.Size(363, 29);
-            this.dtFechaMascota.TabIndex = 5;
-            this.dtFechaMascota.UseCustomBackColor = true;
-            this.dtFechaMascota.UseCustomForeColor = true;
-            this.dtFechaMascota.UseStyleColors = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HuellasDeEsperanzaC_.Properties.Resources.Huellas_Esperanza_LogoIcono;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(129, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
@@ -217,6 +92,14 @@
             this.button8.Size = new System.Drawing.Size(52, 43);
             this.button8.TabIndex = 1;
             this.button8.UseVisualStyleBackColor = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.panel4.Location = new System.Drawing.Point(0, 185);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(17, 67);
+            this.panel4.TabIndex = 3;
             // 
             // button7
             // 
@@ -313,6 +196,7 @@
             this.button2.Text = "   Adoptar Mascotas";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -330,6 +214,125 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(240)))), ((int)(((byte)(197)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(280, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1031, 22);
+            this.panel2.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(192)))), ((int)(((byte)(184)))));
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(332, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(136, 116);
+            this.panel3.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HuellasDeEsperanzaC_.Properties.Resources.Huellas_Esperanza_LogoIcono;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(129, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
+            this.label1.Location = new System.Drawing.Point(488, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(386, 32);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Agregar Mascota para Adopción";
+            // 
+            // lblORA3
+            // 
+            this.lblORA3.AutoSize = true;
+            this.lblORA3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblORA3.ForeColor = System.Drawing.Color.White;
+            this.lblORA3.Location = new System.Drawing.Point(769, 460);
+            this.lblORA3.Name = "lblORA3";
+            this.lblORA3.Size = new System.Drawing.Size(106, 18);
+            this.lblORA3.TabIndex = 33;
+            this.lblORA3.Text = "Descripción:";
+            // 
+            // lblORA2
+            // 
+            this.lblORA2.AutoSize = true;
+            this.lblORA2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblORA2.ForeColor = System.Drawing.Color.White;
+            this.lblORA2.Location = new System.Drawing.Point(769, 208);
+            this.lblORA2.Name = "lblORA2";
+            this.lblORA2.Size = new System.Drawing.Size(75, 18);
+            this.lblORA2.TabIndex = 32;
+            this.lblORA2.Text = "Especie:";
+            // 
+            // lblORA1
+            // 
+            this.lblORA1.AutoSize = true;
+            this.lblORA1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblORA1.ForeColor = System.Drawing.Color.White;
+            this.lblORA1.Location = new System.Drawing.Point(769, 397);
+            this.lblORA1.Name = "lblORA1";
+            this.lblORA1.Size = new System.Drawing.Size(183, 18);
+            this.lblORA1.TabIndex = 31;
+            this.lblORA1.Text = "Fecha de Nacimiento:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(769, 271);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 18);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Sexo:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(769, 334);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 18);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Raza:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(769, 142);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 18);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Nombre:";
+            // 
+            // dtFechaMascota
+            // 
+            this.dtFechaMascota.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.dtFechaMascota.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.dtFechaMascota.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.dtFechaMascota.Location = new System.Drawing.Point(769, 421);
+            this.dtFechaMascota.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtFechaMascota.Name = "dtFechaMascota";
+            this.dtFechaMascota.Size = new System.Drawing.Size(363, 29);
+            this.dtFechaMascota.TabIndex = 5;
+            this.dtFechaMascota.UseCustomBackColor = true;
+            this.dtFechaMascota.UseCustomForeColor = true;
+            this.dtFechaMascota.UseStyleColors = true;
             // 
             // tbDescripcionMascota
             // 
@@ -457,6 +460,21 @@
             this.pbCircle.TabStop = false;
             this.pbCircle.Click += new System.EventHandler(this.pbCircle_Click);
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
+            this.btnCerrarSesion.TabIndex = 7;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // AddMascot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
@@ -528,5 +546,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private MetroFramework.Controls.MetroDateTime dtFechaMascota;
+        private CustomUserControls.RoundButton btnCerrarSesion;
     }
 }
