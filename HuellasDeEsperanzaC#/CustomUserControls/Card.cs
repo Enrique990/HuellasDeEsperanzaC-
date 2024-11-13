@@ -13,6 +13,8 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
 {
     public partial class Card : UserControl
     {
+        public event EventHandler OnSelect = null;
+
         private int borderRadius = 30;
         private int borderSize = 0;
         private Color borderColor = Color.White;
@@ -33,6 +35,7 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
 
             this.panel1.AutoSize = false;
             this.panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            this.panel1.BackColor = Color.White;
         }
 
         public int BorderRadius
@@ -119,5 +122,50 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
         {
 
         }
+
+        private void roundButton1_Click(object sender, EventArgs e)
+        {
+            OnSelect?.Invoke(this, e);
+        }
+
+        //public enum Estado
+        //{
+        //    Disponible, EnEspera, Adoptado
+        //}
+
+        //public Estado EstadoMascota
+        //{
+        //    get { return EstadoMascota; }
+        //    set { EstadoMascota = value; }
+        //}
+
+        public string CardNombreMascota
+        {
+            get { return lblNombreMascota.Text; }
+            set { lblNombreMascota.Text = value; }
+        }
+        public string CardRaza
+        {
+            get { return lblRaza.Text; }
+            set { lblRaza.Text = value; }
+        }
+        public string CardSexo
+        {
+            get { return lblSexo.Text; }
+            set { lblSexo.Text = value; }
+        }
+
+        public string CardEdad
+        {
+            get { return lblEdad.Text; }
+            set { lblEdad.Text = value; }
+        }
+
+        public Image CardImagen
+        {
+            get { return circlePictureBox1.Image; }
+            set { circlePictureBox1.Image = value; }
+        }
+
     }
 }

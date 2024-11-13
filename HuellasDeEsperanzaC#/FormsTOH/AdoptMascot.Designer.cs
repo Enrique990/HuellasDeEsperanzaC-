@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.button8 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -44,23 +46,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
-            this.card1 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card2 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card3 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card4 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card5 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card6 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card7 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card8 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card9 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card10 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card11 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card12 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card13 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card14 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card15 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card16 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,6 +77,22 @@
             this.panel1.Size = new System.Drawing.Size(280, 760);
             this.panel1.TabIndex = 1;
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
+            this.btnCerrarSesion.TabIndex = 4;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
@@ -108,6 +114,7 @@
             // 
             // button7
             // 
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,6 +131,7 @@
             // 
             // button6
             // 
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -140,6 +148,7 @@
             // 
             // button5
             // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -156,6 +165,7 @@
             // 
             // button4
             // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,6 +182,7 @@
             // 
             // button3
             // 
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -189,6 +200,7 @@
             // 
             // button2
             // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -205,6 +217,7 @@
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -262,64 +275,24 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.flowLayoutPanel1);
-            this.panel5.Location = new System.Drawing.Point(302, 152);
+            this.panel5.Location = new System.Drawing.Point(299, 152);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(986, 571);
+            this.panel5.Size = new System.Drawing.Size(1000, 571);
             this.panel5.TabIndex = 8;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.card1);
             this.flowLayoutPanel1.Controls.Add(this.card2);
             this.flowLayoutPanel1.Controls.Add(this.card3);
             this.flowLayoutPanel1.Controls.Add(this.card4);
-            this.flowLayoutPanel1.Controls.Add(this.card5);
-            this.flowLayoutPanel1.Controls.Add(this.card6);
-            this.flowLayoutPanel1.Controls.Add(this.card7);
-            this.flowLayoutPanel1.Controls.Add(this.card8);
-            this.flowLayoutPanel1.Controls.Add(this.card9);
-            this.flowLayoutPanel1.Controls.Add(this.card10);
-            this.flowLayoutPanel1.Controls.Add(this.card11);
-            this.flowLayoutPanel1.Controls.Add(this.card12);
             this.flowLayoutPanel1.Controls.Add(this.card13);
-            this.flowLayoutPanel1.Controls.Add(this.card14);
-            this.flowLayoutPanel1.Controls.Add(this.card15);
-            this.flowLayoutPanel1.Controls.Add(this.card16);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(986, 571);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1000, 571);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
-            this.btnCerrarSesion.TabIndex = 4;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
-            // card1
-            // 
-            this.card1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card1.BackColor = System.Drawing.Color.White;
-            this.card1.BorderColor = System.Drawing.Color.White;
-            this.card1.BorderRadius = 30;
-            this.card1.BorderSize = 0;
-            this.card1.Location = new System.Drawing.Point(3, 3);
-            this.card1.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card1.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card1.Name = "card1";
-            this.card1.Size = new System.Drawing.Size(240, 300);
-            this.card1.TabIndex = 0;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // card2
             // 
@@ -328,7 +301,7 @@
             this.card2.BorderColor = System.Drawing.Color.White;
             this.card2.BorderRadius = 30;
             this.card2.BorderSize = 0;
-            this.card2.Location = new System.Drawing.Point(249, 3);
+            this.card2.Location = new System.Drawing.Point(3, 3);
             this.card2.MaximumSize = new System.Drawing.Size(240, 300);
             this.card2.MinimumSize = new System.Drawing.Size(240, 300);
             this.card2.Name = "card2";
@@ -342,7 +315,7 @@
             this.card3.BorderColor = System.Drawing.Color.White;
             this.card3.BorderRadius = 30;
             this.card3.BorderSize = 0;
-            this.card3.Location = new System.Drawing.Point(495, 3);
+            this.card3.Location = new System.Drawing.Point(249, 3);
             this.card3.MaximumSize = new System.Drawing.Size(240, 300);
             this.card3.MinimumSize = new System.Drawing.Size(240, 300);
             this.card3.Name = "card3";
@@ -356,124 +329,12 @@
             this.card4.BorderColor = System.Drawing.Color.White;
             this.card4.BorderRadius = 30;
             this.card4.BorderSize = 0;
-            this.card4.Location = new System.Drawing.Point(741, 3);
+            this.card4.Location = new System.Drawing.Point(495, 3);
             this.card4.MaximumSize = new System.Drawing.Size(240, 300);
             this.card4.MinimumSize = new System.Drawing.Size(240, 300);
             this.card4.Name = "card4";
             this.card4.Size = new System.Drawing.Size(240, 300);
             this.card4.TabIndex = 3;
-            // 
-            // card5
-            // 
-            this.card5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card5.BackColor = System.Drawing.Color.White;
-            this.card5.BorderColor = System.Drawing.Color.White;
-            this.card5.BorderRadius = 30;
-            this.card5.BorderSize = 0;
-            this.card5.Location = new System.Drawing.Point(3, 309);
-            this.card5.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card5.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card5.Name = "card5";
-            this.card5.Size = new System.Drawing.Size(240, 300);
-            this.card5.TabIndex = 4;
-            // 
-            // card6
-            // 
-            this.card6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card6.BackColor = System.Drawing.Color.White;
-            this.card6.BorderColor = System.Drawing.Color.White;
-            this.card6.BorderRadius = 30;
-            this.card6.BorderSize = 0;
-            this.card6.Location = new System.Drawing.Point(249, 309);
-            this.card6.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card6.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card6.Name = "card6";
-            this.card6.Size = new System.Drawing.Size(240, 300);
-            this.card6.TabIndex = 5;
-            // 
-            // card7
-            // 
-            this.card7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card7.BackColor = System.Drawing.Color.White;
-            this.card7.BorderColor = System.Drawing.Color.White;
-            this.card7.BorderRadius = 30;
-            this.card7.BorderSize = 0;
-            this.card7.Location = new System.Drawing.Point(495, 309);
-            this.card7.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card7.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card7.Name = "card7";
-            this.card7.Size = new System.Drawing.Size(240, 300);
-            this.card7.TabIndex = 6;
-            // 
-            // card8
-            // 
-            this.card8.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card8.BackColor = System.Drawing.Color.White;
-            this.card8.BorderColor = System.Drawing.Color.White;
-            this.card8.BorderRadius = 30;
-            this.card8.BorderSize = 0;
-            this.card8.Location = new System.Drawing.Point(741, 309);
-            this.card8.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card8.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card8.Name = "card8";
-            this.card8.Size = new System.Drawing.Size(240, 300);
-            this.card8.TabIndex = 7;
-            // 
-            // card9
-            // 
-            this.card9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card9.BackColor = System.Drawing.Color.White;
-            this.card9.BorderColor = System.Drawing.Color.White;
-            this.card9.BorderRadius = 30;
-            this.card9.BorderSize = 0;
-            this.card9.Location = new System.Drawing.Point(3, 615);
-            this.card9.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card9.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card9.Name = "card9";
-            this.card9.Size = new System.Drawing.Size(240, 300);
-            this.card9.TabIndex = 8;
-            // 
-            // card10
-            // 
-            this.card10.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card10.BackColor = System.Drawing.Color.White;
-            this.card10.BorderColor = System.Drawing.Color.White;
-            this.card10.BorderRadius = 30;
-            this.card10.BorderSize = 0;
-            this.card10.Location = new System.Drawing.Point(249, 615);
-            this.card10.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card10.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card10.Name = "card10";
-            this.card10.Size = new System.Drawing.Size(240, 300);
-            this.card10.TabIndex = 9;
-            // 
-            // card11
-            // 
-            this.card11.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card11.BackColor = System.Drawing.Color.White;
-            this.card11.BorderColor = System.Drawing.Color.White;
-            this.card11.BorderRadius = 30;
-            this.card11.BorderSize = 0;
-            this.card11.Location = new System.Drawing.Point(495, 615);
-            this.card11.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card11.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card11.Name = "card11";
-            this.card11.Size = new System.Drawing.Size(240, 300);
-            this.card11.TabIndex = 10;
-            // 
-            // card12
-            // 
-            this.card12.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card12.BackColor = System.Drawing.Color.White;
-            this.card12.BorderColor = System.Drawing.Color.White;
-            this.card12.BorderRadius = 30;
-            this.card12.BorderSize = 0;
-            this.card12.Location = new System.Drawing.Point(741, 615);
-            this.card12.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card12.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card12.Name = "card12";
-            this.card12.Size = new System.Drawing.Size(240, 300);
-            this.card12.TabIndex = 11;
             // 
             // card13
             // 
@@ -482,54 +343,16 @@
             this.card13.BorderColor = System.Drawing.Color.White;
             this.card13.BorderRadius = 30;
             this.card13.BorderSize = 0;
-            this.card13.Location = new System.Drawing.Point(3, 921);
+            this.card13.Location = new System.Drawing.Point(741, 3);
             this.card13.MaximumSize = new System.Drawing.Size(240, 300);
             this.card13.MinimumSize = new System.Drawing.Size(240, 300);
             this.card13.Name = "card13";
             this.card13.Size = new System.Drawing.Size(240, 300);
             this.card13.TabIndex = 12;
             // 
-            // card14
+            // timer1
             // 
-            this.card14.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card14.BackColor = System.Drawing.Color.White;
-            this.card14.BorderColor = System.Drawing.Color.White;
-            this.card14.BorderRadius = 30;
-            this.card14.BorderSize = 0;
-            this.card14.Location = new System.Drawing.Point(249, 921);
-            this.card14.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card14.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card14.Name = "card14";
-            this.card14.Size = new System.Drawing.Size(240, 300);
-            this.card14.TabIndex = 13;
-            // 
-            // card15
-            // 
-            this.card15.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card15.BackColor = System.Drawing.Color.White;
-            this.card15.BorderColor = System.Drawing.Color.White;
-            this.card15.BorderRadius = 30;
-            this.card15.BorderSize = 0;
-            this.card15.Location = new System.Drawing.Point(495, 921);
-            this.card15.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card15.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card15.Name = "card15";
-            this.card15.Size = new System.Drawing.Size(240, 300);
-            this.card15.TabIndex = 14;
-            // 
-            // card16
-            // 
-            this.card16.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card16.BackColor = System.Drawing.Color.White;
-            this.card16.BorderColor = System.Drawing.Color.White;
-            this.card16.BorderRadius = 30;
-            this.card16.BorderSize = 0;
-            this.card16.Location = new System.Drawing.Point(741, 921);
-            this.card16.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card16.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card16.Name = "card16";
-            this.card16.Size = new System.Drawing.Size(240, 300);
-            this.card16.TabIndex = 15;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // AdoptMascot
             // 
@@ -578,21 +401,10 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private CustomUserControls.Card card1;
         private CustomUserControls.Card card2;
         private CustomUserControls.Card card3;
         private CustomUserControls.Card card4;
-        private CustomUserControls.Card card5;
-        private CustomUserControls.Card card6;
-        private CustomUserControls.Card card7;
-        private CustomUserControls.Card card8;
-        private CustomUserControls.Card card9;
-        private CustomUserControls.Card card10;
-        private CustomUserControls.Card card11;
-        private CustomUserControls.Card card12;
         private CustomUserControls.Card card13;
-        private CustomUserControls.Card card14;
-        private CustomUserControls.Card card15;
-        private CustomUserControls.Card card16;
+        private System.Windows.Forms.Timer timer1;
     }
 }
