@@ -72,5 +72,10 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             addMascot.Show();
             this.Hide();
         }
+
+        private void panel5_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

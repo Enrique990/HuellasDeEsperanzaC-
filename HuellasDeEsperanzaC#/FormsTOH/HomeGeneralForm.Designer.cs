@@ -28,10 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeGeneralForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
+            this.tutorialCard3 = new HuellasDeEsperanzaC_.CustomUserControls.TutorialCard();
+            this.tutorialCard2 = new HuellasDeEsperanzaC_.CustomUserControls.TutorialCard();
+            this.tutorialCard1 = new HuellasDeEsperanzaC_.CustomUserControls.TutorialCard();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -39,14 +50,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +76,75 @@
             this.panel1.Size = new System.Drawing.Size(280, 760);
             this.panel1.TabIndex = 0;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.panel4.Location = new System.Drawing.Point(1, 39);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(15, 67);
+            this.panel4.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(240)))), ((int)(((byte)(197)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(280, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1031, 22);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(192)))), ((int)(((byte)(184)))));
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(299, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(122, 116);
+            this.panel3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
+            this.label1.Location = new System.Drawing.Point(439, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(437, 32);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "¡Bienvenidos a Huellas de Esperanza!";
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(409, 590);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(406, 134);
+            this.listBox1.TabIndex = 4;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.tutorialCard3);
+            this.panel5.Controls.Add(this.tutorialCard2);
+            this.panel5.Controls.Add(this.tutorialCard1);
+            this.panel5.Location = new System.Drawing.Point(409, 182);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(798, 360);
+            this.panel5.TabIndex = 5;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
+            this.label2.Location = new System.Drawing.Point(354, 158);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(908, 21);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "\"Nuestra misión es conectar a animales necesitados con familias amorosas, y apoya" +
+    "r a las organizaciones que los cuidan.\"";
+            // 
             // btnCerrarSesion
             // 
             this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
@@ -85,6 +161,64 @@
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.roundButton1_Click);
             // 
+            // tutorialCard3
+            // 
+            this.tutorialCard3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tutorialCard3.BorderColor = System.Drawing.Color.White;
+            this.tutorialCard3.BorderRadius = 30;
+            this.tutorialCard3.BorderSize = 0;
+            this.tutorialCard3.Descripcion = "Encuentra a tu compañero perfecto entre nuestras mascotas en adopción.";
+            this.tutorialCard3.Imagen = global::HuellasDeEsperanzaC_.Properties.Resources.iconoDonacionHD;
+            this.tutorialCard3.Location = new System.Drawing.Point(536, 30);
+            this.tutorialCard3.MaximumSize = new System.Drawing.Size(240, 300);
+            this.tutorialCard3.MinimumSize = new System.Drawing.Size(240, 300);
+            this.tutorialCard3.Name = "tutorialCard3";
+            this.tutorialCard3.Size = new System.Drawing.Size(240, 300);
+            this.tutorialCard3.TabIndex = 2;
+            this.tutorialCard3.Titulo = "¿Cómo Donar?";
+            // 
+            // tutorialCard2
+            // 
+            this.tutorialCard2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tutorialCard2.BorderColor = System.Drawing.Color.White;
+            this.tutorialCard2.BorderRadius = 30;
+            this.tutorialCard2.BorderSize = 0;
+            this.tutorialCard2.Descripcion = "Encuentra a tu compañero perfecto entre nuestras mascotas en adopción.";
+            this.tutorialCard2.Imagen = global::HuellasDeEsperanzaC_.Properties.Resources.iconoVoluntariadoHD;
+            this.tutorialCard2.Location = new System.Drawing.Point(278, 30);
+            this.tutorialCard2.MaximumSize = new System.Drawing.Size(240, 300);
+            this.tutorialCard2.MinimumSize = new System.Drawing.Size(240, 300);
+            this.tutorialCard2.Name = "tutorialCard2";
+            this.tutorialCard2.Size = new System.Drawing.Size(240, 300);
+            this.tutorialCard2.TabIndex = 1;
+            this.tutorialCard2.Titulo = "¿Ser Voluntario?";
+            // 
+            // tutorialCard1
+            // 
+            this.tutorialCard1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tutorialCard1.BorderColor = System.Drawing.Color.White;
+            this.tutorialCard1.BorderRadius = 30;
+            this.tutorialCard1.BorderSize = 0;
+            this.tutorialCard1.Descripcion = "Encuentra a tu compañero perfecto entre nuestras mascotas en adopción.";
+            this.tutorialCard1.Imagen = ((System.Drawing.Image)(resources.GetObject("tutorialCard1.Imagen")));
+            this.tutorialCard1.Location = new System.Drawing.Point(20, 27);
+            this.tutorialCard1.MaximumSize = new System.Drawing.Size(240, 300);
+            this.tutorialCard1.MinimumSize = new System.Drawing.Size(240, 300);
+            this.tutorialCard1.Name = "tutorialCard1";
+            this.tutorialCard1.Size = new System.Drawing.Size(240, 300);
+            this.tutorialCard1.TabIndex = 0;
+            this.tutorialCard1.Titulo = "¿Cómo Adoptar?";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HuellasDeEsperanzaC_.Properties.Resources.Huellas_Esperanza_LogoIcono;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
@@ -96,14 +230,6 @@
             this.button8.TabIndex = 1;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.panel4.Location = new System.Drawing.Point(1, 39);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(15, 67);
-            this.panel4.TabIndex = 3;
             // 
             // button7
             // 
@@ -226,60 +352,16 @@
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // label3
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(240)))), ((int)(((byte)(197)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(280, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1031, 22);
-            this.panel2.TabIndex = 1;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(192)))), ((int)(((byte)(184)))));
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(299, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(122, 116);
-            this.panel3.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HuellasDeEsperanzaC_.Properties.Resources.Huellas_Esperanza_LogoIcono;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.label1.Location = new System.Drawing.Point(439, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 32);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "¡Bienvenidos a Huellas de Esperanza!";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(325, 389);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(224, 251);
-            this.listBox1.TabIndex = 4;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(445, 152);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(708, 213);
-            this.panel5.TabIndex = 5;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
+            this.label3.Location = new System.Drawing.Point(405, 566);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(149, 21);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Datos del Usuario:";
             // 
             // HomeGeneralForm
             // 
@@ -287,6 +369,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.ClientSize = new System.Drawing.Size(1311, 760);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
@@ -300,6 +384,7 @@
             this.Load += new System.EventHandler(this.HomeGeneralForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -325,5 +410,10 @@
         private CustomUserControls.RoundButton btnCerrarSesion;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label2;
+        private CustomUserControls.TutorialCard tutorialCard1;
+        private CustomUserControls.TutorialCard tutorialCard3;
+        private CustomUserControls.TutorialCard tutorialCard2;
+        private System.Windows.Forms.Label label3;
     }
 }

@@ -175,4 +175,19 @@
   <data name="icons8_añadir_imagen_HD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-añadir-imagen-HD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="agregarImagenIconoFULLHD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregarImagenIconoFULLHD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregarImagenIconoFULLHD2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregarImagenIconoFULLHD2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconoAdopcionHD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconoAdopcionHD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconoDonacionHD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconoDonacionHD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconoVoluntariadoHD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconoVoluntariadoHD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -63,6 +63,26 @@ namespace HuellasDeEsperanzaC_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregarImagenIconoFULLHD {
+            get {
+                object obj = ResourceManager.GetObject("agregarImagenIconoFULLHD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap agregarImagenIconoFULLHD2 {
+            get {
+                object obj = ResourceManager.GetObject("agregarImagenIconoFULLHD2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Huellas_Esperanza_LogoIcono {
             get {
                 object obj = ResourceManager.GetObject("Huellas_Esperanza_LogoIcono", resourceCulture);
@@ -96,6 +116,36 @@ namespace HuellasDeEsperanzaC_.Properties {
         internal static System.Drawing.Bitmap HuellasDeEsperanzaLogoMedianoNegro {
             get {
                 object obj = ResourceManager.GetObject("HuellasDeEsperanzaLogoMedianoNegro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconoAdopcionHD {
+            get {
+                object obj = ResourceManager.GetObject("iconoAdopcionHD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconoDonacionHD {
+            get {
+                object obj = ResourceManager.GetObject("iconoDonacionHD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconoVoluntariadoHD {
+            get {
+                object obj = ResourceManager.GetObject("iconoVoluntariadoHD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
