@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HuellasDeEsperanzaC_.Servicio;
 using HuellasDeEsperanzaC_.CustomUserControls;
+using System.IO;
 
 namespace HuellasDeEsperanzaC_.FormsTOH
 {
@@ -42,13 +43,30 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         public void AgregarMascotaCard(Mascota mascota)
         {
+            Image imagenMascota;
+            try
+            {
+                if (string.IsNullOrEmpty(mascota.RutaImagen) || !File.Exists(mascota.RutaImagen))
+                {
+                    throw new FileNotFoundException();
+                }
+
+                imagenMascota = Image.FromFile(mascota.RutaImagen);
+            }
+            catch (Exception)
+            {
+                // Ruta de la imagen predeterminada
+                string rutaImagenPredeterminada = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\icons8-pets-50.png");
+                imagenMascota = Image.FromFile(rutaImagenPredeterminada);
+            }
+
             flowLayoutPanel1.Controls.Add(new Card()
             {
                 CardNombreMascota = mascota.Nombre,
                 CardRaza = mascota.Raza,
                 CardEdad = mascota.FechaNacimiento.ToString("dd/MM/yyyy"),
                 CardSexo = mascota.Sexo,
-                CardImagen = Image.FromFile(mascota.RutaImagen),
+                CardImagen = imagenMascota,
             });
         }
 

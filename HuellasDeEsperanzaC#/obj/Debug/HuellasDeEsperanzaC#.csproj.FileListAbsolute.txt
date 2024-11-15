@@ -59,3 +59,8 @@ C:\Users\Lenovo\Desktop\Huellas de Esperanza CSharp\HuellasDeEsperanzaC-\Huellas
 C:\Users\Lenovo\Desktop\Huellas de Esperanza CSharp\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.CustomUserControls.Card.resources
 C:\Users\Lenovo\Desktop\Huellas de Esperanza CSharp\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.AdoptMascot.resources
 C:\Users\Lenovo\Desktop\Huellas de Esperanza CSharp\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.CustomUserControls.TutorialCard.resources
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.CustomUserControls.Card.resources
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.CustomUserControls.TutorialCard.resources
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.AdoptMascot.resources
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.AddMascot.resources
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\bin\Debug\Resources\icons8-pets-50.png

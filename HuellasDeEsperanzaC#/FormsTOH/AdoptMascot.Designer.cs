@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdoptMascot));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.button8 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -46,11 +46,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.card2 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card3 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card4 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card13 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,22 +77,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(280, 760);
             this.panel1.TabIndex = 1;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
-            this.btnCerrarSesion.TabIndex = 4;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // button8
             // 
@@ -240,7 +225,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.label1.Location = new System.Drawing.Point(439, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(421, 32);
+            this.label1.Size = new System.Drawing.Size(518, 41);
             this.label1.TabIndex = 6;
             this.label1.Text = "Mascotas Disponibles para Adoptar";
             // 
@@ -294,6 +279,10 @@
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // card2
             // 
             this.card2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -301,7 +290,13 @@
             this.card2.BorderColor = System.Drawing.Color.White;
             this.card2.BorderRadius = 30;
             this.card2.BorderSize = 0;
-            this.card2.Location = new System.Drawing.Point(3, 3);
+            this.card2.CardEdad = "Nombre de Mascota";
+            this.card2.CardImagen = ((System.Drawing.Image)(resources.GetObject("card2.CardImagen")));
+            this.card2.CardNombreMascota = "Nombre de Mascota";
+            this.card2.CardRaza = "Nombre de Mascota";
+            this.card2.CardSexo = "Nombre de Mascota";
+            this.card2.Location = new System.Drawing.Point(4, 4);
+            this.card2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.card2.MaximumSize = new System.Drawing.Size(240, 300);
             this.card2.MinimumSize = new System.Drawing.Size(240, 300);
             this.card2.Name = "card2";
@@ -315,7 +310,13 @@
             this.card3.BorderColor = System.Drawing.Color.White;
             this.card3.BorderRadius = 30;
             this.card3.BorderSize = 0;
-            this.card3.Location = new System.Drawing.Point(249, 3);
+            this.card3.CardEdad = "Nombre de Mascota";
+            this.card3.CardImagen = ((System.Drawing.Image)(resources.GetObject("card3.CardImagen")));
+            this.card3.CardNombreMascota = "Nombre de Mascota";
+            this.card3.CardRaza = "Nombre de Mascota";
+            this.card3.CardSexo = "Nombre de Mascota";
+            this.card3.Location = new System.Drawing.Point(252, 4);
+            this.card3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.card3.MaximumSize = new System.Drawing.Size(240, 300);
             this.card3.MinimumSize = new System.Drawing.Size(240, 300);
             this.card3.Name = "card3";
@@ -329,7 +330,13 @@
             this.card4.BorderColor = System.Drawing.Color.White;
             this.card4.BorderRadius = 30;
             this.card4.BorderSize = 0;
-            this.card4.Location = new System.Drawing.Point(495, 3);
+            this.card4.CardEdad = "Nombre de Mascota";
+            this.card4.CardImagen = ((System.Drawing.Image)(resources.GetObject("card4.CardImagen")));
+            this.card4.CardNombreMascota = "Nombre de Mascota";
+            this.card4.CardRaza = "Nombre de Mascota";
+            this.card4.CardSexo = "Nombre de Mascota";
+            this.card4.Location = new System.Drawing.Point(500, 4);
+            this.card4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.card4.MaximumSize = new System.Drawing.Size(240, 300);
             this.card4.MinimumSize = new System.Drawing.Size(240, 300);
             this.card4.Name = "card4";
@@ -343,20 +350,38 @@
             this.card13.BorderColor = System.Drawing.Color.White;
             this.card13.BorderRadius = 30;
             this.card13.BorderSize = 0;
-            this.card13.Location = new System.Drawing.Point(741, 3);
+            this.card13.CardEdad = "Nombre de Mascota";
+            this.card13.CardImagen = ((System.Drawing.Image)(resources.GetObject("card13.CardImagen")));
+            this.card13.CardNombreMascota = "Nombre de Mascota";
+            this.card13.CardRaza = "Nombre de Mascota";
+            this.card13.CardSexo = "Nombre de Mascota";
+            this.card13.Location = new System.Drawing.Point(748, 4);
+            this.card13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.card13.MaximumSize = new System.Drawing.Size(240, 300);
             this.card13.MinimumSize = new System.Drawing.Size(240, 300);
             this.card13.Name = "card13";
             this.card13.Size = new System.Drawing.Size(240, 300);
             this.card13.TabIndex = 12;
             // 
-            // timer1
+            // btnCerrarSesion
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
+            this.btnCerrarSesion.TabIndex = 4;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
             // 
             // AdoptMascot
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.ClientSize = new System.Drawing.Size(1311, 760);

@@ -212,7 +212,9 @@
     <None Include="Resources\icons8-pets-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-pets-50.png" />
+    <None Include="Resources\icons8-pets-50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-lista-de-ingredientes-50.png" />
