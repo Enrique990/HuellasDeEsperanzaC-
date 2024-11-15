@@ -203,6 +203,16 @@ namespace HuellasDeEsperanzaC_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_close_window_38 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_close_window_38", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_heart_with_dog_paw_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_heart_with_dog_paw_32", resourceCulture);
@@ -266,6 +276,26 @@ namespace HuellasDeEsperanzaC_.Properties {
         internal static System.Drawing.Bitmap icons8_lista_de_ingredientes_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8_lista_de_ingredientes_50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_maximizar_32__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8_maximizar_32__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_minimizar_32__1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8_minimizar_32__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

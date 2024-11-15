@@ -47,6 +47,7 @@
             this.tbOra1 = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.tbOra2 = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.tbOra3 = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -340,6 +341,15 @@
             this.tbOra3.Visible = false;
             this.tbOra3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbOra3_KeyPress);
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(902, 653);
+            this.panel2.TabIndex = 21;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -362,6 +372,7 @@
             this.Controls.Add(this.isORA);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -398,5 +409,6 @@
         private CustomUserControls.CustomTextBox tbOra1;
         private CustomUserControls.CustomTextBox tbOra2;
         private CustomUserControls.CustomTextBox tbOra3;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -285,5 +285,14 @@
   <ItemGroup>
     <None Include="Resources\agregarImagenIconoFULLHD2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimizar-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maximizar-32 %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

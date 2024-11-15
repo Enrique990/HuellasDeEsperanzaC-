@@ -39,6 +39,7 @@
             this.tbContrasena = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.tbCorreo = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.roundButton1 = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -198,6 +199,15 @@
             this.roundButton1.UseVisualStyleBackColor = false;
             this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(902, 430);
+            this.panel2.TabIndex = 20;
+            this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -212,6 +222,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -240,5 +251,6 @@
         private System.Windows.Forms.Label label2;
         private CustomUserControls.CustomTextBox tbCorreo;
         private CustomUserControls.CustomTextBox tbContrasena;
+        private System.Windows.Forms.Panel panel2;
     }
 }
