@@ -109,7 +109,15 @@ namespace HuellasDeEsperanzaC_.Servicio
                         RutaImagen = Lector.ReadString()
                     };
 
-                    mascotas.Add(mascota);
+                    string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, mascota.RutaImagen);
+                    if (File.Exists(fullPath))
+                    {
+                        mascotas.Add(mascota);
+                    }
+                    else
+                    {
+                        MessageBox.Show("La imagen no se encontró: " + fullPath);
+                    }
                 }
             }
         }
@@ -142,7 +150,8 @@ namespace HuellasDeEsperanzaC_.Servicio
                     string targetFilePath = Path.Combine(targetDirectory, fileName);
                     File.Copy(sourceFilePath, targetFilePath, true);
 
-                    return targetFilePath;
+                    // Devolver la ruta relativa
+                    return Path.Combine("Resources", "FotosMascota", fileName);
                 }
             }
 

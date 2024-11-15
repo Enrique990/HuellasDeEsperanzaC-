@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -48,7 +49,15 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
             if (!string.IsNullOrEmpty(rutaImagenSeleccionada))
             {
-                pbCircle.Image = Image.FromFile(rutaImagenSeleccionada);
+                try
+                {
+                    string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, rutaImagenSeleccionada);
+                    pbCircle.Image = Image.FromFile(fullPath);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al cargar la imagen: " + ex.Message);
+                }
             }
         }
 

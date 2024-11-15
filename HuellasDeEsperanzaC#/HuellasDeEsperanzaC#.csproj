@@ -267,9 +267,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-añadir-imagen-HD.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\FotosMascota\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\iconoAdopcionHD.png" />
   </ItemGroup>
@@ -297,7 +295,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Content Include="Resources\**">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-</ItemGroup>
+  </ItemGroup>
 </Project>
