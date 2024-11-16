@@ -64,6 +64,23 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void btnGuardarMascota_Click(object sender, EventArgs e)
         {
+            // Validar campos requeridos
+            if (string.IsNullOrEmpty(tbNombreMascota.Texts) ||
+                string.IsNullOrEmpty(tbTipoMascota.Texts) ||
+                string.IsNullOrEmpty(tbSexoMascota.Texts) ||
+                string.IsNullOrEmpty(tbRazaMascota.Texts) ||
+                string.IsNullOrEmpty(tbDescripcionMascota.Texts))
+            {
+                MessageBox.Show("Por favor, rellene todos los campos requeridos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Asignar imagen predeterminada si no se selecciona una imagen
+            if (string.IsNullOrEmpty(rutaImagenSeleccionada))
+            {
+                string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                rutaImagenSeleccionada = Path.Combine(projectDirectory, "Resources\\icons8-pets-50.png");
+            }
 
             Mascota mascota = new Mascota
             {

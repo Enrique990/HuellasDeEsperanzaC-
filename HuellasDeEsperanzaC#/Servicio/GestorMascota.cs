@@ -62,7 +62,7 @@ namespace HuellasDeEsperanzaC_.Servicio
                     Escritor.Write(mascotas[i].Raza);
                     Escritor.Write(mascotas[i].FechaNacimiento.ToBinary());
                     Escritor.Write(mascotas[i].Descripcion);
-                    Escritor.Write(mascotas[i].RutaImagen);
+                    Escritor.Write(mascotas[i].RutaImagen ?? string.Empty);
                 }
             }
 
