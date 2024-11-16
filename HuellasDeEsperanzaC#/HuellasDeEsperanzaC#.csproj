@@ -267,7 +267,9 @@
   <ItemGroup>
     <None Include="Resources\icons8-añadir-imagen-HD.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="FotosMascotas\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconoAdopcionHD.png" />
   </ItemGroup>

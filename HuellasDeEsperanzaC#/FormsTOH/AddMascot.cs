@@ -51,7 +51,8 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             {
                 try
                 {
-                    string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, rutaImagenSeleccionada);
+                    string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                    string fullPath = Path.Combine(projectDirectory, rutaImagenSeleccionada);
                     pbCircle.Image = Image.FromFile(fullPath);
                 }
                 catch (Exception ex)

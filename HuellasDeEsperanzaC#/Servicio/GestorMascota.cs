@@ -109,7 +109,8 @@ namespace HuellasDeEsperanzaC_.Servicio
                         RutaImagen = Lector.ReadString()
                     };
 
-                    string fullPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, mascota.RutaImagen);
+                    string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                    string fullPath = Path.Combine(projectDirectory, mascota.RutaImagen);
                     if (File.Exists(fullPath))
                     {
                         mascotas.Add(mascota);
@@ -140,7 +141,8 @@ namespace HuellasDeEsperanzaC_.Servicio
                 {
                     string sourceFilePath = openFileDialog.FileName;
                     string fileName = Path.GetFileName(sourceFilePath);
-                    string targetDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "FotosMascota");
+                    string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                    string targetDirectory = Path.Combine(projectDirectory, "FotosMascotas");
 
                     if (!Directory.Exists(targetDirectory))
                     {
@@ -151,7 +153,7 @@ namespace HuellasDeEsperanzaC_.Servicio
                     File.Copy(sourceFilePath, targetFilePath, true);
 
                     // Devolver la ruta relativa
-                    return Path.Combine("Resources", "FotosMascota", fileName);
+                    return Path.Combine("FotosMascotas", fileName);
                 }
             }
 

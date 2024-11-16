@@ -47,12 +47,14 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             Image imagenMascota;
             try
             {
-                if (string.IsNullOrEmpty(mascota.RutaImagen) || !File.Exists(mascota.RutaImagen))
+                string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                string fullPath = Path.Combine(projectDirectory, mascota.RutaImagen);
+                if (string.IsNullOrEmpty(mascota.RutaImagen) || !File.Exists(fullPath))
                 {
                     throw new FileNotFoundException();
                 }
 
-                imagenMascota = Image.FromFile(mascota.RutaImagen);
+                imagenMascota = Image.FromFile(fullPath);
             }
             catch (Exception)
             {
