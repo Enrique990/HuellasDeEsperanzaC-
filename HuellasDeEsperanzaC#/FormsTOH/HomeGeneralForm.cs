@@ -60,8 +60,15 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             listBox1.Items.Add(usuarioActual.Tipo);
             listBox1.Items.Add(usuarioActual.Direccion);
             listBox1.Items.Add(usuarioActual.NumeroTelefono);
-            listBox1.Items.Add(usuarioActual.NumeroCedula);
-            listBox1.Items.Add(usuarioActual.Ocupacion);
+            listBox1.Items.Add(usuarioActual.NumeroTelefono);
+            if (usuarioActual.NumeroCedula != null)
+            {
+                listBox1.Items.Add(usuarioActual.NumeroCedula);
+            }
+            if (usuarioActual.Ocupacion != null)
+            {
+                listBox1.Items.Add(usuarioActual.Ocupacion);
+            }
             listBox1.Items.Add(usuarioActual.Descripcion);
         }
 
