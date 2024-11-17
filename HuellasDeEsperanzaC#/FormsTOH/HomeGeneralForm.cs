@@ -54,12 +54,15 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         public void showUsuario()
         {
+            listBox1.Items.Clear();
             listBox1.Items.Add(usuarioActual.NombreCompleto);
             listBox1.Items.Add(usuarioActual.CorreoElectronico);
             listBox1.Items.Add(usuarioActual.Tipo);
-            listBox1.Items.Add(usuarioActual.NumeroTelefono);
-            listBox1.Items.Add(usuarioActual.Descripcion);
             listBox1.Items.Add(usuarioActual.Direccion);
+            listBox1.Items.Add(usuarioActual.NumeroTelefono);
+            listBox1.Items.Add(usuarioActual.NumeroCedula);
+            listBox1.Items.Add(usuarioActual.Ocupacion);
+            listBox1.Items.Add(usuarioActual.Descripcion);
         }
 
         private void HomeGeneralForm_Load(object sender, EventArgs e)
@@ -117,6 +120,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         private void button9_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnConfiguracion_Click_1(object sender, EventArgs e)
+        {
+            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual);
+            configuracionForm.Show();
+            this.Hide();
         }
     }
 }

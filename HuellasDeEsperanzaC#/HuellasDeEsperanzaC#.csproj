@@ -97,6 +97,12 @@
     <Compile Include="FormsTOH\AdoptMascot.Designer.cs">
       <DependentUpon>AdoptMascot.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsTOH\ConfiguracionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsTOH\ConfiguracionForm.Designer.cs">
+      <DependentUpon>ConfiguracionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsTOH\HomeGeneralForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsTOH\AdoptMascot.resx">
       <DependentUpon>AdoptMascot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsTOH\ConfiguracionForm.resx">
+      <DependentUpon>ConfiguracionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsTOH\HomeGeneralForm.resx">
       <DependentUpon>HomeGeneralForm.cs</DependentUpon>

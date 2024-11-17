@@ -208,3 +208,4 @@ C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\
 C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\bin\Debug\Resources\icons8-minimizar-32 (1).png
 C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\bin\Debug\Resources\icons8-pets-32.png
 C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\bin\Debug\Resources\icons8-settings-40.png
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.ConfiguracionForm.resources

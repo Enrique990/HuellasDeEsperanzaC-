@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using HuellasDeEsperanzaC_.FormsTOH;
 using System.Windows.Forms;
 using HuellasDeEsperanzaC_.Models;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace HuellasDeEsperanzaC_.Servicio
 {
@@ -41,13 +42,15 @@ namespace HuellasDeEsperanzaC_.Servicio
             {
                 foreach (var usr in usuarios)
                 {
-                    Escritor.Write(usr.NombreCompleto);
-                    Escritor.Write(usr.CorreoElectronico);
-                    Escritor.Write(usr.HashContrasena);
-                    Escritor.Write(usr.Direccion);
-                    Escritor.Write(usr.NumeroTelefono);
-                    Escritor.Write(usr.Descripcion);
-                    Escritor.Write(usr.Tipo.ToString());
+                    Escritor.Write(usr.NombreCompleto ?? string.Empty);
+                    Escritor.Write(usr.CorreoElectronico ?? string.Empty);
+                    Escritor.Write(usr.HashContrasena ?? string.Empty);
+                    Escritor.Write(usr.Direccion ?? string.Empty);
+                    Escritor.Write(usr.NumeroTelefono ?? string.Empty);
+                    Escritor.Write(usr.Descripcion ?? string.Empty);
+                    Escritor.Write(usr.NumeroCedula ?? string.Empty);
+                    Escritor.Write(usr.Ocupacion ?? string.Empty);
+                    Escritor.Write(usr.Tipo.ToString() ?? string.Empty);
                 }
             }
 
@@ -70,14 +73,12 @@ namespace HuellasDeEsperanzaC_.Servicio
             HomeGeneralForm Home = new HomeGeneralForm(usuario);
             Home.Show();
             formulario.Hide();
-
         }
 
         public void ActualizarUsuario(Usuario usuario, Form formulario)
         {
             RegistrarUsuario(usuario, formulario, true);
         }
-
 
         public void CargarDatosUsuarios(List<Usuario> usuarios)
         {
@@ -101,6 +102,8 @@ namespace HuellasDeEsperanzaC_.Servicio
                         Direccion = Lector.ReadString(),
                         NumeroTelefono = Lector.ReadString(),
                         Descripcion = Lector.ReadString(),
+                        NumeroCedula = Lector.ReadString(),
+                        Ocupacion = Lector.ReadString(),
                         Tipo = (TipoUsuario)Enum.Parse(typeof(TipoUsuario), Lector.ReadString())
                     };
 
@@ -108,8 +111,6 @@ namespace HuellasDeEsperanzaC_.Servicio
                 }
             }
         }
-
-        // Login
 
         public void VerificarUsuario(string correoVerificar, string contrasenaVerificar, List<Usuario> usuarios, Form formulario)
         {
