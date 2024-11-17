@@ -194,5 +194,10 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             // Envía un mensaje para iniciar el arrastre de la ventana
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

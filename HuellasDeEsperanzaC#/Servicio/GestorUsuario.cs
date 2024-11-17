@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using HuellasDeEsperanzaC_.FormsTOH;
 using System.Windows.Forms;
 using HuellasDeEsperanzaC_.Models;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace HuellasDeEsperanzaC_.Servicio
 {
@@ -22,10 +21,10 @@ namespace HuellasDeEsperanzaC_.Servicio
 
             if (esEdicion)
             {
-                // Buscar y actualizar el usuario existente segun los datos cargados
+                // Buscar y actualizar el usuario existente según los datos cargados
                 for (int i = 0; i < usuarios.Count; i++)
                 {
-                    if (usuarios[i].CorreoElectronico == usuario.CorreoElectronico)
+                    if (usuarios[i].Id == usuario.Id)
                     {
                         usuarios[i] = usuario;
                         break;
@@ -40,17 +39,52 @@ namespace HuellasDeEsperanzaC_.Servicio
             using (FileStream mArchivoEscritor = new FileStream("datos.dat", FileMode.Create, FileAccess.Write))
             using (BinaryWriter Escritor = new BinaryWriter(mArchivoEscritor))
             {
-                foreach (var usr in usuarios)
+                for (int i = 0; i < usuarios.Count; i++)
                 {
-                    Escritor.Write(usr.NombreCompleto ?? string.Empty);
-                    Escritor.Write(usr.CorreoElectronico ?? string.Empty);
-                    Escritor.Write(usr.HashContrasena ?? string.Empty);
-                    Escritor.Write(usr.Direccion ?? string.Empty);
-                    Escritor.Write(usr.NumeroTelefono ?? string.Empty);
-                    Escritor.Write(usr.Descripcion ?? string.Empty);
-                    Escritor.Write(usr.NumeroCedula ?? string.Empty);
-                    Escritor.Write(usr.Ocupacion ?? string.Empty);
-                    Escritor.Write(usr.Tipo.ToString() ?? string.Empty);
+                    if (usuarios[i].NombreCompleto != null)
+                        Escritor.Write(usuarios[i].NombreCompleto);
+                    else
+                        Escritor.Write(string.Empty);
+
+                    if (usuarios[i].CorreoElectronico != null)
+                        Escritor.Write(usuarios[i].CorreoElectronico);
+                    else
+                        Escritor.Write(string.Empty);
+
+                    if (usuarios[i].HashContrasena != null)
+                        Escritor.Write(usuarios[i].HashContrasena);
+                    else
+                        Escritor.Write(string.Empty);
+
+                    if (usuarios[i].Direccion != null)
+                        Escritor.Write(usuarios[i].Direccion);
+                    else
+                        Escritor.Write(string.Empty);
+
+                    if (usuarios[i].NumeroTelefono != null)
+                        Escritor.Write(usuarios[i].NumeroTelefono);
+                    else
+                        Escritor.Write(string.Empty);
+
+                    if (usuarios[i].Descripcion != null)
+                        Escritor.Write(usuarios[i].Descripcion);
+                    else
+                        Escritor.Write(string.Empty);
+
+                    if (usuarios[i].NumeroCedula != null)
+                        Escritor.Write(usuarios[i].NumeroCedula);
+                    else
+                        Escritor.Write(string.Empty);
+
+                    if (usuarios[i].Ocupacion != null)
+                        Escritor.Write(usuarios[i].Ocupacion);
+                    else
+                        Escritor.Write(string.Empty);
+
+                    if (usuarios[i].Tipo.ToString() != null)
+                        Escritor.Write(usuarios[i].Tipo.ToString());
+                    else
+                        Escritor.Write(string.Empty);
                 }
             }
 

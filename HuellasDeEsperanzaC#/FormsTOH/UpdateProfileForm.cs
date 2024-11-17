@@ -1,0 +1,128 @@
+﻿using HuellasDeEsperanzaC_.Models;
+using HuellasDeEsperanzaC_.Servicio;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace HuellasDeEsperanzaC_.FormsTOH
+{
+    public partial class ConfiguracionForm : Form
+    {
+        private Usuario usuarioActual;
+
+        public ConfiguracionForm(Usuario usuario)
+        {
+            InitializeComponent();
+            this.usuarioActual = usuario;
+            MostrarDatosUsuario();
+        }
+
+        private void MostrarDatosUsuario()
+        {
+            tbNombreCompleto.Texts = usuarioActual.NombreCompleto;
+            tbEmail.Texts = usuarioActual.CorreoElectronico;
+            tbDireccion.Texts = usuarioActual.Direccion;
+            tbNumeroTelefono.Texts = usuarioActual.NumeroTelefono;
+            tbNumeroCedula.Texts = usuarioActual.NumeroCedula;
+            tbOcupacion.Texts = usuarioActual.Ocupacion;
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            string nombreCompleto = tbNombreCompleto.Texts.Trim();
+            string correo = tbEmail.Texts.Trim();
+            string direccion = tbDireccion.Texts.Trim();
+            string numeroTelefono = tbNumeroTelefono.Texts.Trim();
+            string numeroCedula = tbNumeroCedula.Texts.Trim();
+            string ocupacion = tbOcupacion.Texts.Trim();
+
+            if (string.IsNullOrEmpty(nombreCompleto) &&
+                string.IsNullOrEmpty(correo) &&
+                string.IsNullOrEmpty(direccion) &&
+                string.IsNullOrEmpty(numeroTelefono) &&
+                string.IsNullOrEmpty(numeroCedula) &&
+                string.IsNullOrEmpty(ocupacion))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "No hay cambios para guardar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            bool hayCambios = false;
+
+            if (nombreCompleto != usuarioActual.NombreCompleto ||
+                direccion != usuarioActual.Direccion ||
+                numeroTelefono != usuarioActual.NumeroTelefono ||
+                numeroCedula != usuarioActual.NumeroCedula ||
+                ocupacion != usuarioActual.Ocupacion)
+            {
+                usuarioActual.CompletarPerfil(nombreCompleto, direccion, numeroTelefono, numeroCedula, ocupacion);
+                hayCambios = true;
+            }
+
+            if (correo != usuarioActual.CorreoElectronico)
+            {
+                usuarioActual.CorreoElectronico = correo;
+                hayCambios = true;
+            }
+
+            if (!hayCambios)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "No hay cambios para guardar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            GestorUsuario gestorUsuario = new GestorUsuario();
+            gestorUsuario.ActualizarUsuario(usuarioActual, this);
+
+            this.Close();
+        }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            HomeGeneralForm homeForm = new HomeGeneralForm(usuarioActual);
+            homeForm.Show();
+            this.Close();
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblNumeroTelefono_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblDireccion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblOcupacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumeroCedula_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
