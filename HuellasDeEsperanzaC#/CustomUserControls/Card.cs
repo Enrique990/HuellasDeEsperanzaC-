@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HuellasDeEsperanzaC_.Models;
+using HuellasDeEsperanzaC_.Servicio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,17 +20,16 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
         private int borderRadius = 30;
         private int borderSize = 0;
         private Color borderColor = Color.White;
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+        private GestorAdopcion gestorAdopcion;
+        private int usuarioId;
+        private int mascotaId;
 
-        }
-
-        public Card()
+        public Card(int usuarioId, int mascotaId)
         {
             InitializeComponent();
             this.AutoSize = false;
             this.AutoScaleMode = AutoScaleMode.None;
-            this.Size = new Size(240, 300); 
+            this.Size = new Size(240, 300);
 
             this.MinimumSize = new Size(240, 300);
             this.MaximumSize = new Size(240, 300);
@@ -36,6 +37,10 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
             this.panel1.AutoSize = false;
             this.panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left;
             this.panel1.BackColor = Color.White;
+
+            this.usuarioId = usuarioId;
+            this.mascotaId = mascotaId;
+            this.gestorAdopcion = new GestorAdopcion();
         }
 
         public int BorderRadius
@@ -64,7 +69,7 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
 
         protected override void SetBoundsCore(int x, int y, int width, int height, BoundsSpecified specified)
         {
-            base.SetBoundsCore(x, y, 240, 300, specified); 
+            base.SetBoundsCore(x, y, 240, 300, specified);
         }
 
         protected override void OnPaint(PaintEventArgs pevent)
@@ -125,19 +130,13 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
 
         private void roundButton1_Click(object sender, EventArgs e)
         {
-            OnSelect?.Invoke(this, e);
+            if (OnSelect != null)
+            {
+                OnSelect(this, e);
+            }
+
+            gestorAdopcion.CrearSolicitudAdopcion(usuarioId, mascotaId);
         }
-
-        //public enum Estado
-        //{
-        //    Disponible, EnEspera, Adoptado
-        //}
-
-        //public Estado EstadoMascota
-        //{
-        //    get { return EstadoMascota; }
-        //    set { EstadoMascota = value; }
-        //}
 
         public string CardNombreMascota
         {
@@ -165,6 +164,11 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
         {
             get { return circlePictureBox1.Image; }
             set { circlePictureBox1.Image = value; }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
     }

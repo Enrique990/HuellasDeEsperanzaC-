@@ -1,6 +1,6 @@
 ﻿namespace HuellasDeEsperanzaC_.FormsTOH
 {
-    partial class HomeGeneralForm
+    partial class WaitingListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeGeneralForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.button8 = new System.Windows.Forms.Button();
@@ -45,22 +44,24 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.tutorialCard3 = new HuellasDeEsperanzaC_.CustomUserControls.TutorialCard();
-            this.tutorialCard2 = new HuellasDeEsperanzaC_.CustomUserControls.TutorialCard();
-            this.tutorialCard1 = new HuellasDeEsperanzaC_.CustomUserControls.TutorialCard();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDescripcionM = new System.Windows.Forms.Label();
+            this.lblEspecieM = new System.Windows.Forms.Label();
+            this.lblFechaNacM = new System.Windows.Forms.Label();
+            this.lblSexoM = new System.Windows.Forms.Label();
+            this.lblRazaM = new System.Windows.Forms.Label();
+            this.lblNombreM = new System.Windows.Forms.Label();
+            this.pbCircleMascota = new HuellasDeEsperanzaC_.CustomUserControls.CirclePictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblEstadoLista = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbCircleMascota)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,7 +81,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(280, 760);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // btnCerrarSesion
             // 
@@ -96,7 +97,6 @@
             this.btnCerrarSesion.TabIndex = 4;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.roundButton1_Click);
             // 
             // button8
             // 
@@ -108,12 +108,11 @@
             this.button8.Size = new System.Drawing.Size(47, 43);
             this.button8.TabIndex = 1;
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.panel4.Location = new System.Drawing.Point(1, 39);
+            this.panel4.Location = new System.Drawing.Point(0, 258);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(15, 67);
             this.panel4.TabIndex = 3;
@@ -134,7 +133,7 @@
             this.btnConfiguracion.Text = "    Configuración";
             this.btnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConfiguracion.UseVisualStyleBackColor = true;
-            this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click_1);
+            this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
             // 
             // button6
             // 
@@ -249,8 +248,7 @@
             this.panel2.Location = new System.Drawing.Point(280, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1031, 36);
-            this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.TabIndex = 2;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // panel6
@@ -306,6 +304,17 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
+            this.label1.Location = new System.Drawing.Point(441, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(303, 32);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Mis Solicitudes en Espera";
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(192)))), ((int)(((byte)(184)))));
@@ -313,7 +322,7 @@
             this.panel3.Location = new System.Drawing.Point(299, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(122, 116);
-            this.panel3.TabIndex = 2;
+            this.panel3.TabIndex = 4;
             // 
             // pictureBox1
             // 
@@ -325,136 +334,138 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // lblDescripcionM
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.label1.Location = new System.Drawing.Point(441, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 32);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "¡Bienvenidos a Huellas de Esperanza!";
+            this.lblDescripcionM.AutoSize = true;
+            this.lblDescripcionM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcionM.ForeColor = System.Drawing.Color.White;
+            this.lblDescripcionM.Location = new System.Drawing.Point(727, 428);
+            this.lblDescripcionM.Name = "lblDescripcionM";
+            this.lblDescripcionM.Size = new System.Drawing.Size(106, 18);
+            this.lblDescripcionM.TabIndex = 46;
+            this.lblDescripcionM.Text = "Descripción:";
             // 
-            // listBox1
+            // lblEspecieM
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(409, 590);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(406, 134);
-            this.listBox1.TabIndex = 4;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lblEspecieM.AutoSize = true;
+            this.lblEspecieM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspecieM.ForeColor = System.Drawing.Color.White;
+            this.lblEspecieM.Location = new System.Drawing.Point(727, 288);
+            this.lblEspecieM.Name = "lblEspecieM";
+            this.lblEspecieM.Size = new System.Drawing.Size(75, 18);
+            this.lblEspecieM.TabIndex = 45;
+            this.lblEspecieM.Text = "Especie:";
             // 
-            // panel5
+            // lblFechaNacM
             // 
-            this.panel5.Controls.Add(this.tutorialCard3);
-            this.panel5.Controls.Add(this.tutorialCard2);
-            this.panel5.Controls.Add(this.tutorialCard1);
-            this.panel5.Location = new System.Drawing.Point(409, 182);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(798, 360);
-            this.panel5.TabIndex = 5;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint_1);
+            this.lblFechaNacM.AutoSize = true;
+            this.lblFechaNacM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNacM.ForeColor = System.Drawing.Color.White;
+            this.lblFechaNacM.Location = new System.Drawing.Point(727, 393);
+            this.lblFechaNacM.Name = "lblFechaNacM";
+            this.lblFechaNacM.Size = new System.Drawing.Size(183, 18);
+            this.lblFechaNacM.TabIndex = 44;
+            this.lblFechaNacM.Text = "Fecha de Nacimiento:";
             // 
-            // tutorialCard3
+            // lblSexoM
             // 
-            this.tutorialCard3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tutorialCard3.BorderColor = System.Drawing.Color.White;
-            this.tutorialCard3.BorderRadius = 30;
-            this.tutorialCard3.BorderSize = 0;
-            this.tutorialCard3.Descripcion = "Encuentra a tu compañero perfecto entre nuestras mascotas en adopción.";
-            this.tutorialCard3.Imagen = global::HuellasDeEsperanzaC_.Properties.Resources.iconoDonacionHD;
-            this.tutorialCard3.Location = new System.Drawing.Point(536, 30);
-            this.tutorialCard3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tutorialCard3.MaximumSize = new System.Drawing.Size(240, 300);
-            this.tutorialCard3.MinimumSize = new System.Drawing.Size(240, 300);
-            this.tutorialCard3.Name = "tutorialCard3";
-            this.tutorialCard3.Size = new System.Drawing.Size(240, 300);
-            this.tutorialCard3.TabIndex = 2;
-            this.tutorialCard3.Titulo = "¿Cómo Donar?";
+            this.lblSexoM.AutoSize = true;
+            this.lblSexoM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexoM.ForeColor = System.Drawing.Color.White;
+            this.lblSexoM.Location = new System.Drawing.Point(727, 323);
+            this.lblSexoM.Name = "lblSexoM";
+            this.lblSexoM.Size = new System.Drawing.Size(55, 18);
+            this.lblSexoM.TabIndex = 43;
+            this.lblSexoM.Text = "Sexo:";
             // 
-            // tutorialCard2
+            // lblRazaM
             // 
-            this.tutorialCard2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tutorialCard2.BorderColor = System.Drawing.Color.White;
-            this.tutorialCard2.BorderRadius = 30;
-            this.tutorialCard2.BorderSize = 0;
-            this.tutorialCard2.Descripcion = "Encuentra a tu compañero perfecto entre nuestras mascotas en adopción.";
-            this.tutorialCard2.Imagen = global::HuellasDeEsperanzaC_.Properties.Resources.iconoVoluntariadoHD;
-            this.tutorialCard2.Location = new System.Drawing.Point(278, 30);
-            this.tutorialCard2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tutorialCard2.MaximumSize = new System.Drawing.Size(240, 300);
-            this.tutorialCard2.MinimumSize = new System.Drawing.Size(240, 300);
-            this.tutorialCard2.Name = "tutorialCard2";
-            this.tutorialCard2.Size = new System.Drawing.Size(240, 300);
-            this.tutorialCard2.TabIndex = 1;
-            this.tutorialCard2.Titulo = "¿Ser Voluntario?";
+            this.lblRazaM.AutoSize = true;
+            this.lblRazaM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRazaM.ForeColor = System.Drawing.Color.White;
+            this.lblRazaM.Location = new System.Drawing.Point(727, 358);
+            this.lblRazaM.Name = "lblRazaM";
+            this.lblRazaM.Size = new System.Drawing.Size(55, 18);
+            this.lblRazaM.TabIndex = 42;
+            this.lblRazaM.Text = "Raza:";
             // 
-            // tutorialCard1
+            // lblNombreM
             // 
-            this.tutorialCard1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tutorialCard1.BorderColor = System.Drawing.Color.White;
-            this.tutorialCard1.BorderRadius = 30;
-            this.tutorialCard1.BorderSize = 0;
-            this.tutorialCard1.Descripcion = "Encuentra a tu compañero perfecto entre nuestras mascotas en adopción.";
-            this.tutorialCard1.Imagen = ((System.Drawing.Image)(resources.GetObject("tutorialCard1.Imagen")));
-            this.tutorialCard1.Location = new System.Drawing.Point(20, 27);
-            this.tutorialCard1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tutorialCard1.MaximumSize = new System.Drawing.Size(240, 300);
-            this.tutorialCard1.MinimumSize = new System.Drawing.Size(240, 300);
-            this.tutorialCard1.Name = "tutorialCard1";
-            this.tutorialCard1.Size = new System.Drawing.Size(240, 300);
-            this.tutorialCard1.TabIndex = 0;
-            this.tutorialCard1.Titulo = "¿Cómo Adoptar?";
+            this.lblNombreM.AutoSize = true;
+            this.lblNombreM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreM.ForeColor = System.Drawing.Color.White;
+            this.lblNombreM.Location = new System.Drawing.Point(727, 253);
+            this.lblNombreM.Name = "lblNombreM";
+            this.lblNombreM.Size = new System.Drawing.Size(79, 18);
+            this.lblNombreM.TabIndex = 41;
+            this.lblNombreM.Text = "Nombre:";
             // 
-            // label2
+            // pbCircleMascota
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.label2.Location = new System.Drawing.Point(354, 158);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(908, 21);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "\"Nuestra misión es conectar a animales necesitados con familias amorosas, y apoya" +
-    "r a las organizaciones que los cuidan.\"";
+            this.pbCircleMascota.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbCircleMascota.Image = global::HuellasDeEsperanzaC_.Properties.Resources.agregarImagenIconoFULLHD2;
+            this.pbCircleMascota.Location = new System.Drawing.Point(376, 216);
+            this.pbCircleMascota.Name = "pbCircleMascota";
+            this.pbCircleMascota.Size = new System.Drawing.Size(300, 300);
+            this.pbCircleMascota.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCircleMascota.TabIndex = 40;
+            this.pbCircleMascota.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.label3.Location = new System.Drawing.Point(405, 566);
+            this.label3.Location = new System.Drawing.Point(373, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 21);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Datos del Usuario:";
+            this.label3.Size = new System.Drawing.Size(97, 32);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "Estado:";
             // 
-            // HomeGeneralForm
+            // lblEstadoLista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.lblEstadoLista.AutoSize = true;
+            this.lblEstadoLista.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoLista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
+            this.lblEstadoLista.Location = new System.Drawing.Point(479, 161);
+            this.lblEstadoLista.Name = "lblEstadoLista";
+            this.lblEstadoLista.Size = new System.Drawing.Size(76, 32);
+            this.lblEstadoLista.TabIndex = 48;
+            this.lblEstadoLista.Text = "Texto";
+            // 
+            // WaitingListForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1311, 760);
+            this.Controls.Add(this.lblEstadoLista);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lblDescripcionM);
+            this.Controls.Add(this.lblEspecieM);
+            this.Controls.Add(this.lblFechaNacM);
+            this.Controls.Add(this.lblSexoM);
+            this.Controls.Add(this.lblRazaM);
+            this.Controls.Add(this.lblNombreM);
+            this.Controls.Add(this.pbCircleMascota);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "HomeGeneralForm";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "WaitingListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "HomeGeneralForm";
-            this.Load += new System.EventHandler(this.HomeGeneralForm_Load);
+            this.Text = "WaitingListForm";
+            this.Load += new System.EventHandler(this.WaitingListForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbCircleMascota)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -463,30 +474,32 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private CustomUserControls.RoundButton btnCerrarSesion;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnConfiguracion;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button8;
-        private CustomUserControls.RoundButton btnCerrarSesion;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label2;
-        private CustomUserControls.TutorialCard tutorialCard1;
-        private CustomUserControls.TutorialCard tutorialCard3;
-        private CustomUserControls.TutorialCard tutorialCard2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblDescripcionM;
+        private System.Windows.Forms.Label lblEspecieM;
+        private System.Windows.Forms.Label lblFechaNacM;
+        private System.Windows.Forms.Label lblSexoM;
+        private System.Windows.Forms.Label lblRazaM;
+        private System.Windows.Forms.Label lblNombreM;
+        private CustomUserControls.CirclePictureBox pbCircleMascota;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblEstadoLista;
     }
 }

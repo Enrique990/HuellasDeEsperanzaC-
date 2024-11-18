@@ -63,14 +63,38 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 imagenMascota = Image.FromFile(rutaImagenPredeterminada);
             }
 
-            flowLayoutPanel1.Controls.Add(new Card()
+            Card card = new Card(usuarioActual.Id, mascota.Id)
             {
                 CardNombreMascota = mascota.Nombre,
                 CardRaza = mascota.Raza,
                 CardEdad = mascota.FechaNacimiento.ToString("dd/MM/yyyy"),
                 CardSexo = mascota.Sexo,
                 CardImagen = imagenMascota,
-            });
+            };
+
+            card.OnSelect += Card_OnSelect;
+
+            flowLayoutPanel1.Controls.Add(card);
+        }
+
+        private void Card_OnSelect(object sender, EventArgs e)
+        {
+            Card selectedCard = sender as Card;
+            if (selectedCard != null)
+            {
+                Mascota mascota = new Mascota
+                {
+                    Id = selectedCard.MascotaId,
+                    Nombre = selectedCard.CardNombreMascota,
+                    Raza = selectedCard.CardRaza,
+                    Sexo = selectedCard.CardSexo,
+                    FechaNacimiento = DateTime.Parse(selectedCard.CardEdad),
+                    RutaImagen = selectedCard.CardImagen.ToString()
+                };
+
+                usuarioActual.MascotasAdoptadas.Add(mascota);
+                MessageBox.Show("Solicitud de adopción creada con éxito.");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -109,7 +133,6 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             WindowState = FormWindowState.Minimized;
         }
 
-
         // Constantes para manejar el arrastre de la ventana
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -117,7 +140,6 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         public static extern bool ReleaseCapture();
         [DllImport("User32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
-
 
         // Método para permitir arrastrar la ventana desde el panel2
         private void panel2_MouseDown(object sender, MouseEventArgs e)
