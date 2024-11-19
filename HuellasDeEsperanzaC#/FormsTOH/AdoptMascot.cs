@@ -18,11 +18,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
     public partial class AdoptMascot : Form
     {
         private Usuario usuarioActual;
+        private GestorAdopcion gestorAdopcionUser;
 
-        public AdoptMascot(Usuario usuario)
+        public AdoptMascot(Usuario usuario, GestorAdopcion gestorAdopcion)
         {
             InitializeComponent();
             this.usuarioActual = usuario;
+            this.gestorAdopcionUser = gestorAdopcion;
         }
 
         private void AdoptMascot_Load(object sender, EventArgs e)
@@ -99,14 +101,14 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void button1_Click(object sender, EventArgs e)
         {
-            HomeGeneralForm homeGeneralForm = new HomeGeneralForm(usuarioActual);
+            HomeGeneralForm homeGeneralForm = new HomeGeneralForm(usuarioActual, gestorAdopcionUser);
             homeGeneralForm.Show();
             this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AddMascot addMascot = new AddMascot(usuarioActual);
+            AddMascot addMascot = new AddMascot(usuarioActual, gestorAdopcionUser);
             addMascot.Show();
             this.Hide();
         }
@@ -165,6 +167,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         private void button9_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            WaitingListForm waitingListForm = new WaitingListForm(usuarioActual, gestorAdopcionUser);
+            waitingListForm.Show();
+            this.Hide();
         }
     }
 }

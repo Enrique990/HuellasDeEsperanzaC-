@@ -186,6 +186,7 @@
             this.button4.Text = "   Mi Lista de Espera";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -365,7 +366,7 @@
             this.tutorialCard3.Descripcion = "Encuentra a tu compañero perfecto entre nuestras mascotas en adopción.";
             this.tutorialCard3.Imagen = global::HuellasDeEsperanzaC_.Properties.Resources.iconoDonacionHD;
             this.tutorialCard3.Location = new System.Drawing.Point(536, 30);
-            this.tutorialCard3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tutorialCard3.Margin = new System.Windows.Forms.Padding(4);
             this.tutorialCard3.MaximumSize = new System.Drawing.Size(240, 300);
             this.tutorialCard3.MinimumSize = new System.Drawing.Size(240, 300);
             this.tutorialCard3.Name = "tutorialCard3";
@@ -382,7 +383,7 @@
             this.tutorialCard2.Descripcion = "Encuentra a tu compañero perfecto entre nuestras mascotas en adopción.";
             this.tutorialCard2.Imagen = global::HuellasDeEsperanzaC_.Properties.Resources.iconoVoluntariadoHD;
             this.tutorialCard2.Location = new System.Drawing.Point(278, 30);
-            this.tutorialCard2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tutorialCard2.Margin = new System.Windows.Forms.Padding(4);
             this.tutorialCard2.MaximumSize = new System.Drawing.Size(240, 300);
             this.tutorialCard2.MinimumSize = new System.Drawing.Size(240, 300);
             this.tutorialCard2.Name = "tutorialCard2";
@@ -399,7 +400,7 @@
             this.tutorialCard1.Descripcion = "Encuentra a tu compañero perfecto entre nuestras mascotas en adopción.";
             this.tutorialCard1.Imagen = ((System.Drawing.Image)(resources.GetObject("tutorialCard1.Imagen")));
             this.tutorialCard1.Location = new System.Drawing.Point(20, 27);
-            this.tutorialCard1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tutorialCard1.Margin = new System.Windows.Forms.Padding(4);
             this.tutorialCard1.MaximumSize = new System.Drawing.Size(240, 300);
             this.tutorialCard1.MinimumSize = new System.Drawing.Size(240, 300);
             this.tutorialCard1.Name = "tutorialCard1";

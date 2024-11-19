@@ -1,4 +1,6 @@
-﻿using HuellasDeEsperanzaC_.Models;
+﻿using HuellasDeEsperanzaC_.CustomUserControls;
+using HuellasDeEsperanzaC_.Models;
+using HuellasDeEsperanzaC_.Servicio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,11 +18,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
     public partial class WaitingListForm : Form
     {
         private Usuario usuarioActual;
+        private GestorAdopcion gestorAdopcionUser;
 
-        public WaitingListForm(Usuario usuario)
+        public WaitingListForm(Usuario usuario, GestorAdopcion gestorAdopcion)
         {
             InitializeComponent();
             this.usuarioActual = usuario;
+            this.gestorAdopcionUser = gestorAdopcion;
         }
 
         private void WaitingListForm_Load(object sender, EventArgs e)
@@ -30,9 +34,11 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void CargarMascotaEnEspera()
         {
-            if (usuarioActual.MascotasAdoptadas.Count > 0)
+            if (gestorAdopcionUser.SolicitudesAdopcion.Count > 0)
             {
-                Mascota mascotaEnEspera = usuarioActual.MascotasAdoptadas[0]; // Asumiendo que solo hay una mascota en espera
+                SolicitudAdopcion solicitudEnEspera = gestorAdopcionUser.SolicitudesAdopcion[0]; // Una solicitud en espera
+                Mascota mascotaEnEspera = gestorAdopcionUser.ObtenerMascotaPorId(solicitudEnEspera.MascotaId);
+                Usuario usuarioSolicitante = gestorAdopcionUser.ObtenerUsuarioPorId(solicitudEnEspera.UsuarioId);
 
                 lblEstadoLista.Text = "En espera";
                 lblNombreM.Text = mascotaEnEspera.Nombre;
@@ -56,7 +62,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             }
             else
             {
-                lblEstadoLista.Text = "No hay mascotas en espera";
+                lblEstadoLista.Text = "No hay solicitudes de adopción en espera";
                 lblNombreM.Text = string.Empty;
                 lblEspecieM.Text = string.Empty;
                 lblSexoM.Text = string.Empty;
@@ -69,28 +75,28 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void button1_Click(object sender, EventArgs e)
         {
-            HomeGeneralForm homeGeneralForm = new HomeGeneralForm(usuarioActual);
+            HomeGeneralForm homeGeneralForm = new HomeGeneralForm(usuarioActual, gestorAdopcionUser);
             homeGeneralForm.Show();
             this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AdoptMascot adoptMascot = new AdoptMascot(usuarioActual);
+            AdoptMascot adoptMascot = new AdoptMascot(usuarioActual, gestorAdopcionUser);
             adoptMascot.Show();
             this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AddMascot addMascot = new AddMascot(usuarioActual);
+            AddMascot addMascot = new AddMascot(usuarioActual, gestorAdopcionUser);
             addMascot.Show();
             this.Close();
         }
 
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
-            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual);
+            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorAdopcionUser);
             configuracionForm.Show();
             this.Close();
         }

@@ -1,4 +1,5 @@
 ﻿using HuellasDeEsperanzaC_.Models;
+using HuellasDeEsperanzaC_.Servicio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,17 +16,19 @@ namespace HuellasDeEsperanzaC_.FormsTOH
     public partial class HomeGeneralForm : Form
     {
         private Usuario usuarioActual;
+        private GestorAdopcion gestorAdopcionUser;
 
-        public HomeGeneralForm(Usuario usuario)
+        public HomeGeneralForm(Usuario usuario, GestorAdopcion gestorAdopcion)
         {
             InitializeComponent();
             this.usuarioActual = usuario;
+            this.gestorAdopcionUser = gestorAdopcion;
             showUsuario();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AdoptMascot adoptMascot = new AdoptMascot(usuarioActual);
+            AdoptMascot adoptMascot = new AdoptMascot(usuarioActual, gestorAdopcionUser);
             adoptMascot.Show();
             this.Hide();
         }
@@ -78,7 +81,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void button3_Click(object sender, EventArgs e)
         {
-            AddMascot addMascot = new AddMascot(usuarioActual);
+            AddMascot addMascot = new AddMascot(usuarioActual, gestorAdopcionUser);
             addMascot.Show();
             this.Hide();
         }
@@ -130,7 +133,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void btnConfiguracion_Click_1(object sender, EventArgs e)
         {
-            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual);
+            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorAdopcionUser);
             configuracionForm.Show();
             this.Hide();
         }
@@ -143,6 +146,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            WaitingListForm waitingListForm = new WaitingListForm(usuarioActual, gestorAdopcionUser);
+            waitingListForm.Show();
+            this.Hide();
         }
     }
 }

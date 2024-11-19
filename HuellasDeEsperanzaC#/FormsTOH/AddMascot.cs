@@ -17,12 +17,14 @@ namespace HuellasDeEsperanzaC_.FormsTOH
     public partial class AddMascot : Form
     {
         private Usuario usuarioActual;
+        private GestorAdopcion gestorAdopcionUser;
         private string rutaImagenSeleccionada;
 
-        public AddMascot(Usuario usuario)
+        public AddMascot(Usuario usuario, GestorAdopcion gestorAdopcion)
         {
             InitializeComponent();
             this.usuarioActual = usuario;
+            this.gestorAdopcionUser = gestorAdopcion;
         }
 
         private void UserProfile_Load(object sender, EventArgs e)
@@ -37,7 +39,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void button1_Click(object sender, EventArgs e)
         {
-            HomeGeneralForm homeGeneralForm = new HomeGeneralForm(usuarioActual);
+            HomeGeneralForm homeGeneralForm = new HomeGeneralForm(usuarioActual, gestorAdopcionUser);
             homeGeneralForm.Show();
             this.Close();
         }
@@ -116,14 +118,14 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 gestorMascota.RegistrarMascota(mascota, this);
             }
 
-            HomeGeneralForm homeGeneralForm = new HomeGeneralForm(usuarioActual);
+            HomeGeneralForm homeGeneralForm = new HomeGeneralForm(usuarioActual, gestorAdopcionUser);
             homeGeneralForm.Show();
             this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AdoptMascot adoptMascot = new AdoptMascot(usuarioActual);
+            AdoptMascot adoptMascot = new AdoptMascot(usuarioActual, gestorAdopcionUser);
             adoptMascot.Show();
             this.Close();
         }
@@ -173,6 +175,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         private void button9_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            WaitingListForm waitingListForm = new WaitingListForm(usuarioActual, gestorAdopcionUser);
+            waitingListForm.Show();
+            this.Close();
         }
     }
 }

@@ -1,14 +1,10 @@
 ﻿using HuellasDeEsperanzaC_.Models;
 using HuellasDeEsperanzaC_.Servicio;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace HuellasDeEsperanzaC_.CustomUserControls
@@ -22,7 +18,8 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
         private Color borderColor = Color.White;
         private GestorAdopcion gestorAdopcion;
         private int usuarioId;
-        private int mascotaId;
+
+        public int MascotaId { get; set; }
 
         public Card(int usuarioId, int mascotaId)
         {
@@ -39,8 +36,44 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
             this.panel1.BackColor = Color.White;
 
             this.usuarioId = usuarioId;
-            this.mascotaId = mascotaId;
+            this.MascotaId = mascotaId;
             this.gestorAdopcion = new GestorAdopcion();
+
+            CargarDatosMascota();
+        }
+
+        private void CargarDatosMascota()
+        {
+            Mascota mascota = gestorAdopcion.ObtenerMascotaPorId(MascotaId);
+            if (mascota != null)
+            {
+                CardNombreMascota = mascota.Nombre;
+                CardRaza = mascota.Raza;
+                CardEdad = mascota.FechaNacimiento.ToString("dd/MM/yyyy");
+                CardSexo = mascota.Sexo;
+                CardImagen = CargarImagenMascota(mascota.RutaImagen);
+            }
+        }
+
+        private Image CargarImagenMascota(string rutaImagen)
+        {
+            try
+            {
+                string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                string fullPath = Path.Combine(projectDirectory, rutaImagen);
+                if (string.IsNullOrEmpty(rutaImagen) || !File.Exists(fullPath))
+                {
+                    throw new FileNotFoundException();
+                }
+
+                return Image.FromFile(fullPath);
+            }
+            catch (Exception)
+            {
+                // Ruta de la imagen predeterminada
+                string rutaImagenPredeterminada = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\icons8-pets-50.png");
+                return Image.FromFile(rutaImagenPredeterminada);
+            }
         }
 
         public int BorderRadius
@@ -135,7 +168,7 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
                 OnSelect(this, e);
             }
 
-            gestorAdopcion.CrearSolicitudAdopcion(usuarioId, mascotaId);
+            gestorAdopcion.CrearSolicitudAdopcion(usuarioId, MascotaId);
         }
 
         public string CardNombreMascota
@@ -170,6 +203,5 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
         {
 
         }
-
     }
 }

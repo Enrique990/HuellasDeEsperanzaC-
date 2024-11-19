@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using HuellasDeEsperanzaC_.FormsTOH;
 using System.Windows.Forms;
 using HuellasDeEsperanzaC_.Models;
+using HuellasDeEsperanzaC_.Servicio;
 
 namespace HuellasDeEsperanzaC_.Servicio
 {
@@ -14,7 +15,7 @@ namespace HuellasDeEsperanzaC_.Servicio
     {
         // Registro
 
-        public void RegistrarUsuario(Usuario usuario, Form formulario, bool esEdicion = false)
+        public void RegistrarUsuario(Usuario usuario, Form formulario, GestorAdopcion gestorAdopcion, bool esEdicion = false)
         {
             List<Usuario> usuarios = new List<Usuario>();
             CargarDatosUsuarios(usuarios);
@@ -104,14 +105,14 @@ namespace HuellasDeEsperanzaC_.Servicio
 
             MetroFramework.MetroMessageBox.Show(formulario, mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            HomeGeneralForm Home = new HomeGeneralForm(usuario);
+            HomeGeneralForm Home = new HomeGeneralForm(usuario, gestorAdopcion);
             Home.Show();
             formulario.Hide();
         }
 
-        public void ActualizarUsuario(Usuario usuario, Form formulario)
+        public void ActualizarUsuario(Usuario usuario, Form formulario, GestorAdopcion gestorAdopcion)
         {
-            RegistrarUsuario(usuario, formulario, true);
+            RegistrarUsuario(usuario, formulario, gestorAdopcion, true);
         }
 
         public void CargarDatosUsuarios(List<Usuario> usuarios)
@@ -146,14 +147,14 @@ namespace HuellasDeEsperanzaC_.Servicio
             }
         }
 
-        public void VerificarUsuario(string correoVerificar, string contrasenaVerificar, List<Usuario> usuarios, Form formulario)
+        public void VerificarUsuario(string correoVerificar, string contrasenaVerificar, List<Usuario> usuarios, Form formulario, GestorAdopcion gestorAdopcion)
         {
             for (int i = 0; i < usuarios.Count; i++)
             {
                 if (usuarios[i].CorreoElectronico == correoVerificar && usuarios[i].VerificarContraseña(contrasenaVerificar))
                 {
                     MetroFramework.MetroMessageBox.Show(formulario, "Bienvenido", "Inicio de Sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HomeGeneralForm Home = new HomeGeneralForm(usuarios[i]);
+                    HomeGeneralForm Home = new HomeGeneralForm(usuarios[i], gestorAdopcion);
                     Home.Show();
                     formulario.Hide();
                     return;

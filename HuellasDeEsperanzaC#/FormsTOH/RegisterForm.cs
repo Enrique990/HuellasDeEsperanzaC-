@@ -82,6 +82,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             // TODO: Verificar si usuario existe
 
             Usuario usuario = new Usuario();
+            GestorAdopcion gestorAdopcion = new GestorAdopcion();
             GestorUsuario GestorUsuario = new GestorUsuario();
 
             usuario.NombreCompleto = tbNombreCompleto.Texts;
@@ -113,7 +114,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             }
             else
             {
-                GestorUsuario.RegistrarUsuario(usuario, this);
+                GestorUsuario.RegistrarUsuario(usuario, this, gestorAdopcion);
             }
         }
 

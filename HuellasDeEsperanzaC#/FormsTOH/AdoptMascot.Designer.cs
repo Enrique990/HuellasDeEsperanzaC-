@@ -45,24 +45,20 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.card2 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card3 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card4 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.card13 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -186,6 +182,7 @@
             this.button4.Text = "   Mi Lista de Espera";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -281,112 +278,6 @@
             this.panel2.TabIndex = 4;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.flowLayoutPanel1);
-            this.panel5.Location = new System.Drawing.Point(299, 152);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1000, 571);
-            this.panel5.TabIndex = 8;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.card2);
-            this.flowLayoutPanel1.Controls.Add(this.card3);
-            this.flowLayoutPanel1.Controls.Add(this.card4);
-            this.flowLayoutPanel1.Controls.Add(this.card13);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1000, 571);
-            this.flowLayoutPanel1.TabIndex = 0;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            // 
-            // card2
-            // 
-            this.card2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card2.BackColor = System.Drawing.Color.White;
-            this.card2.BorderColor = System.Drawing.Color.White;
-            this.card2.BorderRadius = 30;
-            this.card2.BorderSize = 0;
-            this.card2.CardEdad = "Nombre de Mascota";
-            this.card2.CardImagen = ((System.Drawing.Image)(resources.GetObject("card2.CardImagen")));
-            this.card2.CardNombreMascota = "Nombre de Mascota";
-            this.card2.CardRaza = "Nombre de Mascota";
-            this.card2.CardSexo = "Nombre de Mascota";
-            this.card2.Location = new System.Drawing.Point(4, 4);
-            this.card2.Margin = new System.Windows.Forms.Padding(4);
-            this.card2.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card2.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card2.Name = "card2";
-            this.card2.Size = new System.Drawing.Size(240, 300);
-            this.card2.TabIndex = 1;
-            // 
-            // card3
-            // 
-            this.card3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card3.BackColor = System.Drawing.Color.White;
-            this.card3.BorderColor = System.Drawing.Color.White;
-            this.card3.BorderRadius = 30;
-            this.card3.BorderSize = 0;
-            this.card3.CardEdad = "Nombre de Mascota";
-            this.card3.CardImagen = ((System.Drawing.Image)(resources.GetObject("card3.CardImagen")));
-            this.card3.CardNombreMascota = "Nombre de Mascota";
-            this.card3.CardRaza = "Nombre de Mascota";
-            this.card3.CardSexo = "Nombre de Mascota";
-            this.card3.Location = new System.Drawing.Point(252, 4);
-            this.card3.Margin = new System.Windows.Forms.Padding(4);
-            this.card3.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card3.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card3.Name = "card3";
-            this.card3.Size = new System.Drawing.Size(240, 300);
-            this.card3.TabIndex = 2;
-            // 
-            // card4
-            // 
-            this.card4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card4.BackColor = System.Drawing.Color.White;
-            this.card4.BorderColor = System.Drawing.Color.White;
-            this.card4.BorderRadius = 30;
-            this.card4.BorderSize = 0;
-            this.card4.CardEdad = "Nombre de Mascota";
-            this.card4.CardImagen = ((System.Drawing.Image)(resources.GetObject("card4.CardImagen")));
-            this.card4.CardNombreMascota = "Nombre de Mascota";
-            this.card4.CardRaza = "Nombre de Mascota";
-            this.card4.CardSexo = "Nombre de Mascota";
-            this.card4.Location = new System.Drawing.Point(500, 4);
-            this.card4.Margin = new System.Windows.Forms.Padding(4);
-            this.card4.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card4.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card4.Name = "card4";
-            this.card4.Size = new System.Drawing.Size(240, 300);
-            this.card4.TabIndex = 3;
-            // 
-            // card13
-            // 
-            this.card13.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.card13.BackColor = System.Drawing.Color.White;
-            this.card13.BorderColor = System.Drawing.Color.White;
-            this.card13.BorderRadius = 30;
-            this.card13.BorderSize = 0;
-            this.card13.CardEdad = "Nombre de Mascota";
-            this.card13.CardImagen = ((System.Drawing.Image)(resources.GetObject("card13.CardImagen")));
-            this.card13.CardNombreMascota = "Nombre de Mascota";
-            this.card13.CardRaza = "Nombre de Mascota";
-            this.card13.CardSexo = "Nombre de Mascota";
-            this.card13.Location = new System.Drawing.Point(748, 4);
-            this.card13.Margin = new System.Windows.Forms.Padding(4);
-            this.card13.MaximumSize = new System.Drawing.Size(240, 300);
-            this.card13.MinimumSize = new System.Drawing.Size(240, 300);
-            this.card13.Name = "card13";
-            this.card13.Size = new System.Drawing.Size(240, 300);
-            this.card13.TabIndex = 12;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.button11);
@@ -440,6 +331,108 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.flowLayoutPanel1);
+            this.panel5.Location = new System.Drawing.Point(299, 152);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1000, 571);
+            this.panel5.TabIndex = 8;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Controls.Add(this.card1);
+            this.flowLayoutPanel1.Controls.Add(this.card2);
+            this.flowLayoutPanel1.Controls.Add(this.card3);
+            this.flowLayoutPanel1.Controls.Add(this.card4);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1000, 571);
+            this.flowLayoutPanel1.TabIndex = 0;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // card1
+            // 
+            this.card1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.card1.BorderColor = System.Drawing.Color.White;
+            this.card1.BorderRadius = 30;
+            this.card1.BorderSize = 0;
+            this.card1.CardEdad = "Nombre de Mascota";
+            this.card1.CardImagen = ((System.Drawing.Image)(resources.GetObject("card1.CardImagen")));
+            this.card1.CardNombreMascota = "Nombre de Mascota";
+            this.card1.CardRaza = "Nombre de Mascota";
+            this.card1.CardSexo = "Nombre de Mascota";
+            this.card1.Location = new System.Drawing.Point(3, 3);
+            this.card1.MascotaId = 0;
+            this.card1.MaximumSize = new System.Drawing.Size(240, 300);
+            this.card1.MinimumSize = new System.Drawing.Size(240, 300);
+            this.card1.Name = "card1";
+            this.card1.Size = new System.Drawing.Size(240, 300);
+            this.card1.TabIndex = 13;
+            // 
+            // card2
+            // 
+            this.card2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.card2.BorderColor = System.Drawing.Color.White;
+            this.card2.BorderRadius = 30;
+            this.card2.BorderSize = 0;
+            this.card2.CardEdad = "Nombre de Mascota";
+            this.card2.CardImagen = ((System.Drawing.Image)(resources.GetObject("card2.CardImagen")));
+            this.card2.CardNombreMascota = "Nombre de Mascota";
+            this.card2.CardRaza = "Nombre de Mascota";
+            this.card2.CardSexo = "Nombre de Mascota";
+            this.card2.Location = new System.Drawing.Point(249, 3);
+            this.card2.MascotaId = 0;
+            this.card2.MaximumSize = new System.Drawing.Size(240, 300);
+            this.card2.MinimumSize = new System.Drawing.Size(240, 300);
+            this.card2.Name = "card2";
+            this.card2.Size = new System.Drawing.Size(240, 300);
+            this.card2.TabIndex = 14;
+            // 
+            // card3
+            // 
+            this.card3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.card3.BorderColor = System.Drawing.Color.White;
+            this.card3.BorderRadius = 30;
+            this.card3.BorderSize = 0;
+            this.card3.CardEdad = "Nombre de Mascota";
+            this.card3.CardImagen = ((System.Drawing.Image)(resources.GetObject("card3.CardImagen")));
+            this.card3.CardNombreMascota = "Nombre de Mascota";
+            this.card3.CardRaza = "Nombre de Mascota";
+            this.card3.CardSexo = "Nombre de Mascota";
+            this.card3.Location = new System.Drawing.Point(495, 3);
+            this.card3.MascotaId = 0;
+            this.card3.MaximumSize = new System.Drawing.Size(240, 300);
+            this.card3.MinimumSize = new System.Drawing.Size(240, 300);
+            this.card3.Name = "card3";
+            this.card3.Size = new System.Drawing.Size(240, 300);
+            this.card3.TabIndex = 15;
+            // 
+            // card4
+            // 
+            this.card4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.card4.BorderColor = System.Drawing.Color.White;
+            this.card4.BorderRadius = 30;
+            this.card4.BorderSize = 0;
+            this.card4.CardEdad = "Nombre de Mascota";
+            this.card4.CardImagen = ((System.Drawing.Image)(resources.GetObject("card4.CardImagen")));
+            this.card4.CardNombreMascota = "Nombre de Mascota";
+            this.card4.CardRaza = "Nombre de Mascota";
+            this.card4.CardSexo = "Nombre de Mascota";
+            this.card4.Location = new System.Drawing.Point(741, 3);
+            this.card4.MascotaId = 0;
+            this.card4.MaximumSize = new System.Drawing.Size(240, 300);
+            this.card4.MinimumSize = new System.Drawing.Size(240, 300);
+            this.card4.Name = "card4";
+            this.card4.Size = new System.Drawing.Size(240, 300);
+            this.card4.TabIndex = 16;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // AdoptMascot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -462,9 +455,9 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,14 +482,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private CustomUserControls.Card card2;
-        private CustomUserControls.Card card3;
-        private CustomUserControls.Card card4;
-        private CustomUserControls.Card card13;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
+        private CustomUserControls.Card card1;
+        private CustomUserControls.Card card2;
+        private CustomUserControls.Card card3;
+        private CustomUserControls.Card card4;
     }
 }

@@ -18,6 +18,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
     public partial class LoginForm : Form
     {
         List<Usuario> usuarios = new List<Usuario>();
+        GestorAdopcion GestorAdopcion = new GestorAdopcion();
         GestorUsuario GestorUsuario = new GestorUsuario();
 
         public LoginForm()
@@ -45,7 +46,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
             GestorUsuario.CargarDatosUsuarios(usuarios);
 
-            GestorUsuario.VerificarUsuario(correoVerificar, contrasenaVerificar, usuarios, this);
+            GestorUsuario.VerificarUsuario(correoVerificar, contrasenaVerificar, usuarios, this, GestorAdopcion);
 
         }
 

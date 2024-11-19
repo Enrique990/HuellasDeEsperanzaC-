@@ -12,13 +12,24 @@ namespace HuellasDeEsperanzaC_.Servicio
     {
         private List<SolicitudAdopcion> solicitudes;
         private List<Mascota> mascotas;
+        private List<Usuario> usuarios;
+
+        public List<SolicitudAdopcion> SolicitudesAdopcion
+        {
+            get
+            {
+                return solicitudes;
+            }
+        }
 
         public GestorAdopcion()
         {
             solicitudes = new List<SolicitudAdopcion>();
             mascotas = new List<Mascota>();
+            usuarios = new List<Usuario>();
             CargarDatosSolicitudes();
             CargarDatosMascotas();
+            CargarDatosUsuarios();
         }
 
         public void CrearSolicitudAdopcion(int usuarioId, int mascotaId)
@@ -87,13 +98,25 @@ namespace HuellasDeEsperanzaC_.Servicio
             }
         }
 
-        private Mascota ObtenerMascotaPorId(int mascotaId)
+        public Mascota ObtenerMascotaPorId(int mascotaId)
         {
             for (int i = 0; i < mascotas.Count; i++)
             {
                 if (mascotas[i].Id == mascotaId)
                 {
                     return mascotas[i];
+                }
+            }
+            return null;
+        }
+
+        public Usuario ObtenerUsuarioPorId(int usuarioId)
+        {
+            for (int i = 0; i < usuarios.Count; i++)
+            {
+                if (usuarios[i].Id == usuarioId)
+                {
+                    return usuarios[i];
                 }
             }
             return null;
@@ -173,6 +196,38 @@ namespace HuellasDeEsperanzaC_.Servicio
                         RutaImagen = reader.ReadString()
                     };
                     mascotas.Add(mascota);
+                }
+            }
+        }
+
+        private void CargarDatosUsuarios()
+        {
+            if (!File.Exists("usuarios.dat"))
+            {
+                return;
+            }
+
+            using (FileStream fileStreamUsuarios = new FileStream("usuarios.dat", FileMode.Open, FileAccess.Read))
+            using (BinaryReader reader = new BinaryReader(fileStreamUsuarios))
+            {
+                while (fileStreamUsuarios.Position < fileStreamUsuarios.Length)
+                {
+                    Usuario usuario = new Usuario
+                    {
+                        Id = reader.ReadInt32(),
+                        NombreUsuario = reader.ReadString(),
+                        CorreoElectronico = reader.ReadString(),
+                        HashContrasena = reader.ReadString(),
+                        NombreCompleto = reader.ReadString(),
+                        Direccion = reader.ReadString(),
+                        NumeroTelefono = reader.ReadString(),
+                        Descripcion = reader.ReadString(),
+                        NumeroCedula = reader.ReadString(),
+                        Ocupacion = reader.ReadString(),
+                        Tipo = (TipoUsuario)reader.ReadInt32(),
+                        PerfilCompleto = reader.ReadBoolean()
+                    };
+                    usuarios.Add(usuario);
                 }
             }
         }

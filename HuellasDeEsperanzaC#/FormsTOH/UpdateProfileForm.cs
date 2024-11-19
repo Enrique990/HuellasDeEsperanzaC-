@@ -16,11 +16,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
     public partial class ConfiguracionForm : Form
     {
         private Usuario usuarioActual;
+        private GestorAdopcion gestorAdopcionUser;  
 
-        public ConfiguracionForm(Usuario usuario)
+        public ConfiguracionForm(Usuario usuario, GestorAdopcion gestorAdopcion)
         {
             InitializeComponent();
             this.usuarioActual = usuario;
+            this.gestorAdopcionUser = gestorAdopcion;
             MostrarDatosUsuario();
         }
 
@@ -79,14 +81,14 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             }
 
             GestorUsuario gestorUsuario = new GestorUsuario();
-            gestorUsuario.ActualizarUsuario(usuarioActual, this);
+            gestorUsuario.ActualizarUsuario(usuarioActual, this, gestorAdopcionUser);
 
             this.Close();
         }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
-            HomeGeneralForm homeForm = new HomeGeneralForm(usuarioActual);
+            HomeGeneralForm homeForm = new HomeGeneralForm(usuarioActual, gestorAdopcionUser);
             homeForm.Show();
             this.Close();
         }

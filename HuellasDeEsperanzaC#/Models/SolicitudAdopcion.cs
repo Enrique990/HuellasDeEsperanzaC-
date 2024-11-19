@@ -12,7 +12,7 @@ namespace HuellasDeEsperanzaC_.Models
         Aprobada,
         Rechazada
     }
-    internal class SolicitudAdopcion
+    public class SolicitudAdopcion
     {
         public int Id { get; set; }
         public int UsuarioId { get; set; }
