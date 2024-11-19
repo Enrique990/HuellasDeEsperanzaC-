@@ -175,5 +175,12 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             waitingListForm.Show();
             this.Hide();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorAdopcionUser);
+            configuracionForm.Show();
+            this.Hide();
+        }
     }
 }

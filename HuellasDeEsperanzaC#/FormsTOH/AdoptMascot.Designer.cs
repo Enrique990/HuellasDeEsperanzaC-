@@ -52,6 +52,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.card1 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
+            this.card2 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
+            this.card3 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
+            this.card4 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -131,6 +135,7 @@
             this.button7.Text = "    Configuración";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -353,6 +358,10 @@
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // card1
             // 
             this.card1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -370,7 +379,7 @@
             this.card1.MinimumSize = new System.Drawing.Size(240, 300);
             this.card1.Name = "card1";
             this.card1.Size = new System.Drawing.Size(240, 300);
-            this.card1.TabIndex = 13;
+            this.card1.TabIndex = 0;
             // 
             // card2
             // 
@@ -389,7 +398,7 @@
             this.card2.MinimumSize = new System.Drawing.Size(240, 300);
             this.card2.Name = "card2";
             this.card2.Size = new System.Drawing.Size(240, 300);
-            this.card2.TabIndex = 14;
+            this.card2.TabIndex = 1;
             // 
             // card3
             // 
@@ -408,7 +417,7 @@
             this.card3.MinimumSize = new System.Drawing.Size(240, 300);
             this.card3.Name = "card3";
             this.card3.Size = new System.Drawing.Size(240, 300);
-            this.card3.TabIndex = 15;
+            this.card3.TabIndex = 2;
             // 
             // card4
             // 
@@ -427,11 +436,7 @@
             this.card4.MinimumSize = new System.Drawing.Size(240, 300);
             this.card4.Name = "card4";
             this.card4.Size = new System.Drawing.Size(240, 300);
-            this.card4.TabIndex = 16;
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.card4.TabIndex = 3;
             // 
             // AdoptMascot
             // 

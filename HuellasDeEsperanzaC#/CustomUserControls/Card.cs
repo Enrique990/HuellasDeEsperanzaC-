@@ -21,6 +21,23 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
 
         public int MascotaId { get; set; }
 
+        // Constructor sin parámetros
+        public Card()
+        {
+            InitializeComponent();
+            this.AutoSize = false;
+            this.AutoScaleMode = AutoScaleMode.None;
+            this.Size = new Size(240, 300);
+
+            this.MinimumSize = new Size(240, 300);
+            this.MaximumSize = new Size(240, 300);
+
+            this.panel1.AutoSize = false;
+            this.panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            this.panel1.BackColor = Color.White;
+        }
+
+        // Constructor con parámetros
         public Card(int usuarioId, int mascotaId)
         {
             InitializeComponent();
@@ -163,11 +180,7 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
 
         private void roundButton1_Click(object sender, EventArgs e)
         {
-            if (OnSelect != null)
-            {
-                OnSelect(this, e);
-            }
-
+            OnSelect?.Invoke(this, e);
             gestorAdopcion.CrearSolicitudAdopcion(usuarioId, MascotaId);
         }
 
