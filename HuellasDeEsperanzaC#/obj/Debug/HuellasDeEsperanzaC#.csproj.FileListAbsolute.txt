@@ -211,3 +211,6 @@ C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\
 C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.ConfiguracionForm.resources
 C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.ConfiguracionForm.resources
 C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.WaitingListForm.resources
+C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\Huellas_Esperanza_LogoIcono.ico
+C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\IconoHuellasEsperanzaVerde.ico
+C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\HuellaIconoVerde2.ico

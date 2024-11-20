@@ -51,11 +51,11 @@
             this.button9 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.card1 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card2 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card3 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card4 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -358,10 +358,6 @@
             this.flowLayoutPanel1.TabIndex = 0;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // card1
             // 
             this.card1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -438,6 +434,10 @@
             this.card4.Size = new System.Drawing.Size(240, 300);
             this.card4.TabIndex = 3;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // AdoptMascot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -451,6 +451,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdoptMascot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

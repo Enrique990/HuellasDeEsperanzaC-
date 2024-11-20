@@ -81,12 +81,32 @@ namespace HuellasDeEsperanzaC_.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon HuellaIconoVerde2 {
+            get {
+                object obj = ResourceManager.GetObject("HuellaIconoVerde2", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Huellas_Esperanza_LogoIcono {
             get {
                 object obj = ResourceManager.GetObject("Huellas_Esperanza_LogoIcono", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon Huellas_Esperanza_LogoIcono1 {
+            get {
+                object obj = ResourceManager.GetObject("Huellas_Esperanza_LogoIcono1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -137,6 +157,16 @@ namespace HuellasDeEsperanzaC_.Properties {
             get {
                 object obj = ResourceManager.GetObject("iconoDonacionHD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+        /// </summary>
+        internal static System.Drawing.Icon IconoHuellasEsperanzaVerde {
+            get {
+                object obj = ResourceManager.GetObject("IconoHuellasEsperanzaVerde", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         

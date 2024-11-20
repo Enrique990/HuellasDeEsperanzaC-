@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\HuellaIconoVerde2.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
@@ -181,6 +184,9 @@
     <EmbeddedResource Include="FormsTOH\AddMascot.resx">
       <DependentUpon>AddMascot.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormsTOH\UpdateProfileForm.resx">
+      <DependentUpon>UpdateProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsTOH\WaitingListForm.resx">
       <DependentUpon>WaitingListForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,8 +320,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
+    <Content Include="Huellas_Esperanza_LogoIcono.ico" />
     <Content Include="Resources\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\HuellaIconoVerde2.ico" />
+    <None Include="Resources\IconoHuellasEsperanzaVerde.ico" />
+    <None Include="Resources\Huellas_Esperanza_LogoIcono.ico" />
   </ItemGroup>
 </Project>
