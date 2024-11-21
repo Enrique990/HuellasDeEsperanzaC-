@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.button8 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnConfiguracion = new System.Windows.Forms.Button();
@@ -47,15 +46,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanelAdopciones = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.lblDescripcionM = new System.Windows.Forms.Label();
-            this.lblEspecieM = new System.Windows.Forms.Label();
             this.lblFechaNacM = new System.Windows.Forms.Label();
-            this.lblSexoM = new System.Windows.Forms.Label();
             this.lblRazaM = new System.Windows.Forms.Label();
+            this.lblSexoM = new System.Windows.Forms.Label();
+            this.lblEspecieM = new System.Windows.Forms.Label();
             this.lblNombreM = new System.Windows.Forms.Label();
             this.pbCircleMascota = new HuellasDeEsperanzaC_.CustomUserControls.CirclePictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblEstadoLista = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -82,21 +83,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(280, 760);
             this.panel1.TabIndex = 1;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
-            this.btnCerrarSesion.TabIndex = 4;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
             // 
             // button8
             // 
@@ -311,7 +297,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.label1.Location = new System.Drawing.Point(441, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(303, 32);
+            this.label1.Size = new System.Drawing.Size(373, 41);
             this.label1.TabIndex = 5;
             this.label1.Text = "Mis Solicitudes en Espera";
             // 
@@ -334,6 +320,29 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // flowLayoutPanelAdopciones
+            // 
+            this.flowLayoutPanelAdopciones.AutoScroll = true;
+            this.flowLayoutPanelAdopciones.Location = new System.Drawing.Point(280, 144);
+            this.flowLayoutPanelAdopciones.Name = "flowLayoutPanelAdopciones";
+            this.flowLayoutPanelAdopciones.Size = new System.Drawing.Size(1031, 616);
+            this.flowLayoutPanelAdopciones.TabIndex = 49;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
+            this.btnCerrarSesion.TabIndex = 4;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            // 
             // lblDescripcionM
             // 
             this.lblDescripcionM.AutoSize = true;
@@ -341,20 +350,9 @@
             this.lblDescripcionM.ForeColor = System.Drawing.Color.White;
             this.lblDescripcionM.Location = new System.Drawing.Point(727, 428);
             this.lblDescripcionM.Name = "lblDescripcionM";
-            this.lblDescripcionM.Size = new System.Drawing.Size(106, 18);
+            this.lblDescripcionM.Size = new System.Drawing.Size(143, 23);
             this.lblDescripcionM.TabIndex = 46;
             this.lblDescripcionM.Text = "Descripción:";
-            // 
-            // lblEspecieM
-            // 
-            this.lblEspecieM.AutoSize = true;
-            this.lblEspecieM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEspecieM.ForeColor = System.Drawing.Color.White;
-            this.lblEspecieM.Location = new System.Drawing.Point(727, 288);
-            this.lblEspecieM.Name = "lblEspecieM";
-            this.lblEspecieM.Size = new System.Drawing.Size(75, 18);
-            this.lblEspecieM.TabIndex = 45;
-            this.lblEspecieM.Text = "Especie:";
             // 
             // lblFechaNacM
             // 
@@ -363,20 +361,9 @@
             this.lblFechaNacM.ForeColor = System.Drawing.Color.White;
             this.lblFechaNacM.Location = new System.Drawing.Point(727, 393);
             this.lblFechaNacM.Name = "lblFechaNacM";
-            this.lblFechaNacM.Size = new System.Drawing.Size(183, 18);
+            this.lblFechaNacM.Size = new System.Drawing.Size(244, 23);
             this.lblFechaNacM.TabIndex = 44;
             this.lblFechaNacM.Text = "Fecha de Nacimiento:";
-            // 
-            // lblSexoM
-            // 
-            this.lblSexoM.AutoSize = true;
-            this.lblSexoM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexoM.ForeColor = System.Drawing.Color.White;
-            this.lblSexoM.Location = new System.Drawing.Point(727, 323);
-            this.lblSexoM.Name = "lblSexoM";
-            this.lblSexoM.Size = new System.Drawing.Size(55, 18);
-            this.lblSexoM.TabIndex = 43;
-            this.lblSexoM.Text = "Sexo:";
             // 
             // lblRazaM
             // 
@@ -385,9 +372,31 @@
             this.lblRazaM.ForeColor = System.Drawing.Color.White;
             this.lblRazaM.Location = new System.Drawing.Point(727, 358);
             this.lblRazaM.Name = "lblRazaM";
-            this.lblRazaM.Size = new System.Drawing.Size(55, 18);
+            this.lblRazaM.Size = new System.Drawing.Size(70, 23);
             this.lblRazaM.TabIndex = 42;
             this.lblRazaM.Text = "Raza:";
+            // 
+            // lblSexoM
+            // 
+            this.lblSexoM.AutoSize = true;
+            this.lblSexoM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexoM.ForeColor = System.Drawing.Color.White;
+            this.lblSexoM.Location = new System.Drawing.Point(727, 323);
+            this.lblSexoM.Name = "lblSexoM";
+            this.lblSexoM.Size = new System.Drawing.Size(71, 23);
+            this.lblSexoM.TabIndex = 43;
+            this.lblSexoM.Text = "Sexo:";
+            // 
+            // lblEspecieM
+            // 
+            this.lblEspecieM.AutoSize = true;
+            this.lblEspecieM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEspecieM.ForeColor = System.Drawing.Color.White;
+            this.lblEspecieM.Location = new System.Drawing.Point(727, 288);
+            this.lblEspecieM.Name = "lblEspecieM";
+            this.lblEspecieM.Size = new System.Drawing.Size(99, 23);
+            this.lblEspecieM.TabIndex = 45;
+            this.lblEspecieM.Text = "Especie:";
             // 
             // lblNombreM
             // 
@@ -396,7 +405,7 @@
             this.lblNombreM.ForeColor = System.Drawing.Color.White;
             this.lblNombreM.Location = new System.Drawing.Point(727, 253);
             this.lblNombreM.Name = "lblNombreM";
-            this.lblNombreM.Size = new System.Drawing.Size(79, 18);
+            this.lblNombreM.Size = new System.Drawing.Size(102, 23);
             this.lblNombreM.TabIndex = 41;
             this.lblNombreM.Text = "Nombre:";
             // 
@@ -411,17 +420,6 @@
             this.pbCircleMascota.TabIndex = 40;
             this.pbCircleMascota.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.label3.Location = new System.Drawing.Point(373, 161);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 32);
-            this.label3.TabIndex = 47;
-            this.label3.Text = "Estado:";
-            // 
             // lblEstadoLista
             // 
             this.lblEstadoLista.AutoSize = true;
@@ -429,17 +427,29 @@
             this.lblEstadoLista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.lblEstadoLista.Location = new System.Drawing.Point(479, 161);
             this.lblEstadoLista.Name = "lblEstadoLista";
-            this.lblEstadoLista.Size = new System.Drawing.Size(76, 32);
+            this.lblEstadoLista.Size = new System.Drawing.Size(96, 41);
             this.lblEstadoLista.TabIndex = 48;
             this.lblEstadoLista.Text = "Texto";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
+            this.label3.Location = new System.Drawing.Point(373, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 41);
+            this.label3.TabIndex = 47;
+            this.label3.Text = "Estado:";
+            // 
             // WaitingListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1311, 760);
+            this.Controls.Add(this.flowLayoutPanelAdopciones);
             this.Controls.Add(this.lblEstadoLista);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblDescripcionM);
@@ -455,7 +465,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "WaitingListForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WaitingListForm";
@@ -492,14 +502,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelAdopciones;
         private System.Windows.Forms.Label lblDescripcionM;
-        private System.Windows.Forms.Label lblEspecieM;
         private System.Windows.Forms.Label lblFechaNacM;
-        private System.Windows.Forms.Label lblSexoM;
         private System.Windows.Forms.Label lblRazaM;
+        private System.Windows.Forms.Label lblSexoM;
+        private System.Windows.Forms.Label lblEspecieM;
         private System.Windows.Forms.Label lblNombreM;
         private CustomUserControls.CirclePictureBox pbCircleMascota;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblEstadoLista;
+        private System.Windows.Forms.Label label3;
     }
 }

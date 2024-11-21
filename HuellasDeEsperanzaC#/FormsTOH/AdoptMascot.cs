@@ -81,6 +81,12 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void Card_OnSelect(object sender, EventArgs e)
         {
+            if (usuarioActual.MascotasAdoptadas.Count >= 3)
+            {
+                MessageBox.Show("No puedes adoptar más de 3 mascotas.", "Límite de adopciones", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             Card selectedCard = sender as Card;
             if (selectedCard != null)
             {

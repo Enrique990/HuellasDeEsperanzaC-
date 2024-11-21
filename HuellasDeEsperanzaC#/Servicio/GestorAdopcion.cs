@@ -34,13 +34,14 @@ namespace HuellasDeEsperanzaC_.Servicio
 
         public void CrearSolicitudAdopcion(int usuarioId, int mascotaId)
         {
-            SolicitudAdopcion nuevaSolicitud = new SolicitudAdopcion
+            SolicitudAdopcion solicitud = new SolicitudAdopcion
             {
                 UsuarioId = usuarioId,
-                MascotaId = mascotaId
+                MascotaId = mascotaId,
+                FechaSolicitud = DateTime.Now,
+                Estado = EstadoSolicitud.Pendiente
             };
-
-            solicitudes.Add(nuevaSolicitud);
+            solicitudes.Add(solicitud);
             GuardarDatosSolicitudes();
         }
 

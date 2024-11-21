@@ -38,7 +38,7 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
         }
 
         // Constructor con parámetros
-        public Card(int usuarioId, int mascotaId)
+        public Card(int usuarioId, int mascotaId, bool mostrarBotonAdoptar = true)
         {
             InitializeComponent();
             this.AutoSize = false;
@@ -55,6 +55,11 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
             this.usuarioId = usuarioId;
             this.MascotaId = mascotaId;
             this.gestorAdopcion = new GestorAdopcion();
+
+            if (!mostrarBotonAdoptar)
+            {
+                roundButton1.Visible = false;
+            }
 
             CargarDatosMascota();
         }

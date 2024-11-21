@@ -34,42 +34,71 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void CargarMascotaEnEspera()
         {
-            if (gestorAdopcionUser.SolicitudesAdopcion.Count > 0)
+            flowLayoutPanelAdopciones.Controls.Clear();
+            var solicitudesUsuario = gestorAdopcionUser.SolicitudesAdopcion.Where(s => s.UsuarioId == usuarioActual.Id).ToList();
+
+            if (solicitudesUsuario.Count > 0)
             {
-                SolicitudAdopcion solicitudEnEspera = gestorAdopcionUser.SolicitudesAdopcion[0]; // Una solicitud en espera
-                Mascota mascotaEnEspera = gestorAdopcionUser.ObtenerMascotaPorId(solicitudEnEspera.MascotaId);
-                Usuario usuarioSolicitante = gestorAdopcionUser.ObtenerUsuarioPorId(solicitudEnEspera.UsuarioId);
-
-                lblEstadoLista.Text = "En espera";
-                lblNombreM.Text = mascotaEnEspera.Nombre;
-                lblEspecieM.Text = mascotaEnEspera.Especie;
-                lblSexoM.Text = mascotaEnEspera.Sexo;
-                lblRazaM.Text = mascotaEnEspera.Raza;
-                lblFechaNacM.Text = mascotaEnEspera.FechaNacimiento.ToString("dd/MM/yyyy");
-                lblDescripcionM.Text = mascotaEnEspera.Descripcion;
-
-                string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-                string fullPath = Path.Combine(projectDirectory, mascotaEnEspera.RutaImagen);
-                if (File.Exists(fullPath))
+                foreach (var solicitud in solicitudesUsuario)
                 {
-                    pbCircleMascota.Image = Image.FromFile(fullPath);
-                }
-                else
-                {
-                    string rutaImagenPredeterminada = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\icons8-pets-50.png");
-                    pbCircleMascota.Image = Image.FromFile(rutaImagenPredeterminada);
+                    Mascota mascotaEnEspera = gestorAdopcionUser.ObtenerMascotaPorId(solicitud.MascotaId);
+                    AgregarMascotaCard(mascotaEnEspera);
                 }
             }
             else
             {
                 lblEstadoLista.Text = "No hay solicitudes de adopción en espera";
-                lblNombreM.Text = string.Empty;
-                lblEspecieM.Text = string.Empty;
-                lblSexoM.Text = string.Empty;
-                lblRazaM.Text = string.Empty;
-                lblFechaNacM.Text = string.Empty;
-                lblDescripcionM.Text = string.Empty;
-                pbCircleMascota.Image = null;
+            }
+        }
+
+        public void AgregarMascotaCard(Mascota mascota)
+        {
+            Image imagenMascota;
+            try
+            {
+                string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                string fullPath = Path.Combine(projectDirectory, mascota.RutaImagen);
+                if (string.IsNullOrEmpty(mascota.RutaImagen) || !File.Exists(fullPath))
+                {
+                    throw new FileNotFoundException();
+                }
+
+                imagenMascota = Image.FromFile(fullPath);
+            }
+            catch (Exception)
+            {
+                // Ruta de la imagen predeterminada
+                string rutaImagenPredeterminada = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\icons8-pets-50.png");
+                imagenMascota = Image.FromFile(rutaImagenPredeterminada);
+            }
+
+            Card card = new Card(usuarioActual.Id, mascota.Id, mostrarBotonAdoptar: false)
+            {
+                CardNombreMascota = mascota.Nombre,
+                CardRaza = mascota.Raza,
+                CardEdad = mascota.FechaNacimiento.ToString("dd/MM/yyyy"),
+                CardSexo = mascota.Sexo,
+                CardImagen = imagenMascota,
+            };
+
+            card.OnSelect += Card_OnSelect;
+
+            flowLayoutPanelAdopciones.Controls.Add(card);
+        }
+
+        private void Card_OnSelect(object sender, EventArgs e)
+        {
+            Card selectedCard = sender as Card;
+            if (selectedCard != null)
+            {
+                var solicitud = gestorAdopcionUser.SolicitudesAdopcion.FirstOrDefault(s => s.MascotaId == selectedCard.MascotaId && s.UsuarioId == usuarioActual.Id);
+                if (solicitud != null)
+                {
+                    gestorAdopcionUser.RechazarSolicitud(solicitud.Id, usuarioActual, "Cancelada por el usuario");
+                    usuarioActual.MascotasAdoptadas.RemoveAll(m => m.Id == solicitud.MascotaId);
+                    MessageBox.Show("Solicitud de adopción cancelada con éxito.");
+                    CargarMascotaEnEspera();
+                }
             }
         }
 

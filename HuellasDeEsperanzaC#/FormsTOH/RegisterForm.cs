@@ -210,5 +210,90 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblORA3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblORA2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblORA1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbNombreCompleto__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbEmail__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbPass__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbOra1__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbOra2__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbOra3__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

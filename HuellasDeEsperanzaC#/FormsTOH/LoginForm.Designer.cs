@@ -252,6 +252,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(45, 42);
             this.button11.TabIndex = 10;
+            this.button11.TabStop = false;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -267,6 +268,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(40, 42);
             this.button9.TabIndex = 8;
+            this.button9.TabStop = false;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
