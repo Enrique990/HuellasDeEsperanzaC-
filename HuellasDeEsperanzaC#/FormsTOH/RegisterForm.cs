@@ -23,7 +23,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.ActiveControl = tbNombreCompleto;
             this.Size = new Size(902, 430);
             roundButton1.Location = new Point(710, 332);
-            
+
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)
@@ -104,11 +104,11 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 usuario.Tipo = TipoUsuario.Comun;
             }
 
-            if (usuario.NombreCompleto == "" || usuario.CorreoElectronico == "" || usuario.HashContrasena == "")
+            if (string.IsNullOrWhiteSpace(usuario.NombreCompleto) || string.IsNullOrWhiteSpace(usuario.CorreoElectronico) || string.IsNullOrWhiteSpace(usuario.HashContrasena))
             {
                 MetroFramework.MetroMessageBox.Show(this, "Por favor llene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (isORA.Checked && (usuario.Direccion == "" || usuario.NumeroTelefono == "" || usuario.Descripcion == ""))
+            else if (isORA.Checked && (string.IsNullOrWhiteSpace(usuario.Direccion) ||string.IsNullOrWhiteSpace(usuario.NumeroTelefono) ||string.IsNullOrWhiteSpace(usuario.Descripcion)))
             {
                 MetroFramework.MetroMessageBox.Show(this, "Por favor llene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
