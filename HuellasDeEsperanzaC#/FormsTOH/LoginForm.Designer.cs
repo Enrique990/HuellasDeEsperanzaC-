@@ -40,8 +40,15 @@
             this.tbCorreo = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.roundButton1 = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -100,7 +107,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(368, 180);
+            this.label5.Location = new System.Drawing.Point(368, 185);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(126, 23);
             this.label5.TabIndex = 0;
@@ -109,7 +116,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(368, 129);
+            this.label4.Location = new System.Drawing.Point(368, 134);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(196, 23);
             this.label4.TabIndex = 0;
@@ -132,7 +139,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(354, 41);
+            this.label2.Location = new System.Drawing.Point(354, 46);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(240, 46);
@@ -148,7 +155,7 @@
             this.tbContrasena.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbContrasena.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbContrasena.ForeColor = System.Drawing.Color.DimGray;
-            this.tbContrasena.Location = new System.Drawing.Point(528, 165);
+            this.tbContrasena.Location = new System.Drawing.Point(528, 170);
             this.tbContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.tbContrasena.MaxLength = 32767;
             this.tbContrasena.Multiline = false;
@@ -170,7 +177,7 @@
             this.tbCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbCorreo.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCorreo.ForeColor = System.Drawing.Color.DimGray;
-            this.tbCorreo.Location = new System.Drawing.Point(528, 114);
+            this.tbCorreo.Location = new System.Drawing.Point(528, 119);
             this.tbCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.tbCorreo.MaxLength = 32767;
             this.tbCorreo.Multiline = false;
@@ -190,7 +197,7 @@
             this.roundButton1.FlatAppearance.BorderSize = 0;
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton1.ForeColor = System.Drawing.Color.White;
-            this.roundButton1.Location = new System.Drawing.Point(710, 237);
+            this.roundButton1.Location = new System.Drawing.Point(710, 242);
             this.roundButton1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.roundButton1.Name = "roundButton1";
             this.roundButton1.Size = new System.Drawing.Size(145, 60);
@@ -201,6 +208,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -208,6 +216,59 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(240)))), ((int)(((byte)(197)))));
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(902, 42);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.button11);
+            this.panel6.Controls.Add(this.button9);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(706, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(196, 42);
+            this.panel6.TabIndex = 9;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_minimizar_32__1_;
+            this.button11.Location = new System.Drawing.Point(111, 0);
+            this.button11.Margin = new System.Windows.Forms.Padding(4);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(45, 42);
+            this.button11.TabIndex = 10;
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(78)))), ((int)(((byte)(78)))));
+            this.button9.BackgroundImage = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_close_window_38;
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(156, 0);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(40, 42);
+            this.button9.TabIndex = 8;
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // LoginForm
             // 
@@ -234,6 +295,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,5 +317,9 @@
         private CustomUserControls.CustomTextBox tbCorreo;
         private CustomUserControls.CustomTextBox tbContrasena;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button9;
     }
 }

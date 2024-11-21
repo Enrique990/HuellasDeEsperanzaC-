@@ -88,5 +88,22 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
 
         }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
     }
 }
