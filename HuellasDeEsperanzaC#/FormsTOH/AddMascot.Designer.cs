@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.button8 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
@@ -61,6 +60,7 @@
             this.tbNombreMascota = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.btnGuardarMascota = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.pbCircle = new HuellasDeEsperanzaC_.CustomUserControls.CirclePictureBox();
+            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -88,22 +88,6 @@
             this.panel1.Size = new System.Drawing.Size(280, 760);
             this.panel1.TabIndex = 1;
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
-            this.btnCerrarSesion.TabIndex = 7;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
@@ -113,6 +97,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(52, 43);
             this.button8.TabIndex = 1;
+            this.button8.TabStop = false;
             this.button8.UseVisualStyleBackColor = true;
             // 
             // panel4
@@ -136,6 +121,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(247, 67);
             this.button7.TabIndex = 6;
+            this.button7.TabStop = false;
             this.button7.Text = "    Configuración";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
@@ -154,6 +140,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(253, 67);
             this.button6.TabIndex = 5;
+            this.button6.TabStop = false;
             this.button6.Text = "   Ver Organizaciones";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
@@ -171,6 +158,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(253, 67);
             this.button5.TabIndex = 4;
+            this.button5.TabStop = false;
             this.button5.Text = "   Mis Adopciones";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
@@ -188,6 +176,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(253, 67);
             this.button4.TabIndex = 3;
+            this.button4.TabStop = false;
             this.button4.Text = "   Mi Lista de Espera";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
@@ -206,6 +195,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(253, 67);
             this.button3.TabIndex = 2;
+            this.button3.TabStop = false;
             this.button3.Text = "   Agregar Mascotas";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
@@ -223,6 +213,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(253, 67);
             this.button2.TabIndex = 1;
+            this.button2.TabStop = false;
             this.button2.Text = "   Adoptar Mascotas";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
@@ -241,6 +232,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(247, 67);
             this.button1.TabIndex = 0;
+            this.button1.TabStop = false;
             this.button1.Text = "    Inicio";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
@@ -254,7 +246,7 @@
             this.panel2.Location = new System.Drawing.Point(280, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1031, 36);
-            this.panel2.TabIndex = 3;
+            this.panel2.TabIndex = 2;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // panel6
@@ -266,7 +258,7 @@
             this.panel6.Location = new System.Drawing.Point(884, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(147, 36);
-            this.panel6.TabIndex = 10;
+            this.panel6.TabIndex = 0;
             // 
             // button11
             // 
@@ -278,7 +270,8 @@
             this.button11.Location = new System.Drawing.Point(27, 0);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(40, 36);
-            this.button11.TabIndex = 10;
+            this.button11.TabIndex = 0;
+            this.button11.TabStop = false;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -292,7 +285,8 @@
             this.button10.Location = new System.Drawing.Point(67, 0);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(40, 36);
-            this.button10.TabIndex = 9;
+            this.button10.TabIndex = 0;
+            this.button10.TabStop = false;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -306,7 +300,8 @@
             this.button9.Location = new System.Drawing.Point(107, 0);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(40, 36);
-            this.button9.TabIndex = 8;
+            this.button9.TabIndex = 0;
+            this.button9.TabStop = false;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -317,7 +312,7 @@
             this.panel3.Location = new System.Drawing.Point(299, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(122, 116);
-            this.panel3.TabIndex = 4;
+            this.panel3.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -336,8 +331,8 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.label1.Location = new System.Drawing.Point(441, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(386, 32);
-            this.label1.TabIndex = 5;
+            this.label1.Size = new System.Drawing.Size(474, 41);
+            this.label1.TabIndex = 0;
             this.label1.Text = "Agregar Mascota para Adopción";
             // 
             // lblORA3
@@ -347,8 +342,8 @@
             this.lblORA3.ForeColor = System.Drawing.Color.White;
             this.lblORA3.Location = new System.Drawing.Point(769, 460);
             this.lblORA3.Name = "lblORA3";
-            this.lblORA3.Size = new System.Drawing.Size(106, 18);
-            this.lblORA3.TabIndex = 33;
+            this.lblORA3.Size = new System.Drawing.Size(143, 23);
+            this.lblORA3.TabIndex = 0;
             this.lblORA3.Text = "Descripción:";
             // 
             // lblORA2
@@ -358,8 +353,8 @@
             this.lblORA2.ForeColor = System.Drawing.Color.White;
             this.lblORA2.Location = new System.Drawing.Point(769, 208);
             this.lblORA2.Name = "lblORA2";
-            this.lblORA2.Size = new System.Drawing.Size(75, 18);
-            this.lblORA2.TabIndex = 32;
+            this.lblORA2.Size = new System.Drawing.Size(99, 23);
+            this.lblORA2.TabIndex = 0;
             this.lblORA2.Text = "Especie:";
             // 
             // lblORA1
@@ -369,8 +364,8 @@
             this.lblORA1.ForeColor = System.Drawing.Color.White;
             this.lblORA1.Location = new System.Drawing.Point(769, 397);
             this.lblORA1.Name = "lblORA1";
-            this.lblORA1.Size = new System.Drawing.Size(183, 18);
-            this.lblORA1.TabIndex = 31;
+            this.lblORA1.Size = new System.Drawing.Size(244, 23);
+            this.lblORA1.TabIndex = 0;
             this.lblORA1.Text = "Fecha de Nacimiento:";
             // 
             // label5
@@ -380,8 +375,8 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(769, 271);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 18);
-            this.label5.TabIndex = 30;
+            this.label5.Size = new System.Drawing.Size(71, 23);
+            this.label5.TabIndex = 0;
             this.label5.Text = "Sexo:";
             // 
             // label4
@@ -391,8 +386,8 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(769, 334);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 18);
-            this.label4.TabIndex = 29;
+            this.label4.Size = new System.Drawing.Size(70, 23);
+            this.label4.TabIndex = 0;
             this.label4.Text = "Raza:";
             // 
             // label2
@@ -402,8 +397,8 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(769, 142);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 18);
-            this.label2.TabIndex = 28;
+            this.label2.Size = new System.Drawing.Size(102, 23);
+            this.label2.TabIndex = 0;
             this.label2.Text = "Nombre:";
             // 
             // dtFechaMascota
@@ -413,9 +408,9 @@
             this.dtFechaMascota.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.dtFechaMascota.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dtFechaMascota.Location = new System.Drawing.Point(769, 421);
-            this.dtFechaMascota.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtFechaMascota.MinimumSize = new System.Drawing.Size(0, 30);
             this.dtFechaMascota.Name = "dtFechaMascota";
-            this.dtFechaMascota.Size = new System.Drawing.Size(363, 29);
+            this.dtFechaMascota.Size = new System.Drawing.Size(363, 30);
             this.dtFechaMascota.TabIndex = 5;
             this.dtFechaMascota.UseCustomBackColor = true;
             this.dtFechaMascota.UseCustomForeColor = true;
@@ -458,7 +453,7 @@
             this.tbRazaMascota.Name = "tbRazaMascota";
             this.tbRazaMascota.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tbRazaMascota.PasswordChar = false;
-            this.tbRazaMascota.Size = new System.Drawing.Size(363, 33);
+            this.tbRazaMascota.Size = new System.Drawing.Size(363, 38);
             this.tbRazaMascota.TabIndex = 4;
             this.tbRazaMascota.Texts = "";
             this.tbRazaMascota.UnderlinedStyle = false;
@@ -479,7 +474,7 @@
             this.tbSexoMascota.Name = "tbSexoMascota";
             this.tbSexoMascota.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tbSexoMascota.PasswordChar = false;
-            this.tbSexoMascota.Size = new System.Drawing.Size(363, 33);
+            this.tbSexoMascota.Size = new System.Drawing.Size(363, 38);
             this.tbSexoMascota.TabIndex = 3;
             this.tbSexoMascota.Texts = "";
             this.tbSexoMascota.UnderlinedStyle = false;
@@ -500,7 +495,7 @@
             this.tbTipoMascota.Name = "tbTipoMascota";
             this.tbTipoMascota.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tbTipoMascota.PasswordChar = false;
-            this.tbTipoMascota.Size = new System.Drawing.Size(363, 33);
+            this.tbTipoMascota.Size = new System.Drawing.Size(363, 38);
             this.tbTipoMascota.TabIndex = 2;
             this.tbTipoMascota.Texts = "";
             this.tbTipoMascota.UnderlinedStyle = false;
@@ -521,7 +516,7 @@
             this.tbNombreMascota.Name = "tbNombreMascota";
             this.tbNombreMascota.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tbNombreMascota.PasswordChar = false;
-            this.tbNombreMascota.Size = new System.Drawing.Size(363, 33);
+            this.tbNombreMascota.Size = new System.Drawing.Size(363, 38);
             this.tbNombreMascota.TabIndex = 1;
             this.tbNombreMascota.Texts = "";
             this.tbNombreMascota.UnderlinedStyle = false;
@@ -553,9 +548,26 @@
             this.pbCircle.TabStop = false;
             this.pbCircle.Click += new System.EventHandler(this.pbCircle_Click);
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
+            this.btnCerrarSesion.TabIndex = 7;
+            this.btnCerrarSesion.TabStop = false;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // AddMascot
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.ClientSize = new System.Drawing.Size(1311, 760);

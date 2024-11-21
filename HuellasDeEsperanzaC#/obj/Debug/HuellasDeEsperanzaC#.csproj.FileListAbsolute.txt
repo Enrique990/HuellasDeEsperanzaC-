@@ -211,3 +211,4 @@ C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\
 C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.ConfiguracionForm.resources
 C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.ConfiguracionForm.resources
 C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.WaitingListForm.resources
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.WaitingListForm.resources

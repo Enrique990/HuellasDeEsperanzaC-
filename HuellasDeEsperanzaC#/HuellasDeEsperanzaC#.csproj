@@ -166,9 +166,6 @@
     <EmbeddedResource Include="FormsTOH\AdoptMascot.resx">
       <DependentUpon>AdoptMascot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormsTOH\ConfiguracionForm.resx">
-      <DependentUpon>UpdateProfileForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormsTOH\HomeGeneralForm.resx">
       <DependentUpon>HomeGeneralForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsTOH\AddMascot.resx">
       <DependentUpon>AddMascot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsTOH\UpdateProfileForm.resx">
+      <DependentUpon>UpdateProfileForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsTOH\WaitingListForm.resx">
       <DependentUpon>WaitingListForm.cs</DependentUpon>

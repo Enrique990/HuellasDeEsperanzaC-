@@ -80,7 +80,7 @@
             this.roundButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.roundButton2.Name = "roundButton2";
             this.roundButton2.Size = new System.Drawing.Size(153, 60);
-            this.roundButton2.TabIndex = 4;
+            this.roundButton2.TabIndex = 1;
             this.roundButton2.Text = "¡Regístrate!";
             this.roundButton2.UseVisualStyleBackColor = false;
             this.roundButton2.Click += new System.EventHandler(this.roundButton2_Click);
@@ -93,8 +93,8 @@
             this.label1.Location = new System.Drawing.Point(39, 218);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(240, 30);
-            this.label1.TabIndex = 8;
+            this.label1.Size = new System.Drawing.Size(309, 37);
+            this.label1.TabIndex = 0;
             this.label1.Text = "¿Aún no tienes cuenta?";
             // 
             // label5
@@ -102,8 +102,8 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(368, 180);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 18);
-            this.label5.TabIndex = 19;
+            this.label5.Size = new System.Drawing.Size(126, 23);
+            this.label5.TabIndex = 0;
             this.label5.Text = "Contraseña:";
             // 
             // label4
@@ -111,8 +111,8 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(368, 129);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 18);
-            this.label4.TabIndex = 18;
+            this.label4.Size = new System.Drawing.Size(196, 23);
+            this.label4.TabIndex = 0;
             this.label4.Text = "Correo Electrónico:";
             // 
             // label3
@@ -123,7 +123,7 @@
             this.label3.Location = new System.Drawing.Point(313, -133);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(172, 37);
+            this.label3.Size = new System.Drawing.Size(215, 46);
             this.label3.TabIndex = 14;
             this.label3.Text = "¡Regístrate!";
             // 
@@ -135,7 +135,7 @@
             this.label2.Location = new System.Drawing.Point(354, 41);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 37);
+            this.label2.Size = new System.Drawing.Size(240, 46);
             this.label2.TabIndex = 0;
             this.label2.Text = "Iniciar Sesión";
             // 
@@ -155,7 +155,7 @@
             this.tbContrasena.Name = "tbContrasena";
             this.tbContrasena.Padding = new System.Windows.Forms.Padding(7);
             this.tbContrasena.PasswordChar = true;
-            this.tbContrasena.Size = new System.Drawing.Size(327, 33);
+            this.tbContrasena.Size = new System.Drawing.Size(327, 38);
             this.tbContrasena.TabIndex = 2;
             this.tbContrasena.Texts = "";
             this.tbContrasena.UnderlinedStyle = true;
@@ -177,7 +177,7 @@
             this.tbCorreo.Name = "tbCorreo";
             this.tbCorreo.Padding = new System.Windows.Forms.Padding(7);
             this.tbCorreo.PasswordChar = false;
-            this.tbCorreo.Size = new System.Drawing.Size(327, 33);
+            this.tbCorreo.Size = new System.Drawing.Size(327, 38);
             this.tbCorreo.TabIndex = 1;
             this.tbCorreo.Texts = "";
             this.tbCorreo.UnderlinedStyle = true;
@@ -205,13 +205,13 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(902, 430);
-            this.panel2.TabIndex = 20;
+            this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.ClientSize = new System.Drawing.Size(902, 430);
