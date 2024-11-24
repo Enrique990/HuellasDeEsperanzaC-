@@ -41,8 +41,13 @@
             this.tbCorreo = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.roundButton1 = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,7 +86,7 @@
             this.roundButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.roundButton2.Name = "roundButton2";
             this.roundButton2.Size = new System.Drawing.Size(153, 60);
-            this.roundButton2.TabIndex = 4;
+            this.roundButton2.TabIndex = 3;
             this.roundButton2.Text = "¡Regístrate!";
             this.roundButton2.UseVisualStyleBackColor = false;
             this.roundButton2.Click += new System.EventHandler(this.roundButton2_Click);
@@ -157,7 +162,7 @@
             this.tbContrasena.Padding = new System.Windows.Forms.Padding(7);
             this.tbContrasena.PasswordChar = true;
             this.tbContrasena.Size = new System.Drawing.Size(327, 33);
-            this.tbContrasena.TabIndex = 2;
+            this.tbContrasena.TabIndex = 1;
             this.tbContrasena.Texts = "";
             this.tbContrasena.UnderlinedStyle = true;
             this.tbContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbContrasena_KeyPress);
@@ -179,7 +184,7 @@
             this.tbCorreo.Padding = new System.Windows.Forms.Padding(7);
             this.tbCorreo.PasswordChar = false;
             this.tbCorreo.Size = new System.Drawing.Size(327, 33);
-            this.tbCorreo.TabIndex = 1;
+            this.tbCorreo.TabIndex = 0;
             this.tbCorreo.Texts = "";
             this.tbCorreo.UnderlinedStyle = true;
             this.tbCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCorreo_KeyPress);
@@ -195,13 +200,14 @@
             this.roundButton1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.roundButton1.Name = "roundButton1";
             this.roundButton1.Size = new System.Drawing.Size(145, 60);
-            this.roundButton1.TabIndex = 3;
+            this.roundButton1.TabIndex = 2;
             this.roundButton1.Text = "Iniciar Sesión";
             this.roundButton1.UseVisualStyleBackColor = false;
             this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -209,6 +215,41 @@
             this.panel2.TabIndex = 20;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnCerrar);
+            this.panel3.Controls.Add(this.btnMinimizar);
+            this.panel3.Location = new System.Drawing.Point(788, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(114, 41);
+            this.panel3.TabIndex = 17;
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_eliminar_32;
+            this.btnCerrar.Location = new System.Drawing.Point(66, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(49, 41);
+            this.btnCerrar.TabIndex = 5;
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_subtract_32;
+            this.btnMinimizar.Location = new System.Drawing.Point(19, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(49, 41);
+            this.btnMinimizar.TabIndex = 4;
+            this.btnMinimizar.UseVisualStyleBackColor = true;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // LoginForm
             // 
@@ -236,6 +277,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +298,8 @@
         private CustomUserControls.CustomTextBox tbCorreo;
         private CustomUserControls.CustomTextBox tbContrasena;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnMinimizar;
     }
 }

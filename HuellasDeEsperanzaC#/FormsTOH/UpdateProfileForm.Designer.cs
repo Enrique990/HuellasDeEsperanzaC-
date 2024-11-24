@@ -391,7 +391,6 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         private System.Windows.Forms.Label label2;
         private HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox tbNombreCompleto;
         private HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox tbDireccion;
-        private HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox customTextBox;
         private HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox tbNumeroTelefono;
         private HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox tbNumeroCedula;
         private HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox tbOcupacion;

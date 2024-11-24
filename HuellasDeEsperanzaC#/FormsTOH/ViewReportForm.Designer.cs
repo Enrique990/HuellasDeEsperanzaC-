@@ -31,8 +31,11 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewReportForm));
+            this.mascotasDTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsMascotas = new HuellasDeEsperanzaC_.DataSets.DsMascotas();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
+            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.button8 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnConfiguracion = new System.Windows.Forms.Button();
@@ -52,18 +55,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
-            this.dsMascotas = new HuellasDeEsperanzaC_.DataSets.DsMascotas();
-            this.mascotasDTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.mascotasDTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMascotas)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsMascotas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mascotasDTBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // mascotasDTBindingSource
+            // 
+            this.mascotasDTBindingSource.DataMember = "MascotasDT";
+            this.mascotasDTBindingSource.DataSource = this.dsMascotas;
+            // 
+            // dsMascotas
+            // 
+            this.dsMascotas.DataSetName = "DsMascotas";
+            this.dsMascotas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -103,6 +113,22 @@
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 640);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
+            this.btnCerrarSesion.TabIndex = 9;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
@@ -111,7 +137,7 @@
             this.button8.Location = new System.Drawing.Point(12, 705);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(47, 43);
-            this.button8.TabIndex = 1;
+            this.button8.TabIndex = 10;
             this.button8.UseVisualStyleBackColor = true;
             // 
             // panel4
@@ -134,7 +160,7 @@
             this.btnConfiguracion.Location = new System.Drawing.Point(30, 550);
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(250, 67);
-            this.btnConfiguracion.TabIndex = 6;
+            this.btnConfiguracion.TabIndex = 8;
             this.btnConfiguracion.Text = "    Configuración";
             this.btnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConfiguracion.UseVisualStyleBackColor = true;
@@ -151,7 +177,7 @@
             this.button6.Location = new System.Drawing.Point(24, 404);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(256, 67);
-            this.button6.TabIndex = 5;
+            this.button6.TabIndex = 6;
             this.button6.Text = "   Ver Organizaciones";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
@@ -168,7 +194,7 @@
             this.button5.Location = new System.Drawing.Point(24, 331);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(256, 67);
-            this.button5.TabIndex = 4;
+            this.button5.TabIndex = 5;
             this.button5.Text = "   Reportes";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
@@ -185,7 +211,7 @@
             this.button4.Location = new System.Drawing.Point(24, 258);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(256, 67);
-            this.button4.TabIndex = 3;
+            this.button4.TabIndex = 4;
             this.button4.Text = "   Solicitudes en Espera";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
@@ -202,7 +228,7 @@
             this.button3.Location = new System.Drawing.Point(24, 185);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(256, 67);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 3;
             this.button3.Text = "   Agregar Mascotas";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
@@ -219,7 +245,7 @@
             this.button2.Location = new System.Drawing.Point(24, 112);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(256, 67);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 2;
             this.button2.Text = "   Ver Mascotas";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
@@ -236,7 +262,7 @@
             this.button1.Location = new System.Drawing.Point(30, 39);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 67);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 1;
             this.button1.Text = "    Inicio";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
@@ -274,7 +300,7 @@
             this.button11.Location = new System.Drawing.Point(27, 0);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(40, 36);
-            this.button11.TabIndex = 10;
+            this.button11.TabIndex = 11;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -288,7 +314,7 @@
             this.button10.Location = new System.Drawing.Point(67, 0);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(40, 36);
-            this.button10.TabIndex = 9;
+            this.button10.TabIndex = 12;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -302,7 +328,7 @@
             this.button9.Location = new System.Drawing.Point(107, 0);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(40, 36);
-            this.button9.TabIndex = 8;
+            this.button9.TabIndex = 13;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -358,31 +384,6 @@
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 640);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
-            this.btnCerrarSesion.TabIndex = 4;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            // 
-            // dsMascotas
-            // 
-            this.dsMascotas.DataSetName = "DsMascotas";
-            this.dsMascotas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mascotasDTBindingSource
-            // 
-            this.mascotasDTBindingSource.DataMember = "MascotasDT";
-            this.mascotasDTBindingSource.DataSource = this.dsMascotas;
-            // 
             // ViewReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,14 +401,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "8";
             this.Load += new System.EventHandler(this.ViewReportForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.mascotasDTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsMascotas)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dsMascotas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mascotasDTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

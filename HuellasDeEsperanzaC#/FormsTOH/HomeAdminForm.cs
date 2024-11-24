@@ -24,6 +24,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             InitializeComponent();
             this.usuarioActual = usuario;
             this.gestorAdopcionUser = gestorAdopcion;
+            SetSaludo();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -158,6 +159,43 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             {
                 MessageBox.Show("Error al cargar el reporte: " + ex.Message);
             }
+        }
+
+        private string ObtenerSaludo()
+        {
+            int hora = DateTime.Now.Hour;
+            if (hora >= 6 && hora < 12)
+            {
+                return "Buenos días";
+            }
+            else if (hora >= 12 && hora < 18)
+            {
+                return "Buenas tardes";
+            }
+            else
+            {
+                return "Buenas noches";
+            }
+        }
+
+        private void SetSaludo()
+        {
+            string saludo = ObtenerSaludo();
+            lblSaludo.Text = $"{saludo}, {usuarioActual.NombreCompleto}";
+        }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorAdopcionUser);
+            configuracionForm.Show();
+            this.Hide();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Close();
         }
     }
 }

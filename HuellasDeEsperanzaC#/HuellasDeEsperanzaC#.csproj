@@ -378,6 +378,13 @@
     <Content Include="Resources\**">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\icons8-subtract-32.png" />
+    <None Include="Resources\icons8-subtract-48.png" />
+    <None Include="Resources\icons8-eliminar-32.png" />
+    <None Include="Resources\icons8-eliminar-48.png" />
+    <None Include="Resources\AnimalShelterOrganizacionesIconoHD.png" />
+    <None Include="Resources\CorazonAdoptarEsperaIconoHD.png" />
+    <None Include="Resources\ReportesAdopcionesIconoHD.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

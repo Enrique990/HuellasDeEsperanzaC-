@@ -100,7 +100,7 @@
             this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
-            this.btnCerrarSesion.TabIndex = 7;
+            this.btnCerrarSesion.TabIndex = 14;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
@@ -113,7 +113,7 @@
             this.button8.Location = new System.Drawing.Point(13, 705);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(52, 43);
-            this.button8.TabIndex = 1;
+            this.button8.TabIndex = 15;
             this.button8.UseVisualStyleBackColor = true;
             // 
             // panel4
@@ -136,7 +136,7 @@
             this.button7.Location = new System.Drawing.Point(31, 477);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(247, 67);
-            this.button7.TabIndex = 6;
+            this.button7.TabIndex = 13;
             this.button7.Text = "    Configuración";
             this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button7.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@
             this.button6.Location = new System.Drawing.Point(25, 404);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(253, 67);
-            this.button6.TabIndex = 5;
+            this.button6.TabIndex = 12;
             this.button6.Text = "   Ver Organizaciones";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
@@ -171,7 +171,7 @@
             this.button5.Location = new System.Drawing.Point(25, 331);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(253, 67);
-            this.button5.TabIndex = 4;
+            this.button5.TabIndex = 11;
             this.button5.Text = "   Mis Adopciones";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
@@ -188,7 +188,7 @@
             this.button4.Location = new System.Drawing.Point(25, 258);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(253, 67);
-            this.button4.TabIndex = 3;
+            this.button4.TabIndex = 10;
             this.button4.Text = "   Mi Lista de Espera";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
@@ -206,7 +206,7 @@
             this.button3.Location = new System.Drawing.Point(25, 185);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(253, 67);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 9;
             this.button3.Text = "   Agregar Mascotas";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
@@ -223,7 +223,7 @@
             this.button2.Location = new System.Drawing.Point(25, 112);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(253, 67);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 8;
             this.button2.Text = "   Adoptar Mascotas";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
@@ -241,7 +241,7 @@
             this.button1.Location = new System.Drawing.Point(31, 39);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(247, 67);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 7;
             this.button1.Text = "    Inicio";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
@@ -279,7 +279,7 @@
             this.button11.Location = new System.Drawing.Point(27, 0);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(40, 36);
-            this.button11.TabIndex = 10;
+            this.button11.TabIndex = 16;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -293,7 +293,7 @@
             this.button10.Location = new System.Drawing.Point(67, 0);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(40, 36);
-            this.button10.TabIndex = 9;
+            this.button10.TabIndex = 17;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -307,7 +307,7 @@
             this.button9.Location = new System.Drawing.Point(107, 0);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(40, 36);
-            this.button9.TabIndex = 8;
+            this.button9.TabIndex = 18;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -417,7 +417,7 @@
             this.dtFechaMascota.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtFechaMascota.Name = "dtFechaMascota";
             this.dtFechaMascota.Size = new System.Drawing.Size(363, 29);
-            this.dtFechaMascota.TabIndex = 5;
+            this.dtFechaMascota.TabIndex = 4;
             this.dtFechaMascota.UseCustomBackColor = true;
             this.dtFechaMascota.UseCustomForeColor = true;
             this.dtFechaMascota.UseStyleColors = true;
@@ -439,7 +439,7 @@
             this.tbDescripcionMascota.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tbDescripcionMascota.PasswordChar = false;
             this.tbDescripcionMascota.Size = new System.Drawing.Size(363, 113);
-            this.tbDescripcionMascota.TabIndex = 6;
+            this.tbDescripcionMascota.TabIndex = 5;
             this.tbDescripcionMascota.Texts = "";
             this.tbDescripcionMascota.UnderlinedStyle = false;
             // 
@@ -460,7 +460,7 @@
             this.tbRazaMascota.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tbRazaMascota.PasswordChar = false;
             this.tbRazaMascota.Size = new System.Drawing.Size(363, 33);
-            this.tbRazaMascota.TabIndex = 4;
+            this.tbRazaMascota.TabIndex = 3;
             this.tbRazaMascota.Texts = "";
             this.tbRazaMascota.UnderlinedStyle = false;
             // 
@@ -481,7 +481,7 @@
             this.tbSexoMascota.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tbSexoMascota.PasswordChar = false;
             this.tbSexoMascota.Size = new System.Drawing.Size(363, 33);
-            this.tbSexoMascota.TabIndex = 3;
+            this.tbSexoMascota.TabIndex = 2;
             this.tbSexoMascota.Texts = "";
             this.tbSexoMascota.UnderlinedStyle = false;
             // 
@@ -502,7 +502,7 @@
             this.tbTipoMascota.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tbTipoMascota.PasswordChar = false;
             this.tbTipoMascota.Size = new System.Drawing.Size(363, 33);
-            this.tbTipoMascota.TabIndex = 2;
+            this.tbTipoMascota.TabIndex = 1;
             this.tbTipoMascota.Texts = "";
             this.tbTipoMascota.UnderlinedStyle = false;
             // 
@@ -523,7 +523,7 @@
             this.tbNombreMascota.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.tbNombreMascota.PasswordChar = false;
             this.tbNombreMascota.Size = new System.Drawing.Size(363, 33);
-            this.tbNombreMascota.TabIndex = 1;
+            this.tbNombreMascota.TabIndex = 0;
             this.tbNombreMascota.Texts = "";
             this.tbNombreMascota.UnderlinedStyle = false;
             // 
@@ -537,7 +537,7 @@
             this.btnGuardarMascota.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
             this.btnGuardarMascota.Name = "btnGuardarMascota";
             this.btnGuardarMascota.Size = new System.Drawing.Size(183, 60);
-            this.btnGuardarMascota.TabIndex = 7;
+            this.btnGuardarMascota.TabIndex = 6;
             this.btnGuardarMascota.Text = "Guardar Mascota";
             this.btnGuardarMascota.UseVisualStyleBackColor = false;
             this.btnGuardarMascota.Click += new System.EventHandler(this.btnGuardarMascota_Click);

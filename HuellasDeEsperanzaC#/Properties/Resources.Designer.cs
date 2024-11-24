@@ -81,6 +81,26 @@ namespace HuellasDeEsperanzaC_.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AnimalShelterOrganizacionesIconoHD {
+            get {
+                object obj = ResourceManager.GetObject("AnimalShelterOrganizacionesIconoHD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CorazonAdoptarEsperaIconoHD {
+            get {
+                object obj = ResourceManager.GetObject("CorazonAdoptarEsperaIconoHD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
         /// </summary>
         internal static System.Drawing.Icon HuellaIconoVerde2 {
@@ -243,6 +263,26 @@ namespace HuellasDeEsperanzaC_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_eliminar_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_eliminar_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_eliminar_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_eliminar_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_heart_with_dog_paw_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_heart_with_dog_paw_32", resourceCulture);
@@ -356,6 +396,36 @@ namespace HuellasDeEsperanzaC_.Properties {
         internal static System.Drawing.Bitmap icons8_settings_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8_settings_40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_subtract_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_subtract_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_subtract_48 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_subtract_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ReportesAdopcionesIconoHD {
+            get {
+                object obj = ResourceManager.GetObject("ReportesAdopcionesIconoHD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

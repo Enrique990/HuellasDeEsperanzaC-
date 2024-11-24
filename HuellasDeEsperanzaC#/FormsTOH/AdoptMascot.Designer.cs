@@ -95,7 +95,7 @@
             this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
-            this.btnCerrarSesion.TabIndex = 4;
+            this.btnCerrarSesion.TabIndex = 7;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
@@ -108,7 +108,7 @@
             this.button8.Location = new System.Drawing.Point(12, 705);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(47, 43);
-            this.button8.TabIndex = 1;
+            this.button8.TabIndex = 8;
             this.button8.UseVisualStyleBackColor = true;
             // 
             // panel4
@@ -304,7 +304,7 @@
             this.button11.Location = new System.Drawing.Point(27, 0);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(40, 36);
-            this.button11.TabIndex = 10;
+            this.button11.TabIndex = 9;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -318,7 +318,7 @@
             this.button10.Location = new System.Drawing.Point(67, 0);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(40, 36);
-            this.button10.TabIndex = 9;
+            this.button10.TabIndex = 10;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -332,7 +332,7 @@
             this.button9.Location = new System.Drawing.Point(107, 0);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(40, 36);
-            this.button9.TabIndex = 8;
+            this.button9.TabIndex = 11;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 

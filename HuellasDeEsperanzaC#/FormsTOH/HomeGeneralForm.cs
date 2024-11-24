@@ -24,6 +24,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.usuarioActual = usuario;
             this.gestorAdopcionUser = gestorAdopcion;
             showUsuario();
+            SetSaludo();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -153,6 +154,29 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             WaitingListForm waitingListForm = new WaitingListForm(usuarioActual, gestorAdopcionUser);
             waitingListForm.Show();
             this.Hide();
+        }
+
+        private string ObtenerSaludo()
+        {
+            int hora = DateTime.Now.Hour;
+            if (hora >= 6 && hora < 12)
+            {
+                return "Buenos días";
+            }
+            else if (hora >= 12 && hora < 18)
+            {
+                return "Buenas tardes";
+            }
+            else
+            {
+                return "Buenas noches";
+            }
+        }
+
+        private void SetSaludo()
+        {
+            string saludo = ObtenerSaludo();
+            lblSaludo.Text = $"{saludo}, {usuarioActual.NombreCompleto}";
         }
     }
 }

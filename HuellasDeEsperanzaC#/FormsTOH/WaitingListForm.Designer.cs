@@ -95,7 +95,7 @@
             this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
-            this.btnCerrarSesion.TabIndex = 4;
+            this.btnCerrarSesion.TabIndex = 14;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
             // 
@@ -107,7 +107,7 @@
             this.button8.Location = new System.Drawing.Point(12, 705);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(47, 43);
-            this.button8.TabIndex = 1;
+            this.button8.TabIndex = 15;
             this.button8.UseVisualStyleBackColor = true;
             // 
             // panel4
@@ -130,7 +130,7 @@
             this.btnConfiguracion.Location = new System.Drawing.Point(30, 477);
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(242, 67);
-            this.btnConfiguracion.TabIndex = 6;
+            this.btnConfiguracion.TabIndex = 13;
             this.btnConfiguracion.Text = "    Configuración";
             this.btnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConfiguracion.UseVisualStyleBackColor = true;
@@ -148,7 +148,7 @@
             this.button6.Location = new System.Drawing.Point(24, 404);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(242, 67);
-            this.button6.TabIndex = 5;
+            this.button6.TabIndex = 12;
             this.button6.Text = "   Ver Organizaciones";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
@@ -165,7 +165,7 @@
             this.button5.Location = new System.Drawing.Point(24, 331);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(242, 67);
-            this.button5.TabIndex = 4;
+            this.button5.TabIndex = 11;
             this.button5.Text = "   Mis Adopciones";
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
@@ -182,7 +182,7 @@
             this.button4.Location = new System.Drawing.Point(24, 258);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(242, 67);
-            this.button4.TabIndex = 3;
+            this.button4.TabIndex = 10;
             this.button4.Text = "   Mi Lista de Espera";
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
@@ -199,7 +199,7 @@
             this.button3.Location = new System.Drawing.Point(24, 185);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(242, 67);
-            this.button3.TabIndex = 2;
+            this.button3.TabIndex = 9;
             this.button3.Text = "   Agregar Mascotas";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
@@ -217,7 +217,7 @@
             this.button2.Location = new System.Drawing.Point(24, 112);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(242, 67);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 8;
             this.button2.Text = "   Adoptar Mascotas";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
@@ -235,7 +235,7 @@
             this.button1.Location = new System.Drawing.Point(30, 39);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(242, 67);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 7;
             this.button1.Text = "    Inicio";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
@@ -273,7 +273,7 @@
             this.button11.Location = new System.Drawing.Point(27, 0);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(40, 36);
-            this.button11.TabIndex = 10;
+            this.button11.TabIndex = 16;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -287,7 +287,7 @@
             this.button10.Location = new System.Drawing.Point(67, 0);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(40, 36);
-            this.button10.TabIndex = 9;
+            this.button10.TabIndex = 17;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
@@ -301,7 +301,7 @@
             this.button9.Location = new System.Drawing.Point(107, 0);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(40, 36);
-            this.button9.TabIndex = 8;
+            this.button9.TabIndex = 18;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -343,7 +343,7 @@
             this.lblDescripcionM.Location = new System.Drawing.Point(727, 428);
             this.lblDescripcionM.Name = "lblDescripcionM";
             this.lblDescripcionM.Size = new System.Drawing.Size(106, 18);
-            this.lblDescripcionM.TabIndex = 46;
+            this.lblDescripcionM.TabIndex = 6;
             this.lblDescripcionM.Text = "Descripción:";
             // 
             // lblEspecieM
@@ -354,7 +354,7 @@
             this.lblEspecieM.Location = new System.Drawing.Point(727, 288);
             this.lblEspecieM.Name = "lblEspecieM";
             this.lblEspecieM.Size = new System.Drawing.Size(75, 18);
-            this.lblEspecieM.TabIndex = 45;
+            this.lblEspecieM.TabIndex = 2;
             this.lblEspecieM.Text = "Especie:";
             // 
             // lblFechaNacM
@@ -365,7 +365,7 @@
             this.lblFechaNacM.Location = new System.Drawing.Point(727, 393);
             this.lblFechaNacM.Name = "lblFechaNacM";
             this.lblFechaNacM.Size = new System.Drawing.Size(183, 18);
-            this.lblFechaNacM.TabIndex = 44;
+            this.lblFechaNacM.TabIndex = 5;
             this.lblFechaNacM.Text = "Fecha de Nacimiento:";
             // 
             // lblSexoM
@@ -376,7 +376,7 @@
             this.lblSexoM.Location = new System.Drawing.Point(727, 323);
             this.lblSexoM.Name = "lblSexoM";
             this.lblSexoM.Size = new System.Drawing.Size(55, 18);
-            this.lblSexoM.TabIndex = 43;
+            this.lblSexoM.TabIndex = 3;
             this.lblSexoM.Text = "Sexo:";
             // 
             // lblRazaM
@@ -387,7 +387,7 @@
             this.lblRazaM.Location = new System.Drawing.Point(727, 358);
             this.lblRazaM.Name = "lblRazaM";
             this.lblRazaM.Size = new System.Drawing.Size(55, 18);
-            this.lblRazaM.TabIndex = 42;
+            this.lblRazaM.TabIndex = 4;
             this.lblRazaM.Text = "Raza:";
             // 
             // lblNombreM
@@ -398,7 +398,7 @@
             this.lblNombreM.Location = new System.Drawing.Point(727, 253);
             this.lblNombreM.Name = "lblNombreM";
             this.lblNombreM.Size = new System.Drawing.Size(79, 18);
-            this.lblNombreM.TabIndex = 41;
+            this.lblNombreM.TabIndex = 1;
             this.lblNombreM.Text = "Nombre:";
             // 
             // pbCircleMascota
@@ -431,7 +431,7 @@
             this.lblEstadoLista.Location = new System.Drawing.Point(479, 161);
             this.lblEstadoLista.Name = "lblEstadoLista";
             this.lblEstadoLista.Size = new System.Drawing.Size(76, 32);
-            this.lblEstadoLista.TabIndex = 48;
+            this.lblEstadoLista.TabIndex = 0;
             this.lblEstadoLista.Text = "Texto";
             // 
             // WaitingListForm

@@ -268,3 +268,10 @@ C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeE
 C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.HomeAdminForm.resources
 C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.ViewReportForm.resources
+C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\icons8-eliminar-32.png
+C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\icons8-eliminar-48.png
+C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\icons8-subtract-32.png
+C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\icons8-subtract-48.png
+C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\AnimalShelterOrganizacionesIconoHD.png
+C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\CorazonAdoptarEsperaIconoHD.png
+C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\ReportesAdopcionesIconoHD.png
