@@ -55,12 +55,17 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 MetroFramework.MetroMessageBox.Show(this, "No hay cambios para guardar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
-            if (!Usuario.EsCorreoValido(correo))
+            if (nombreCompleto.Length < 3)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "El nombre debe tener al menos 3 caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (!Usuario.EsCorreoValido(correo))
             {
                 MetroFramework.MetroMessageBox.Show(this, "El correo electrónico ingresado no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
 
             bool hayCambios = false;
 
@@ -80,11 +85,12 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 hayCambios = true;
             }
 
-            if (!hayCambios)
+            if(!hayCambios)
             {
                 MetroFramework.MetroMessageBox.Show(this, "No hay cambios para guardar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+
 
             GestorUsuario gestorUsuario = new GestorUsuario();
             gestorUsuario.ActualizarUsuario(usuarioActual, this, gestorAdopcionUser);
