@@ -56,6 +56,12 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 return;
             }
 
+            if (!Usuario.EsCorreoValido(correo))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "El correo electrónico ingresado no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             bool hayCambios = false;
 
             if (nombreCompleto != usuarioActual.NombreCompleto ||

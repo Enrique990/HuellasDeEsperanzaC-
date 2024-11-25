@@ -4,6 +4,8 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace HuellasDeEsperanzaC_.Models
 {
@@ -95,6 +97,48 @@ namespace HuellasDeEsperanzaC_.Models
             else
             {
                 throw new InvalidOperationException("El perfil debe estar completo para inscribirse en una actividad de voluntariado.");
+            }
+        }
+
+        public static bool EsCorreoValido(string correo)
+        {
+            if (string.IsNullOrWhiteSpace(correo))
+                return false;
+
+            try
+            {
+                // Normalizar el dominio
+                correo = Regex.Replace(correo, @"(@)(.+)$", DomainMapper, RegexOptions.None, TimeSpan.FromMilliseconds(200));
+
+                // Examinar el dominio y normalizarlo
+                string DomainMapper(Match match)
+                {
+                    var idn = new IdnMapping();
+
+                    // Usar la clase IdnMapping para convertir nombres de dominio Unicode a ASCII
+                    string domainName = idn.GetAscii(match.Groups[2].Value);
+
+                    return match.Groups[1].Value + domainName;
+                }
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
+            }
+            catch (ArgumentException)
+            {
+                return false;
+            }
+
+            try
+            {
+                return Regex.IsMatch(correo,
+                    @"^[^@\s]+@[^@\s]+\.[^@\s]+$",
+                    RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
             }
         }
     }

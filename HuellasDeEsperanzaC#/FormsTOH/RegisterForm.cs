@@ -89,6 +89,12 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             usuario.CorreoElectronico = tbEmail.Texts;
             usuario.EstablecerContraseña(tbPass.Texts);
 
+            if (!Usuario.EsCorreoValido(usuario.CorreoElectronico))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "El correo electrónico ingresado no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (isORA.Checked)
             {
                 usuario.Direccion = tbOra1.Texts;
@@ -108,7 +114,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             {
                 MetroFramework.MetroMessageBox.Show(this, "Por favor llene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (isORA.Checked && (string.IsNullOrWhiteSpace(usuario.Direccion) ||string.IsNullOrWhiteSpace(usuario.NumeroTelefono) ||string.IsNullOrWhiteSpace(usuario.Descripcion)))
+            else if (isORA.Checked && (string.IsNullOrWhiteSpace(usuario.Direccion) || string.IsNullOrWhiteSpace(usuario.NumeroTelefono) || string.IsNullOrWhiteSpace(usuario.Descripcion)))
             {
                 MetroFramework.MetroMessageBox.Show(this, "Por favor llene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
