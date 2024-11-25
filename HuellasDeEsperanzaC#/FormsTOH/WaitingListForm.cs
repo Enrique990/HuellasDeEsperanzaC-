@@ -67,7 +67,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             }
             catch (Exception)
             {
-                // Ruta de la imagen predeterminada
+                // Ruta de la imagen predeterminada 
                 string rutaImagenPredeterminada = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\icons8-pets-50.png");
                 imagenMascota = Image.FromFile(rutaImagenPredeterminada);
             }
