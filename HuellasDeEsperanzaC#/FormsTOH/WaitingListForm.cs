@@ -47,7 +47,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             }
             else
             {
-                lblEstadoLista.Text = "No hay solicitudes de adopción en espera";
+                MessageBox.Show("No tienes solicitudes de adopción en espera.");
             }
         }
 
