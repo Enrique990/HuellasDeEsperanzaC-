@@ -41,7 +41,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void roundButton1_Click(object sender, EventArgs e)
         {
-            string correoVerificar = tbCorreo.Texts;
+            string correoVerificar = tbCorreo.Texts.Trim();
             string contrasenaVerificar = tbContrasena.Texts;
 
             GestorUsuario.CargarDatosUsuarios(usuarios);

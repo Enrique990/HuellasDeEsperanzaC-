@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace HuellasDeEsperanzaC_.FormsTOH
 {
@@ -38,12 +39,12 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            string nombreCompleto = tbNombreCompleto.Texts.Trim();
+            string nombreCompleto = tbNombreCompleto.Texts;
             string correo = tbEmail.Texts.Trim();
-            string direccion = tbDireccion.Texts.Trim();
+            string direccion = tbDireccion.Texts;
             string numeroTelefono = tbNumeroTelefono.Texts.Trim();
             string numeroCedula = tbNumeroCedula.Texts.Trim();
-            string ocupacion = tbOcupacion.Texts.Trim();
+            string ocupacion = tbOcupacion.Texts;
 
             if (string.IsNullOrEmpty(nombreCompleto) &&
                 string.IsNullOrEmpty(correo) &&
@@ -63,6 +64,10 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             else if (!Usuario.EsCorreoValido(correo))
             {
                 MetroFramework.MetroMessageBox.Show(this, "El correo electrónico ingresado no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }else if (!Regex.IsMatch(nombreCompleto, @"^[a-zA-Z\s]+$"))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "El nombre solo puede contener letras y espacios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HuellasDeEsperanzaC_.FormsTOH;
@@ -86,8 +87,8 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             GestorUsuario GestorUsuario = new GestorUsuario();
 
             usuario.NombreCompleto = tbNombreCompleto.Texts;
-            usuario.CorreoElectronico = tbEmail.Texts;
-            usuario.EstablecerContraseña(tbPass.Texts);
+            usuario.CorreoElectronico = tbEmail.Texts.Trim();
+            usuario.EstablecerContraseña(tbPass.Texts.Trim());
 
             if (usuario.NombreCompleto.Length < 3)
             {
@@ -97,6 +98,10 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             else if (!Usuario.EsCorreoValido(usuario.CorreoElectronico))
             {
                 MetroFramework.MetroMessageBox.Show(this, "El correo electrónico ingresado no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }else if (!Regex.IsMatch(usuario.NombreCompleto, @"^[a-zA-Z\s]+$"))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "El nombre solo puede contener letras y espacios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
