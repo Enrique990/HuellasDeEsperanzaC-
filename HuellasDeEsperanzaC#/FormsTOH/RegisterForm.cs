@@ -89,11 +89,18 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             usuario.CorreoElectronico = tbEmail.Texts;
             usuario.EstablecerContraseña(tbPass.Texts);
 
-            if (!Usuario.EsCorreoValido(usuario.CorreoElectronico))
+            if (usuario.NombreCompleto.Length < 3)
+            {
+                MetroFramework.MetroMessageBox.Show(this, "El nombre debe tener al menos 3 caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (!Usuario.EsCorreoValido(usuario.CorreoElectronico))
             {
                 MetroFramework.MetroMessageBox.Show(this, "El correo electrónico ingresado no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+
 
             if (isORA.Checked)
             {
@@ -301,5 +308,6 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
 
         }
+        
     }
 }

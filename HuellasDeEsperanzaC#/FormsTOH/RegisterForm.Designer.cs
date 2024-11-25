@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.roundButton2 = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.isORA = new System.Windows.Forms.CheckBox();
@@ -51,7 +52,6 @@
             this.tbEmail = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.tbNombreCompleto = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.roundButton1 = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
-            this.roundButton2 = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,6 +85,22 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // roundButton2
+            // 
+            this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(125)))), ((int)(((byte)(106)))));
+            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.roundButton2.FlatAppearance.BorderSize = 0;
+            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.roundButton2.ForeColor = System.Drawing.Color.White;
+            this.roundButton2.Location = new System.Drawing.Point(79, 281);
+            this.roundButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.roundButton2.Name = "roundButton2";
+            this.roundButton2.Size = new System.Drawing.Size(153, 60);
+            this.roundButton2.TabIndex = 1;
+            this.roundButton2.Text = "Iniciar Sesión";
+            this.roundButton2.UseVisualStyleBackColor = false;
+            this.roundButton2.Click += new System.EventHandler(this.roundButton2_Click);
             // 
             // label1
             // 
@@ -413,22 +429,6 @@
             this.roundButton1.Text = "Registrarse";
             this.roundButton1.UseVisualStyleBackColor = false;
             this.roundButton1.Click += new System.EventHandler(this.roundButton1_Click);
-            // 
-            // roundButton2
-            // 
-            this.roundButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(125)))), ((int)(((byte)(106)))));
-            this.roundButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.roundButton2.FlatAppearance.BorderSize = 0;
-            this.roundButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.roundButton2.ForeColor = System.Drawing.Color.White;
-            this.roundButton2.Location = new System.Drawing.Point(79, 281);
-            this.roundButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.roundButton2.Name = "roundButton2";
-            this.roundButton2.Size = new System.Drawing.Size(153, 60);
-            this.roundButton2.TabIndex = 1;
-            this.roundButton2.Text = "Iniciar Sesión";
-            this.roundButton2.UseVisualStyleBackColor = false;
-            this.roundButton2.Click += new System.EventHandler(this.roundButton2_Click);
             // 
             // RegisterForm
             // 
