@@ -157,5 +157,55 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AdoptMascot adoptMascot = new AdoptMascot(usuarioActual, gestorAdopcionUser);
+            adoptMascot.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AddMascot addMascot = new AddMascot(usuarioActual, gestorAdopcionUser);
+            addMascot.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            HomeGeneralForm homeGeneralForm = new HomeGeneralForm(usuarioActual, gestorAdopcionUser);
+            homeGeneralForm.Show();
+            this.Hide();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Close();
+        }
     }
 }

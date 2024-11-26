@@ -116,7 +116,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.panel4.Location = new System.Drawing.Point(0, 185);
+            this.panel4.Location = new System.Drawing.Point(3, 185);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(17, 67);
             this.panel4.TabIndex = 3;
@@ -130,7 +130,7 @@
             this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.button7.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_settings_40;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(32, 331);
+            this.button7.Location = new System.Drawing.Point(30, 331);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(245, 67);
             this.button7.TabIndex = 6;
@@ -149,7 +149,7 @@
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.button6.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_animal_shelter_50;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(31, 258);
+            this.button6.Location = new System.Drawing.Point(30, 258);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(246, 67);
             this.button6.TabIndex = 5;
@@ -167,7 +167,7 @@
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.button3.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_pets_50;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(31, 185);
+            this.button3.Location = new System.Drawing.Point(30, 185);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(247, 67);
             this.button3.TabIndex = 2;
@@ -185,7 +185,7 @@
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.button2.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_heart_with_dog_paw_50__1_;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(31, 112);
+            this.button2.Location = new System.Drawing.Point(30, 112);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(247, 67);
             this.button2.TabIndex = 1;
@@ -204,7 +204,7 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.button1.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_home_40;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(32, 39);
+            this.button1.Location = new System.Drawing.Point(30, 39);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(246, 67);
             this.button1.TabIndex = 0;
@@ -386,7 +386,7 @@
             this.dtFechaMascota.Location = new System.Drawing.Point(769, 421);
             this.dtFechaMascota.MinimumSize = new System.Drawing.Size(0, 29);
             this.dtFechaMascota.Name = "dtFechaMascota";
-            this.dtFechaMascota.Size = new System.Drawing.Size(363, 30);
+            this.dtFechaMascota.Size = new System.Drawing.Size(363, 29);
             this.dtFechaMascota.TabIndex = 5;
             this.dtFechaMascota.UseCustomBackColor = true;
             this.dtFechaMascota.UseCustomForeColor = true;
