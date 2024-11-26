@@ -101,7 +101,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.label1.Location = new System.Drawing.Point(10, 214);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(396, 37);
+            this.label1.Size = new System.Drawing.Size(301, 30);
             this.label1.TabIndex = 8;
             this.label1.Text = "Regresar a la Página Principal";
             // 
@@ -138,7 +138,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.label3.Location = new System.Drawing.Point(368, 189);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 23);
+            this.label3.Size = new System.Drawing.Size(153, 18);
             this.label3.TabIndex = 14;
             this.label3.Text = "Correo Electrónico:";
             // 
@@ -158,7 +158,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Padding = new System.Windows.Forms.Padding(10);
             this.tbEmail.PasswordChar = false;
-            this.tbEmail.Size = new System.Drawing.Size(330, 44);
+            this.tbEmail.Size = new System.Drawing.Size(330, 39);
             this.tbEmail.TabIndex = 2;
             this.tbEmail.Texts = "";
             this.tbEmail.UnderlinedStyle = true;
@@ -171,7 +171,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.label2.Location = new System.Drawing.Point(361, 29);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 46);
+            this.label2.Size = new System.Drawing.Size(176, 37);
             this.label2.TabIndex = 0;
             this.label2.Text = "Editar Perfil";
             // 
@@ -195,10 +195,10 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             // 
             this.lblDireccion.AutoSize = true;
             this.lblDireccion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(368, 437);
+            this.lblDireccion.Location = new System.Drawing.Point(363, 359);
             this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(109, 23);
+            this.lblDireccion.Size = new System.Drawing.Size(82, 18);
             this.lblDireccion.TabIndex = 9;
             this.lblDireccion.Text = "Dirección:";
             this.lblDireccion.Click += new System.EventHandler(this.lblDireccion_Click);
@@ -219,7 +219,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.tbNombreCompleto.Name = "tbNombreCompleto";
             this.tbNombreCompleto.Padding = new System.Windows.Forms.Padding(10);
             this.tbNombreCompleto.PasswordChar = false;
-            this.tbNombreCompleto.Size = new System.Drawing.Size(327, 44);
+            this.tbNombreCompleto.Size = new System.Drawing.Size(327, 39);
             this.tbNombreCompleto.TabIndex = 1;
             this.tbNombreCompleto.Texts = "";
             this.tbNombreCompleto.UnderlinedStyle = true;
@@ -231,7 +231,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.lblNumeroTelefono.Location = new System.Drawing.Point(368, 315);
             this.lblNumeroTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumeroTelefono.Name = "lblNumeroTelefono";
-            this.lblNumeroTelefono.Size = new System.Drawing.Size(100, 23);
+            this.lblNumeroTelefono.Size = new System.Drawing.Size(77, 18);
             this.lblNumeroTelefono.TabIndex = 10;
             this.lblNumeroTelefono.Text = "Teléfono:";
             this.lblNumeroTelefono.Click += new System.EventHandler(this.lblNumeroTelefono_Click);
@@ -264,7 +264,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.lblNumeroCedula.Location = new System.Drawing.Point(368, 250);
             this.lblNumeroCedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNumeroCedula.Name = "lblNumeroCedula";
-            this.lblNumeroCedula.Size = new System.Drawing.Size(84, 23);
+            this.lblNumeroCedula.Size = new System.Drawing.Size(65, 18);
             this.lblNumeroCedula.TabIndex = 11;
             this.lblNumeroCedula.Text = "Cédula:";
             this.lblNumeroCedula.Click += new System.EventHandler(this.lblNumeroCedula_Click);
@@ -285,7 +285,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.tbNumeroTelefono.Name = "tbNumeroTelefono";
             this.tbNumeroTelefono.Padding = new System.Windows.Forms.Padding(10);
             this.tbNumeroTelefono.PasswordChar = false;
-            this.tbNumeroTelefono.Size = new System.Drawing.Size(330, 44);
+            this.tbNumeroTelefono.Size = new System.Drawing.Size(330, 39);
             this.tbNumeroTelefono.TabIndex = 4;
             this.tbNumeroTelefono.Texts = "";
             this.tbNumeroTelefono.UnderlinedStyle = true;
@@ -306,7 +306,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.tbNumeroCedula.Name = "tbNumeroCedula";
             this.tbNumeroCedula.Padding = new System.Windows.Forms.Padding(10);
             this.tbNumeroCedula.PasswordChar = false;
-            this.tbNumeroCedula.Size = new System.Drawing.Size(330, 44);
+            this.tbNumeroCedula.Size = new System.Drawing.Size(330, 39);
             this.tbNumeroCedula.TabIndex = 3;
             this.tbNumeroCedula.Texts = "";
             this.tbNumeroCedula.UnderlinedStyle = true;
@@ -327,7 +327,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.tbOcupacion.Name = "tbOcupacion";
             this.tbOcupacion.Padding = new System.Windows.Forms.Padding(10);
             this.tbOcupacion.PasswordChar = false;
-            this.tbOcupacion.Size = new System.Drawing.Size(330, 44);
+            this.tbOcupacion.Size = new System.Drawing.Size(330, 39);
             this.tbOcupacion.TabIndex = 6;
             this.tbOcupacion.Texts = "";
             this.tbOcupacion.UnderlinedStyle = true;
@@ -339,7 +339,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.lblOcupacion.Location = new System.Drawing.Point(368, 502);
             this.lblOcupacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOcupacion.Name = "lblOcupacion";
-            this.lblOcupacion.Size = new System.Drawing.Size(119, 23);
+            this.lblOcupacion.Size = new System.Drawing.Size(92, 18);
             this.lblOcupacion.TabIndex = 12;
             this.lblOcupacion.Text = "Ocupación:";
             this.lblOcupacion.Click += new System.EventHandler(this.lblOcupacion_Click);
@@ -351,13 +351,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.lblNombreCompleto.Location = new System.Drawing.Point(368, 120);
             this.lblNombreCompleto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreCompleto.Name = "lblNombreCompleto";
-            this.lblNombreCompleto.Size = new System.Drawing.Size(192, 23);
+            this.lblNombreCompleto.Size = new System.Drawing.Size(153, 18);
             this.lblNombreCompleto.TabIndex = 8;
             this.lblNombreCompleto.Text = "Nombre Completo:";
             // 
             // ConfiguracionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.ClientSize = new System.Drawing.Size(902, 653);

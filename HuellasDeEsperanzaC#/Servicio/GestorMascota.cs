@@ -18,7 +18,6 @@ namespace HuellasDeEsperanzaC_.Servicio
 
             if (esEdicion)
             {
-                // Buscar y actualizar la mascota existente según los datos cargados
                 for (int i = 0; i < mascotas.Count; i++)
                 {
                     if (mascotas[i].Id == mascota.Id)
@@ -30,17 +29,9 @@ namespace HuellasDeEsperanzaC_.Servicio
             }
             else
             {
-                // Asignar un nuevo ID a la mascota
                 if (mascotas.Count > 0)
                 {
-                    int maxId = 0;
-                    for (int i = 0; i < mascotas.Count; i++)
-                    {
-                        if (mascotas[i].Id > maxId)
-                        {
-                            maxId = mascotas[i].Id;
-                        }
-                    }
+                    int maxId = mascotas.Max(m => m.Id);
                     mascota.Id = maxId + 1;
                 }
                 else
@@ -50,35 +41,10 @@ namespace HuellasDeEsperanzaC_.Servicio
                 mascotas.Add(mascota);
             }
 
-            using (FileStream mArchivoEscritor = new FileStream("mascotas.dat", FileMode.Create, FileAccess.Write))
-            using (BinaryWriter Escritor = new BinaryWriter(mArchivoEscritor))
-            {
-                for (int i = 0; i < mascotas.Count; i++)
-                {
-                    Escritor.Write(mascotas[i].Id);
-                    Escritor.Write(mascotas[i].Nombre);
-                    Escritor.Write(mascotas[i].Especie);
-                    Escritor.Write(mascotas[i].Sexo);
-                    Escritor.Write(mascotas[i].Raza);
-                    Escritor.Write(mascotas[i].FechaNacimiento.ToBinary());
-                    Escritor.Write(mascotas[i].Descripcion);
-                    Escritor.Write(mascotas[i].RutaImagen ?? string.Empty);
-                }
-            }
+            GuardarMascotas(mascotas);
 
-            string mensaje;
-            string titulo;
-
-            if (esEdicion)
-            {
-                mensaje = "Mascota actualizada exitosamente";
-                titulo = "Actualización exitosa";
-            }
-            else
-            {
-                mensaje = "Mascota registrada exitosamente";
-                titulo = "Registro exitoso";
-            }
+            string mensaje = esEdicion ? "Mascota actualizada exitosamente" : "Mascota registrada exitosamente";
+            string titulo = esEdicion ? "Actualización exitosa" : "Registro exitoso";
 
             MetroFramework.MetroMessageBox.Show(formulario, mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -123,6 +89,25 @@ namespace HuellasDeEsperanzaC_.Servicio
             }
         }
 
+        private void GuardarMascotas(List<Mascota> mascotas)
+        {
+            using (FileStream mArchivoEscritor = new FileStream("mascotas.dat", FileMode.Create, FileAccess.Write))
+            using (BinaryWriter Escritor = new BinaryWriter(mArchivoEscritor))
+            {
+                for (int i = 0; i < mascotas.Count; i++)
+                {
+                    Escritor.Write(mascotas[i].Id);
+                    Escritor.Write(mascotas[i].Nombre ?? string.Empty);
+                    Escritor.Write(mascotas[i].Especie ?? string.Empty);
+                    Escritor.Write(mascotas[i].Sexo ?? string.Empty);
+                    Escritor.Write(mascotas[i].Raza ?? string.Empty);
+                    Escritor.Write(mascotas[i].FechaNacimiento.ToBinary());
+                    Escritor.Write(mascotas[i].Descripcion ?? string.Empty);
+                    Escritor.Write(mascotas[i].RutaImagen ?? string.Empty);
+                }
+            }
+        }
+
         public void ActualizarMascota(Mascota mascota, Form formulario)
         {
             RegistrarMascota(mascota, formulario, true);
@@ -152,7 +137,6 @@ namespace HuellasDeEsperanzaC_.Servicio
                     string targetFilePath = Path.Combine(targetDirectory, fileName);
                     File.Copy(sourceFilePath, targetFilePath, true);
 
-                    // Devolver la ruta relativa
                     return Path.Combine("FotosMascotas", fileName);
                 }
             }

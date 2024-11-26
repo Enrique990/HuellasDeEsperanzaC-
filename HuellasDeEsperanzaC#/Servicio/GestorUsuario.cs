@@ -13,8 +13,6 @@ namespace HuellasDeEsperanzaC_.Servicio
 {
     public class GestorUsuario
     {
-        // Registro
-
         public void RegistrarUsuario(Usuario usuario, Form formulario, GestorAdopcion gestorAdopcion, bool esEdicion = false)
         {
             List<Usuario> usuarios = new List<Usuario>();
@@ -22,7 +20,6 @@ namespace HuellasDeEsperanzaC_.Servicio
 
             if (esEdicion)
             {
-                // Buscar y actualizar el usuario existente según los datos cargados
                 for (int i = 0; i < usuarios.Count; i++)
                 {
                     if (usuarios[i].Id == usuario.Id)
@@ -37,71 +34,10 @@ namespace HuellasDeEsperanzaC_.Servicio
                 usuarios.Add(usuario);
             }
 
-            using (FileStream mArchivoEscritor = new FileStream("datos.dat", FileMode.Create, FileAccess.Write))
-            using (BinaryWriter Escritor = new BinaryWriter(mArchivoEscritor))
-            {
-                for (int i = 0; i < usuarios.Count; i++)
-                {
-                    if (usuarios[i].NombreCompleto != null)
-                        Escritor.Write(usuarios[i].NombreCompleto);
-                    else
-                        Escritor.Write(string.Empty);
+            GuardarUsuarios(usuarios);
 
-                    if (usuarios[i].CorreoElectronico != null)
-                        Escritor.Write(usuarios[i].CorreoElectronico);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].HashContrasena != null)
-                        Escritor.Write(usuarios[i].HashContrasena);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].Direccion != null)
-                        Escritor.Write(usuarios[i].Direccion);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].NumeroTelefono != null)
-                        Escritor.Write(usuarios[i].NumeroTelefono);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].Descripcion != null)
-                        Escritor.Write(usuarios[i].Descripcion);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].NumeroCedula != null)
-                        Escritor.Write(usuarios[i].NumeroCedula);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].Ocupacion != null)
-                        Escritor.Write(usuarios[i].Ocupacion);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].Tipo.ToString() != null)
-                        Escritor.Write(usuarios[i].Tipo.ToString());
-                    else
-                        Escritor.Write(string.Empty);
-                }
-            }
-
-            string mensaje;
-            string titulo;
-
-            if (esEdicion)
-            {
-                mensaje = "Usuario actualizado exitosamente";
-                titulo = "Actualización exitosa";
-            }
-            else
-            {
-                mensaje = "Usuario registrado exitosamente";
-                titulo = "Registro exitoso";
-            }
+            string mensaje = esEdicion ? "Usuario actualizado exitosamente" : "Usuario registrado exitosamente";
+            string titulo = esEdicion ? "Actualización exitosa" : "Registro exitoso";
 
             MetroFramework.MetroMessageBox.Show(formulario, mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -143,6 +79,26 @@ namespace HuellasDeEsperanzaC_.Servicio
                     };
 
                     usuarios.Add(usuario);
+                }
+            }
+        }
+
+        private void GuardarUsuarios(List<Usuario> usuarios)
+        {
+            using (FileStream mArchivoEscritor = new FileStream("datos.dat", FileMode.Create, FileAccess.Write))
+            using (BinaryWriter Escritor = new BinaryWriter(mArchivoEscritor))
+            {
+                for (int i = 0; i < usuarios.Count; i++)
+                {
+                    Escritor.Write(usuarios[i].NombreCompleto ?? string.Empty);
+                    Escritor.Write(usuarios[i].CorreoElectronico ?? string.Empty);
+                    Escritor.Write(usuarios[i].HashContrasena ?? string.Empty);
+                    Escritor.Write(usuarios[i].Direccion ?? string.Empty);
+                    Escritor.Write(usuarios[i].NumeroTelefono ?? string.Empty);
+                    Escritor.Write(usuarios[i].Descripcion ?? string.Empty);
+                    Escritor.Write(usuarios[i].NumeroCedula ?? string.Empty);
+                    Escritor.Write(usuarios[i].Ocupacion ?? string.Empty);
+                    Escritor.Write(usuarios[i].Tipo.ToString() ?? string.Empty);
                 }
             }
         }

@@ -10,30 +10,21 @@ namespace HuellasDeEsperanzaC_.Servicio
 {
     public class GestorAdopcion
     {
-        private List<SolicitudAdopcion> solicitudes;
-        private List<Mascota> mascotas;
-        private List<Usuario> usuarios;
-
-        public List<SolicitudAdopcion> SolicitudesAdopcion
-        {
-            get
-            {
-                return solicitudes;
-            }
-        }
+        private Dictionary<int, List<SolicitudAdopcion>> listasDeEsperaPorUsuario;
 
         public GestorAdopcion()
         {
-            solicitudes = new List<SolicitudAdopcion>();
-            mascotas = new List<Mascota>();
-            usuarios = new List<Usuario>();
+            listasDeEsperaPorUsuario = new Dictionary<int, List<SolicitudAdopcion>>();
             CargarDatosSolicitudes();
-            CargarDatosMascotas();
-            CargarDatosUsuarios();
         }
 
         public void CrearSolicitudAdopcion(int usuarioId, int mascotaId)
         {
+            if (!listasDeEsperaPorUsuario.ContainsKey(usuarioId))
+            {
+                listasDeEsperaPorUsuario[usuarioId] = new List<SolicitudAdopcion>();
+            }
+
             SolicitudAdopcion solicitud = new SolicitudAdopcion
             {
                 UsuarioId = usuarioId,
@@ -41,41 +32,28 @@ namespace HuellasDeEsperanzaC_.Servicio
                 FechaSolicitud = DateTime.Now,
                 Estado = EstadoSolicitud.Pendiente
             };
-            solicitudes.Add(solicitud);
+            listasDeEsperaPorUsuario[usuarioId].Add(solicitud);
             GuardarDatosSolicitudes();
         }
 
-        public List<Mascota> ObtenerMascotasDisponibles()
+        public List<SolicitudAdopcion> ObtenerSolicitudesPorUsuario(int usuarioId)
         {
-            List<Mascota> mascotasDisponibles = new List<Mascota>();
-            for (int i = 0; i < mascotas.Count; i++)
+            if (listasDeEsperaPorUsuario.ContainsKey(usuarioId))
             {
-                bool solicitudPendiente = false;
-                for (int j = 0; j < solicitudes.Count; j++)
-                {
-                    if (solicitudes[j].MascotaId == mascotas[i].Id && solicitudes[j].Estado == EstadoSolicitud.Pendiente)
-                    {
-                        solicitudPendiente = true;
-                        break;
-                    }
-                }
-
-                if (!mascotas[i].EstaAdoptado || solicitudPendiente)
-                {
-                    mascotasDisponibles.Add(mascotas[i]);
-                }
+                return listasDeEsperaPorUsuario[usuarioId];
             }
-            return mascotasDisponibles;
+            return new List<SolicitudAdopcion>();
         }
 
         public void AprobarSolicitud(int solicitudId, Usuario administrador)
         {
-            for (int i = 0; i < solicitudes.Count; i++)
+            foreach (var usuarioSolicitudes in listasDeEsperaPorUsuario.Values)
             {
-                if (solicitudes[i].Id == solicitudId)
+                var solicitud = usuarioSolicitudes.FirstOrDefault(s => s.Id == solicitudId);
+                if (solicitud != null)
                 {
-                    solicitudes[i].AprobarSolicitud(administrador);
-                    Mascota mascota = ObtenerMascotaPorId(solicitudes[i].MascotaId);
+                    solicitud.AprobarSolicitud(administrador);
+                    var mascota = ObtenerMascotaPorId(solicitud.MascotaId);
                     if (mascota != null)
                     {
                         mascota.EstaAdoptado = true;
@@ -88,11 +66,12 @@ namespace HuellasDeEsperanzaC_.Servicio
 
         public void RechazarSolicitud(int solicitudId, Usuario administrador, string motivo)
         {
-            for (int i = 0; i < solicitudes.Count; i++)
+            foreach (var usuarioSolicitudes in listasDeEsperaPorUsuario.Values)
             {
-                if (solicitudes[i].Id == solicitudId)
+                var solicitud = usuarioSolicitudes.FirstOrDefault(s => s.Id == solicitudId);
+                if (solicitud != null)
                 {
-                    solicitudes[i].RechazarSolicitud(administrador, motivo);
+                    solicitud.RechazarSolicitud(administrador, motivo);
                     GuardarDatosSolicitudes();
                     break;
                 }
@@ -101,134 +80,60 @@ namespace HuellasDeEsperanzaC_.Servicio
 
         public Mascota ObtenerMascotaPorId(int mascotaId)
         {
-            for (int i = 0; i < mascotas.Count; i++)
-            {
-                if (mascotas[i].Id == mascotaId)
-                {
-                    return mascotas[i];
-                }
-            }
-            return null;
-        }
+            List<Mascota> mascotas = new List<Mascota>();
+            GestorMascota gestorMascota = new GestorMascota();
+            gestorMascota.CargarDatosMascotas(mascotas);
 
-        public Usuario ObtenerUsuarioPorId(int usuarioId)
-        {
-            for (int i = 0; i < usuarios.Count; i++)
-            {
-                if (usuarios[i].Id == usuarioId)
-                {
-                    return usuarios[i];
-                }
-            }
-            return null;
-        }
-
-        private void CargarDatosSolicitudes()
-        {
-            if (!File.Exists("solicitudes.dat"))
-            {
-                return;
-            }
-
-            using (FileStream fileStreamSolicitudes = new FileStream("solicitudes.dat", FileMode.Open, FileAccess.Read))
-            using (BinaryReader reader = new BinaryReader(fileStreamSolicitudes))
-            {
-                while (fileStreamSolicitudes.Position < fileStreamSolicitudes.Length)
-                {
-                    SolicitudAdopcion solicitud = new SolicitudAdopcion
-                    {
-                        Id = reader.ReadInt32(),
-                        UsuarioId = reader.ReadInt32(),
-                        MascotaId = reader.ReadInt32(),
-                        FechaSolicitud = DateTime.FromBinary(reader.ReadInt64()),
-                        Estado = (EstadoSolicitud)reader.ReadInt32(),
-                        Motivo = reader.ReadString()
-                    };
-                    solicitudes.Add(solicitud);
-                }
-            }
+            return mascotas.FirstOrDefault(m => m.Id == mascotaId);
         }
 
         private void GuardarDatosSolicitudes()
         {
-            using (FileStream fileStreamSolicitudes = new FileStream("solicitudes.dat", FileMode.Create, FileAccess.Write))
-            using (BinaryWriter writer = new BinaryWriter(fileStreamSolicitudes))
+            foreach (var usuarioId in listasDeEsperaPorUsuario.Keys)
             {
-                for (int i = 0; i < solicitudes.Count; i++)
+                string filePath = $"solicitudes_{usuarioId}.dat";
+                using (FileStream fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+                using (BinaryWriter writer = new BinaryWriter(fileStream))
                 {
-                    writer.Write(solicitudes[i].Id);
-                    writer.Write(solicitudes[i].UsuarioId);
-                    writer.Write(solicitudes[i].MascotaId);
-                    writer.Write(solicitudes[i].FechaSolicitud.ToBinary());
-                    writer.Write((int)solicitudes[i].Estado);
-                    if (solicitudes[i].Motivo != null)
+                    var solicitudes = listasDeEsperaPorUsuario[usuarioId];
+                    writer.Write(solicitudes.Count);
+                    foreach (var solicitud in solicitudes)
                     {
-                        writer.Write(solicitudes[i].Motivo);
-                    }
-                    else
-                    {
-                        writer.Write(string.Empty);
+                        writer.Write(solicitud.Id);
+                        writer.Write(solicitud.UsuarioId);
+                        writer.Write(solicitud.MascotaId);
+                        writer.Write(solicitud.FechaSolicitud.ToBinary());
+                        writer.Write((int)solicitud.Estado);
+                        writer.Write(solicitud.Motivo ?? string.Empty);
                     }
                 }
             }
         }
 
-        private void CargarDatosMascotas()
+        private void CargarDatosSolicitudes()
         {
-            if (!File.Exists("mascotas.dat"))
+            foreach (var filePath in Directory.GetFiles(".", "solicitudes_*.dat"))
             {
-                return;
-            }
-
-            using (FileStream fileStreamMascotas = new FileStream("mascotas.dat", FileMode.Open, FileAccess.Read))
-            using (BinaryReader reader = new BinaryReader(fileStreamMascotas))
-            {
-                while (fileStreamMascotas.Position < fileStreamMascotas.Length)
+                int usuarioId = int.Parse(Path.GetFileNameWithoutExtension(filePath).Split('_')[1]);
+                using (FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read))
+                using (BinaryReader reader = new BinaryReader(fileStream))
                 {
-                    Mascota mascota = new Mascota
+                    int count = reader.ReadInt32();
+                    var solicitudes = new List<SolicitudAdopcion>();
+                    for (int i = 0; i < count; i++)
                     {
-                        Id = reader.ReadInt32(),
-                        Nombre = reader.ReadString(),
-                        Especie = reader.ReadString(),
-                        Sexo = reader.ReadString(),
-                        Raza = reader.ReadString(),
-                        FechaNacimiento = DateTime.FromBinary(reader.ReadInt64()),
-                        Descripcion = reader.ReadString(),
-                        RutaImagen = reader.ReadString()
-                    };
-                    mascotas.Add(mascota);
-                }
-            }
-        }
-
-        private void CargarDatosUsuarios()
-        {
-            if (!File.Exists("usuarios.dat"))
-            {
-                return;
-            }
-
-            using (FileStream fileStreamUsuarios = new FileStream("usuarios.dat", FileMode.Open, FileAccess.Read))
-            using (BinaryReader reader = new BinaryReader(fileStreamUsuarios))
-            {
-                while (fileStreamUsuarios.Position < fileStreamUsuarios.Length)
-                {
-                    Usuario usuario = new Usuario
-                    {
-                        Id = reader.ReadInt32(),
-                        NombreUsuario = reader.ReadString(),
-                        CorreoElectronico = reader.ReadString(),
-                        HashContrasena = reader.ReadString(),
-                        NombreCompleto = reader.ReadString(),
-                        Direccion = reader.ReadString(),
-                        NumeroTelefono = reader.ReadString(),
-                        Descripcion = reader.ReadString(),
-                        NumeroCedula = reader.ReadString(),
-                        Ocupacion = reader.ReadString(),
-                        Tipo = (TipoUsuario)reader.ReadInt32(),
-                        PerfilCompleto = reader.ReadBoolean()
-                    };
-                    usuarios.Add(usuario);
+                        SolicitudAdopcion solicitud = new SolicitudAdopcion
+                        {
+                            Id = reader.ReadInt32(),
+                            UsuarioId = reader.ReadInt32(),
+                            MascotaId = reader.ReadInt32(),
+                            FechaSolicitud = DateTime.FromBinary(reader.ReadInt64()),
+                            Estado = (EstadoSolicitud)reader.ReadInt32(),
+                            Motivo = reader.ReadString()
+                        };
+                        solicitudes.Add(solicitud);
+                    }
+                    listasDeEsperaPorUsuario[usuarioId] = solicitudes;
                 }
             }
         }

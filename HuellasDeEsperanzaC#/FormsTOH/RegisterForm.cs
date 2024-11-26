@@ -110,7 +110,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             if (isORA.Checked)
             {
                 usuario.Direccion = tbOra1.Texts;
-                usuario.NumeroTelefono = tbOra2.Texts;
+                usuario.NumeroTelefono = tbOra2.Texts.Trim();
                 usuario.Descripcion = tbOra3.Texts;
                 usuario.Tipo = TipoUsuario.Organizacion;
             }

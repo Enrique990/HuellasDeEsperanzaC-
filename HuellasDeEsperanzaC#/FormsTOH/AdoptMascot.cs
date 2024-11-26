@@ -177,9 +177,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void button4_Click(object sender, EventArgs e)
         {
-            WaitingListForm waitingListForm = new WaitingListForm(usuarioActual, gestorAdopcionUser);
-            waitingListForm.Show();
-            this.Hide();
+            
         }
 
         private void button7_Click(object sender, EventArgs e)

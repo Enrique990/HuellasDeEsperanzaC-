@@ -35,8 +35,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnConfiguracion = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -71,8 +69,6 @@
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.btnConfiguracion);
             this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
@@ -81,6 +77,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(280, 760);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnCerrarSesion
             // 
@@ -113,7 +110,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.panel4.Location = new System.Drawing.Point(1, 39);
+            this.panel4.Location = new System.Drawing.Point(3, 39);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(15, 67);
             this.panel4.TabIndex = 3;
@@ -127,9 +124,9 @@
             this.btnConfiguracion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.btnConfiguracion.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_settings_40;
             this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracion.Location = new System.Drawing.Point(30, 477);
+            this.btnConfiguracion.Location = new System.Drawing.Point(30, 331);
             this.btnConfiguracion.Name = "btnConfiguracion";
-            this.btnConfiguracion.Size = new System.Drawing.Size(242, 67);
+            this.btnConfiguracion.Size = new System.Drawing.Size(247, 67);
             this.btnConfiguracion.TabIndex = 6;
             this.btnConfiguracion.Text = "    Configuración";
             this.btnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -145,48 +142,13 @@
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.button6.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_animal_shelter_50;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(24, 404);
+            this.button6.Location = new System.Drawing.Point(30, 258);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(242, 67);
+            this.button6.Size = new System.Drawing.Size(247, 67);
             this.button6.TabIndex = 5;
             this.button6.Text = "   Ver Organizaciones";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.button5.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_animal_folder_50;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(24, 331);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(242, 67);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "   Mis Adopciones";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.button4.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_lista_de_ingredientes_50;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(24, 258);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(242, 67);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "   Mi Lista de Espera";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -197,9 +159,9 @@
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.button3.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_pets_50;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(24, 185);
+            this.button3.Location = new System.Drawing.Point(30, 185);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(242, 67);
+            this.button3.Size = new System.Drawing.Size(247, 67);
             this.button3.TabIndex = 2;
             this.button3.Text = "   Agregar Mascotas";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -215,9 +177,9 @@
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.button2.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_heart_with_dog_paw_50__1_;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(24, 112);
+            this.button2.Location = new System.Drawing.Point(30, 112);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(242, 67);
+            this.button2.Size = new System.Drawing.Size(247, 67);
             this.button2.TabIndex = 1;
             this.button2.Text = "   Adoptar Mascotas";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -235,7 +197,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(30, 39);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 67);
+            this.button1.Size = new System.Drawing.Size(247, 67);
             this.button1.TabIndex = 0;
             this.button1.Text = "    Inicio";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -468,12 +430,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnConfiguracion;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button8;
