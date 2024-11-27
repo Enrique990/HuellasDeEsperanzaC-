@@ -130,5 +130,19 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             loginForm.Show();
             this.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AdminAddMascot adminAddMascot = new AdminAddMascot(usuarioActual, gestorAdopcionUser);
+            adminAddMascot.Show();
+            this.Close();
+        }
+
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorAdopcionUser);
+            configuracionForm.Show();
+            this.Close();
+        }
     }
 }

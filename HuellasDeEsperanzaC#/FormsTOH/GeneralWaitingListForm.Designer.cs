@@ -74,7 +74,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 721);
+            this.panel1.Size = new System.Drawing.Size(280, 760);
             this.panel1.TabIndex = 2;
             // 
             // button7
@@ -255,7 +255,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(280, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1015, 36);
+            this.panel2.Size = new System.Drawing.Size(1031, 36);
             this.panel2.TabIndex = 3;
             // 
             // panel6
@@ -264,7 +264,7 @@
             this.panel6.Controls.Add(this.button10);
             this.panel6.Controls.Add(this.button9);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(868, 0);
+            this.panel6.Location = new System.Drawing.Point(884, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(147, 36);
             this.panel6.TabIndex = 9;
@@ -352,7 +352,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.ClientSize = new System.Drawing.Size(1295, 721);
+            this.ClientSize = new System.Drawing.Size(1311, 760);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);

@@ -55,6 +55,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.mascotasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mascotasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.adopcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.organizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.mascotasDTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsMascotas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -63,6 +69,8 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mascotasDTBindingSource
@@ -164,6 +172,7 @@
             this.btnConfiguracion.Text = "    Configuración";
             this.btnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnConfiguracion.UseVisualStyleBackColor = true;
+            this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
             // 
             // button6
             // 
@@ -232,6 +241,7 @@
             this.button3.Text = "   Agregar Mascotas";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -372,17 +382,68 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DsDatos";
             reportDataSource1.Value = this.mascotasDTBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "HuellasDeEsperanzaC_.Reportes.RptMascotas.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 56);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(824, 510);
+            this.reportViewer1.Size = new System.Drawing.Size(769, 454);
             this.reportViewer1.TabIndex = 0;
             this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
+            // 
+            // panel7
+            // 
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel7.Controls.Add(this.menuStrip1);
+            this.panel7.Location = new System.Drawing.Point(480, 99);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(386, 100);
+            this.panel7.TabIndex = 7;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(240)))), ((int)(((byte)(197)))));
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mascotasToolStripMenuItem,
+            this.mascotasToolStripMenuItem1,
+            this.organizacionesToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(382, 29);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // mascotasToolStripMenuItem
+            // 
+            this.mascotasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mascotasToolStripMenuItem.Name = "mascotasToolStripMenuItem";
+            this.mascotasToolStripMenuItem.Size = new System.Drawing.Size(88, 25);
+            this.mascotasToolStripMenuItem.Text = "Usuarios";
+            // 
+            // mascotasToolStripMenuItem1
+            // 
+            this.mascotasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adopcionesToolStripMenuItem});
+            this.mascotasToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mascotasToolStripMenuItem1.Name = "mascotasToolStripMenuItem1";
+            this.mascotasToolStripMenuItem1.Size = new System.Drawing.Size(93, 25);
+            this.mascotasToolStripMenuItem1.Text = "Mascotas";
+            // 
+            // adopcionesToolStripMenuItem
+            // 
+            this.adopcionesToolStripMenuItem.Name = "adopcionesToolStripMenuItem";
+            this.adopcionesToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.adopcionesToolStripMenuItem.Text = "Adopciones";
+            // 
+            // organizacionesToolStripMenuItem
+            // 
+            this.organizacionesToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.organizacionesToolStripMenuItem.Name = "organizacionesToolStripMenuItem";
+            this.organizacionesToolStripMenuItem.Size = new System.Drawing.Size(140, 25);
+            this.organizacionesToolStripMenuItem.Text = "Organizaciones";
             // 
             // ViewReportForm
             // 
@@ -390,6 +451,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.ClientSize = new System.Drawing.Size(1311, 760);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
@@ -397,6 +459,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "ViewReportForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "8";
@@ -409,6 +472,10 @@
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,5 +507,11 @@
         public Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource mascotasDTBindingSource;
         private DataSets.DsMascotas dsMascotas;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mascotasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mascotasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem adopcionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem organizacionesToolStripMenuItem;
     }
 }

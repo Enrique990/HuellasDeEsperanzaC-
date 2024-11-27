@@ -36,22 +36,11 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void CargarMascotaEnEspera()
         {
-            List<SolicitudAdopcion> solicitudesUsuarioActual = new List<SolicitudAdopcion>();
+            // Obtener la primera solicitud en espera del usuario actual
+            SolicitudAdopcion solicitudEnEspera = gestorAdopcionUser.ObtenerPrimeraSolicitudEnEsperaPorUsuario(usuarioActual.Id);
 
-            // Filtrar las solicitudes de adopción por el usuario actual sin usar foreach
-            for (int i = 0; i < gestorAdopcionUser.SolicitudesAdopcion.Count; i++)
+            if (solicitudEnEspera != null)
             {
-                SolicitudAdopcion solicitud = gestorAdopcionUser.SolicitudesAdopcion[i];
-                if (solicitud.UsuarioId == usuarioActual.Id && solicitud.Estado == EstadoSolicitud.Pendiente)
-                {
-                    solicitudesUsuarioActual.Add(solicitud);
-                }
-            }
-
-            if (solicitudesUsuarioActual.Count > 0)
-            {
-                // Obtener la primera solicitud en espera del usuario actual
-                SolicitudAdopcion solicitudEnEspera = solicitudesUsuarioActual[0];
                 Mascota mascotaEnEspera = gestorAdopcionUser.ObtenerMascotaPorId(solicitudEnEspera.MascotaId);
                 Usuario usuarioSolicitante = gestorAdopcionUser.ObtenerUsuarioPorId(solicitudEnEspera.UsuarioId);
 
@@ -101,6 +90,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 pbCircleMascota.Image = null;
             }
         }
+
 
 
 

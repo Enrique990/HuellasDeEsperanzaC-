@@ -155,6 +155,7 @@ namespace HuellasDeEsperanzaC_.Servicio
                         NumeroCedula = Lector.ReadString(),
                         Ocupacion = Lector.ReadString(),
                         Tipo = (TipoUsuario)Enum.Parse(typeof(TipoUsuario), Lector.ReadString())
+                        // Perfil Completo : BOOL
                     };
 
                     usuarios.Add(usuario);

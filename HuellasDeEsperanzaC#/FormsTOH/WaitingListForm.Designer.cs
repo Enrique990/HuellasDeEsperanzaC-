@@ -57,6 +57,12 @@
             this.pbCircleMascota = new HuellasDeEsperanzaC_.CustomUserControls.CirclePictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblEstadoLista = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -341,7 +347,7 @@
             this.lblDescripcionM.AutoSize = true;
             this.lblDescripcionM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcionM.ForeColor = System.Drawing.Color.White;
-            this.lblDescripcionM.Location = new System.Drawing.Point(727, 428);
+            this.lblDescripcionM.Location = new System.Drawing.Point(940, 438);
             this.lblDescripcionM.Name = "lblDescripcionM";
             this.lblDescripcionM.Size = new System.Drawing.Size(106, 18);
             this.lblDescripcionM.TabIndex = 6;
@@ -352,7 +358,7 @@
             this.lblEspecieM.AutoSize = true;
             this.lblEspecieM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEspecieM.ForeColor = System.Drawing.Color.White;
-            this.lblEspecieM.Location = new System.Drawing.Point(727, 288);
+            this.lblEspecieM.Location = new System.Drawing.Point(940, 294);
             this.lblEspecieM.Name = "lblEspecieM";
             this.lblEspecieM.Size = new System.Drawing.Size(75, 18);
             this.lblEspecieM.TabIndex = 2;
@@ -363,7 +369,7 @@
             this.lblFechaNacM.AutoSize = true;
             this.lblFechaNacM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaNacM.ForeColor = System.Drawing.Color.White;
-            this.lblFechaNacM.Location = new System.Drawing.Point(727, 393);
+            this.lblFechaNacM.Location = new System.Drawing.Point(940, 402);
             this.lblFechaNacM.Name = "lblFechaNacM";
             this.lblFechaNacM.Size = new System.Drawing.Size(183, 18);
             this.lblFechaNacM.TabIndex = 5;
@@ -374,7 +380,7 @@
             this.lblSexoM.AutoSize = true;
             this.lblSexoM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSexoM.ForeColor = System.Drawing.Color.White;
-            this.lblSexoM.Location = new System.Drawing.Point(727, 323);
+            this.lblSexoM.Location = new System.Drawing.Point(940, 330);
             this.lblSexoM.Name = "lblSexoM";
             this.lblSexoM.Size = new System.Drawing.Size(55, 18);
             this.lblSexoM.TabIndex = 3;
@@ -385,7 +391,7 @@
             this.lblRazaM.AutoSize = true;
             this.lblRazaM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRazaM.ForeColor = System.Drawing.Color.White;
-            this.lblRazaM.Location = new System.Drawing.Point(727, 358);
+            this.lblRazaM.Location = new System.Drawing.Point(940, 366);
             this.lblRazaM.Name = "lblRazaM";
             this.lblRazaM.Size = new System.Drawing.Size(55, 18);
             this.lblRazaM.TabIndex = 4;
@@ -396,7 +402,7 @@
             this.lblNombreM.AutoSize = true;
             this.lblNombreM.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreM.ForeColor = System.Drawing.Color.White;
-            this.lblNombreM.Location = new System.Drawing.Point(727, 253);
+            this.lblNombreM.Location = new System.Drawing.Point(940, 258);
             this.lblNombreM.Name = "lblNombreM";
             this.lblNombreM.Size = new System.Drawing.Size(79, 18);
             this.lblNombreM.TabIndex = 1;
@@ -429,11 +435,77 @@
             this.lblEstadoLista.AutoSize = true;
             this.lblEstadoLista.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstadoLista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.lblEstadoLista.Location = new System.Drawing.Point(479, 161);
+            this.lblEstadoLista.Location = new System.Drawing.Point(476, 161);
             this.lblEstadoLista.Name = "lblEstadoLista";
             this.lblEstadoLista.Size = new System.Drawing.Size(76, 32);
             this.lblEstadoLista.TabIndex = 0;
             this.lblEstadoLista.Text = "Texto";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(834, 258);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 18);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Nombre:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(838, 294);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 18);
+            this.label4.TabIndex = 49;
+            this.label4.Text = "Especie:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(858, 331);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 18);
+            this.label5.TabIndex = 50;
+            this.label5.Text = "Sexo:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(858, 366);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(55, 18);
+            this.label6.TabIndex = 51;
+            this.label6.Text = "Raza:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(730, 402);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(183, 18);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "Fecha de Nacimiento:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(807, 438);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(106, 18);
+            this.label8.TabIndex = 53;
+            this.label8.Text = "Descripción:";
             // 
             // WaitingListForm
             // 
@@ -442,6 +514,12 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1311, 760);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblEstadoLista);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblDescripcionM);
@@ -504,5 +582,11 @@
         private CustomUserControls.CirclePictureBox pbCircleMascota;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblEstadoLista;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
