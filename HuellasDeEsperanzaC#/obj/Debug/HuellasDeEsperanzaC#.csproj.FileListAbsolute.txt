@@ -275,3 +275,4 @@ C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeE
 C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\AnimalShelterOrganizacionesIconoHD.png
 C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\CorazonAdoptarEsperaIconoHD.png
 C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\bin\Debug\Resources\ReportesAdopcionesIconoHD.png
+C:\Users\Lenovo\Desktop\HuellaDeEsperanzaClonado\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.GeneralWaitingListForm.resources

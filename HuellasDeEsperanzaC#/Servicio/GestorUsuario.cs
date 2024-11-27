@@ -34,6 +34,23 @@ namespace HuellasDeEsperanzaC_.Servicio
             }
             else
             {
+                // Asignar un Id único al nuevo usuario
+                if (usuarios.Count > 0)
+                {
+                    int maxId = 0;
+                    for (int i = 0; i < usuarios.Count; i++)
+                    {
+                        if (usuarios[i].Id > maxId)
+                        {
+                            maxId = usuarios[i].Id;
+                        }
+                    }
+                    usuario.Id = maxId + 1;
+                }
+                else
+                {
+                    usuario.Id = 1;
+                }
                 usuarios.Add(usuario);
             }
 
@@ -42,6 +59,8 @@ namespace HuellasDeEsperanzaC_.Servicio
             {
                 for (int i = 0; i < usuarios.Count; i++)
                 {
+                    Escritor.Write(usuarios[i].Id);
+
                     if (usuarios[i].NombreCompleto != null)
                         Escritor.Write(usuarios[i].NombreCompleto);
                     else
@@ -126,6 +145,7 @@ namespace HuellasDeEsperanzaC_.Servicio
                 {
                     Usuario usuario = new Usuario
                     {
+                        Id = Lector.ReadInt32(),
                         NombreCompleto = Lector.ReadString(),
                         CorreoElectronico = Lector.ReadString(),
                         HashContrasena = Lector.ReadString(),
@@ -148,10 +168,10 @@ namespace HuellasDeEsperanzaC_.Servicio
             {
                 if (usuarios[i].CorreoElectronico == correoVerificar && usuarios[i].VerificarContraseña(contrasenaVerificar))
                 {
-                    //HomeGeneralForm Home = new HomeGeneralForm(usuarios[i], gestorAdopcion);
-                    //Home.Show();
-                    HomeAdminForm homeAdminForm = new HomeAdminForm(usuarios[i], gestorAdopcion);
-                    homeAdminForm.Show();
+                    HomeGeneralForm Home = new HomeGeneralForm(usuarios[i], gestorAdopcion);
+                    Home.Show();
+                    //HomeAdminForm homeAdminForm = new HomeAdminForm(usuarios[i], gestorAdopcion);
+                    //homeAdminForm.Show();
                     formulario.Hide();
                     return;
                 }

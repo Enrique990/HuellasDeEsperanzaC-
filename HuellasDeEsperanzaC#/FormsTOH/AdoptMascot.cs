@@ -30,6 +30,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         private void AdoptMascot_Load(object sender, EventArgs e)
         {
             CargarYAgregarMascotas();
+            gestorAdopcionUser.RecargarDatosSolicitudes();
         }
 
         public void CargarYAgregarMascotas()
@@ -84,17 +85,10 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             Card selectedCard = sender as Card;
             if (selectedCard != null)
             {
-                Mascota mascota = new Mascota
-                {
-                    Id = selectedCard.MascotaId,
-                    Nombre = selectedCard.CardNombreMascota,
-                    Raza = selectedCard.CardRaza,
-                    Sexo = selectedCard.CardSexo,
-                    FechaNacimiento = DateTime.Parse(selectedCard.CardEdad),
-                    RutaImagen = selectedCard.CardImagen.ToString()
-                };
+                // Crear una nueva solicitud de adopción
+                gestorAdopcionUser.CrearSolicitudAdopcion(usuarioActual.Id, selectedCard.MascotaId);
 
-                usuarioActual.MascotasAdoptadas.Add(mascota);
+                // Mostrar un mensaje de éxito
                 MessageBox.Show("Solicitud de adopción creada con éxito.");
             }
         }

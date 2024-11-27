@@ -77,7 +77,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void HomeGeneralForm_Load(object sender, EventArgs e)
         {
-
+            gestorAdopcionUser.RecargarDatosSolicitudes();
         }
 
         private void button3_Click(object sender, EventArgs e)

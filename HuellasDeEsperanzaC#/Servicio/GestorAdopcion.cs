@@ -37,7 +37,9 @@ namespace HuellasDeEsperanzaC_.Servicio
             SolicitudAdopcion nuevaSolicitud = new SolicitudAdopcion
             {
                 UsuarioId = usuarioId,
-                MascotaId = mascotaId
+                MascotaId = mascotaId,
+                FechaSolicitud = DateTime.Now,
+                Estado = EstadoSolicitud.Pendiente
             };
 
             solicitudes.Add(nuevaSolicitud);
@@ -230,6 +232,12 @@ namespace HuellasDeEsperanzaC_.Servicio
                     usuarios.Add(usuario);
                 }
             }
+        }
+
+        public void RecargarDatosSolicitudes()
+        {
+            solicitudes.Clear();
+            CargarDatosSolicitudes();
         }
     }
 }
