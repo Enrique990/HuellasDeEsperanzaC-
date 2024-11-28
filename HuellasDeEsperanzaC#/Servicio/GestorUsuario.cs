@@ -36,10 +36,10 @@ namespace HuellasDeEsperanzaC_.Servicio
 
             GuardarUsuarios(usuarios);
 
-            string mensaje = esEdicion ? "Usuario actualizado exitosamente" : "Usuario registrado exitosamente";
-            string titulo = esEdicion ? "Actualización exitosa" : "Registro exitoso";
+            //string mensaje = esEdicion ? "Usuario actualizado exitosamente" : "Usuario registrado exitosamente";
+            //string titulo = esEdicion ? "Actualización exitosa" : "Registro exitoso";
 
-            MetroFramework.MetroMessageBox.Show(formulario, mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //MetroFramework.MetroMessageBox.Show(formulario, mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             HomeGeneralForm Home = new HomeGeneralForm(usuario, gestorAdopcion);
             Home.Show();
@@ -109,7 +109,6 @@ namespace HuellasDeEsperanzaC_.Servicio
             {
                 if (usuarios[i].CorreoElectronico == correoVerificar && usuarios[i].VerificarContraseña(contrasenaVerificar))
                 {
-                    MetroFramework.MetroMessageBox.Show(formulario, "Bienvenido", "Inicio de Sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     HomeGeneralForm Home = new HomeGeneralForm(usuarios[i], gestorAdopcion);
                     Home.Show();
                     formulario.Hide();
