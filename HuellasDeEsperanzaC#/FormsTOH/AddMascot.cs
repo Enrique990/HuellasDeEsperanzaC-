@@ -69,6 +69,23 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         private void btnGuardarMascota_Click(object sender, EventArgs e)
         {
             // Validar campos requeridos
+
+            DateTime fechaNacimiento = dtFechaMascota.Value;
+            DateTime fechaActual = DateTime.Now;
+            int edadMaxima = 33;
+
+            if (fechaNacimiento > fechaActual)
+            {
+                MessageBox.Show("La fecha de nacimiento no puede ser una fecha futura.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if ((fechaActual.Year - fechaNacimiento.Year) > edadMaxima)
+            {
+                MessageBox.Show($"Es imposible que esta mascota tanga esa edad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (string.IsNullOrEmpty(tbNombreMascota.Texts) ||
             string.IsNullOrEmpty(cbEspecie.Text) ||
             string.IsNullOrEmpty(cbSexo.Text) ||
