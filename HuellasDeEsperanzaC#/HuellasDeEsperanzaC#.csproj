@@ -97,6 +97,12 @@
     <Compile Include="FormsTOH\AdoptMascot.Designer.cs">
       <DependentUpon>AdoptMascot.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormsTOH\NewPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsTOH\NewPassword.Designer.cs">
+      <DependentUpon>NewPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormsTOH\UpdateProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormsTOH\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsTOH\NewPassword.resx">
+      <DependentUpon>NewPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormsTOH\RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>

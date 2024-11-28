@@ -162,21 +162,21 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
             AdoptMascot adoptMascot = new AdoptMascot(usuarioActual, gestorAdopcionUser);
             adoptMascot.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             AddMascot addMascot = new AddMascot(usuarioActual, gestorAdopcionUser);
             addMascot.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             HomeGeneralForm homeGeneralForm = new HomeGeneralForm(usuarioActual, gestorAdopcionUser);
             homeGeneralForm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -205,6 +205,23 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+            this.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customTextBox1__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCambiarContraseña_Click(object sender, EventArgs e)
+        {
+            NewPassword newPasswordForm = new NewPassword(usuarioActual);
+            newPasswordForm.Show();
             this.Close();
         }
     }

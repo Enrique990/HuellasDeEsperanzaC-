@@ -29,21 +29,11 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCerrarSesion = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnConfiguracion = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tbEmail = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,16 +48,34 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.tbOcupacion = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
             this.lblOcupacion = new System.Windows.Forms.Label();
             this.lblNombreCompleto = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbPreguntaEmergencia = new HuellasDeEsperanzaC_.CustomUserControls.CustomTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnCambiarContraseña = new HuellasDeEsperanzaC_.CustomUserControls.RoundButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.btnConfiguracion = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnCambiarContraseña);
+            this.panel2.Controls.Add(this.tbPreguntaEmergencia);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel1);
@@ -104,16 +112,6 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.panel3.Size = new System.Drawing.Size(122, 116);
             this.panel3.TabIndex = 17;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HuellasDeEsperanzaC_.Properties.Resources.Huellas_Esperanza_LogoIcono;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(240)))), ((int)(((byte)(197)))));
@@ -134,6 +132,341 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(147, 36);
             this.panel6.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(110)))), ((int)(((byte)(125)))));
+            this.panel1.Controls.Add(this.btnCerrarSesion);
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.btnConfiguracion);
+            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(280, 760);
+            this.panel1.TabIndex = 15;
+            // 
+            // btnCerrarSesion
+            // 
+            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
+            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
+            this.btnCerrarSesion.Name = "btnCerrarSesion";
+            this.btnCerrarSesion.Size = new System.Drawing.Size(185, 62);
+            this.btnCerrarSesion.TabIndex = 4;
+            this.btnCerrarSesion.Text = "Cerrar Sesión";
+            this.btnCerrarSesion.UseVisualStyleBackColor = false;
+            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.panel4.Location = new System.Drawing.Point(3, 331);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(15, 67);
+            this.panel4.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(426, 198);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 18);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Correo Electrónico:";
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.tbEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
+            this.tbEmail.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.tbEmail.BorderSize = 2;
+            this.tbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbEmail.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.tbEmail.Location = new System.Drawing.Point(630, 177);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(6);
+            this.tbEmail.MaxLength = 32767;
+            this.tbEmail.Multiline = false;
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Padding = new System.Windows.Forms.Padding(10);
+            this.tbEmail.PasswordChar = false;
+            this.tbEmail.Size = new System.Drawing.Size(601, 39);
+            this.tbEmail.TabIndex = 2;
+            this.tbEmail.Texts = "";
+            this.tbEmail.UnderlinedStyle = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(441, 52);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(176, 37);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Editar Perfil";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(1112, 689);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(116, 47);
+            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(426, 372);
+            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(82, 18);
+            this.lblDireccion.TabIndex = 9;
+            this.lblDireccion.Text = "Dirección:";
+            this.lblDireccion.Click += new System.EventHandler(this.lblDireccion_Click);
+            // 
+            // tbNombreCompleto
+            // 
+            this.tbNombreCompleto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.tbNombreCompleto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
+            this.tbNombreCompleto.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.tbNombreCompleto.BorderSize = 2;
+            this.tbNombreCompleto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNombreCompleto.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNombreCompleto.ForeColor = System.Drawing.Color.DimGray;
+            this.tbNombreCompleto.Location = new System.Drawing.Point(630, 112);
+            this.tbNombreCompleto.Margin = new System.Windows.Forms.Padding(6);
+            this.tbNombreCompleto.MaxLength = 32767;
+            this.tbNombreCompleto.Multiline = false;
+            this.tbNombreCompleto.Name = "tbNombreCompleto";
+            this.tbNombreCompleto.Padding = new System.Windows.Forms.Padding(10);
+            this.tbNombreCompleto.PasswordChar = false;
+            this.tbNombreCompleto.Size = new System.Drawing.Size(598, 39);
+            this.tbNombreCompleto.TabIndex = 1;
+            this.tbNombreCompleto.Texts = "";
+            this.tbNombreCompleto.UnderlinedStyle = true;
+            // 
+            // lblNumeroTelefono
+            // 
+            this.lblNumeroTelefono.AutoSize = true;
+            this.lblNumeroTelefono.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeroTelefono.Location = new System.Drawing.Point(426, 328);
+            this.lblNumeroTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNumeroTelefono.Name = "lblNumeroTelefono";
+            this.lblNumeroTelefono.Size = new System.Drawing.Size(77, 18);
+            this.lblNumeroTelefono.TabIndex = 10;
+            this.lblNumeroTelefono.Text = "Teléfono:";
+            this.lblNumeroTelefono.Click += new System.EventHandler(this.lblNumeroTelefono_Click);
+            // 
+            // tbDireccion
+            // 
+            this.tbDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.tbDireccion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
+            this.tbDireccion.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.tbDireccion.BorderSize = 2;
+            this.tbDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbDireccion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDireccion.ForeColor = System.Drawing.Color.DimGray;
+            this.tbDireccion.Location = new System.Drawing.Point(630, 372);
+            this.tbDireccion.Margin = new System.Windows.Forms.Padding(6);
+            this.tbDireccion.MaxLength = 32767;
+            this.tbDireccion.Multiline = true;
+            this.tbDireccion.Name = "tbDireccion";
+            this.tbDireccion.Padding = new System.Windows.Forms.Padding(10);
+            this.tbDireccion.PasswordChar = false;
+            this.tbDireccion.Size = new System.Drawing.Size(601, 83);
+            this.tbDireccion.TabIndex = 5;
+            this.tbDireccion.Texts = "";
+            this.tbDireccion.UnderlinedStyle = true;
+            // 
+            // lblNumeroCedula
+            // 
+            this.lblNumeroCedula.AutoSize = true;
+            this.lblNumeroCedula.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeroCedula.Location = new System.Drawing.Point(426, 263);
+            this.lblNumeroCedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNumeroCedula.Name = "lblNumeroCedula";
+            this.lblNumeroCedula.Size = new System.Drawing.Size(65, 18);
+            this.lblNumeroCedula.TabIndex = 11;
+            this.lblNumeroCedula.Text = "Cédula:";
+            this.lblNumeroCedula.Click += new System.EventHandler(this.lblNumeroCedula_Click);
+            // 
+            // tbNumeroTelefono
+            // 
+            this.tbNumeroTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.tbNumeroTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
+            this.tbNumeroTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.tbNumeroTelefono.BorderSize = 2;
+            this.tbNumeroTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNumeroTelefono.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumeroTelefono.ForeColor = System.Drawing.Color.DimGray;
+            this.tbNumeroTelefono.Location = new System.Drawing.Point(630, 307);
+            this.tbNumeroTelefono.Margin = new System.Windows.Forms.Padding(6);
+            this.tbNumeroTelefono.MaxLength = 32767;
+            this.tbNumeroTelefono.Multiline = false;
+            this.tbNumeroTelefono.Name = "tbNumeroTelefono";
+            this.tbNumeroTelefono.Padding = new System.Windows.Forms.Padding(10);
+            this.tbNumeroTelefono.PasswordChar = false;
+            this.tbNumeroTelefono.Size = new System.Drawing.Size(601, 39);
+            this.tbNumeroTelefono.TabIndex = 4;
+            this.tbNumeroTelefono.Texts = "";
+            this.tbNumeroTelefono.UnderlinedStyle = true;
+            // 
+            // tbNumeroCedula
+            // 
+            this.tbNumeroCedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.tbNumeroCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
+            this.tbNumeroCedula.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.tbNumeroCedula.BorderSize = 2;
+            this.tbNumeroCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNumeroCedula.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumeroCedula.ForeColor = System.Drawing.Color.DimGray;
+            this.tbNumeroCedula.Location = new System.Drawing.Point(630, 242);
+            this.tbNumeroCedula.Margin = new System.Windows.Forms.Padding(6);
+            this.tbNumeroCedula.MaxLength = 32767;
+            this.tbNumeroCedula.Multiline = false;
+            this.tbNumeroCedula.Name = "tbNumeroCedula";
+            this.tbNumeroCedula.Padding = new System.Windows.Forms.Padding(10);
+            this.tbNumeroCedula.PasswordChar = false;
+            this.tbNumeroCedula.Size = new System.Drawing.Size(601, 39);
+            this.tbNumeroCedula.TabIndex = 3;
+            this.tbNumeroCedula.Texts = "";
+            this.tbNumeroCedula.UnderlinedStyle = true;
+            // 
+            // tbOcupacion
+            // 
+            this.tbOcupacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.tbOcupacion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
+            this.tbOcupacion.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.tbOcupacion.BorderSize = 2;
+            this.tbOcupacion.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbOcupacion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbOcupacion.ForeColor = System.Drawing.Color.DimGray;
+            this.tbOcupacion.Location = new System.Drawing.Point(630, 478);
+            this.tbOcupacion.Margin = new System.Windows.Forms.Padding(6);
+            this.tbOcupacion.MaxLength = 32767;
+            this.tbOcupacion.Multiline = false;
+            this.tbOcupacion.Name = "tbOcupacion";
+            this.tbOcupacion.Padding = new System.Windows.Forms.Padding(10);
+            this.tbOcupacion.PasswordChar = false;
+            this.tbOcupacion.Size = new System.Drawing.Size(601, 39);
+            this.tbOcupacion.TabIndex = 6;
+            this.tbOcupacion.Texts = "";
+            this.tbOcupacion.UnderlinedStyle = true;
+            // 
+            // lblOcupacion
+            // 
+            this.lblOcupacion.AutoSize = true;
+            this.lblOcupacion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOcupacion.Location = new System.Drawing.Point(426, 499);
+            this.lblOcupacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOcupacion.Name = "lblOcupacion";
+            this.lblOcupacion.Size = new System.Drawing.Size(92, 18);
+            this.lblOcupacion.TabIndex = 12;
+            this.lblOcupacion.Text = "Ocupación:";
+            this.lblOcupacion.Click += new System.EventHandler(this.lblOcupacion_Click);
+            // 
+            // lblNombreCompleto
+            // 
+            this.lblNombreCompleto.AutoSize = true;
+            this.lblNombreCompleto.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreCompleto.Location = new System.Drawing.Point(426, 133);
+            this.lblNombreCompleto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreCompleto.Name = "lblNombreCompleto";
+            this.lblNombreCompleto.Size = new System.Drawing.Size(153, 18);
+            this.lblNombreCompleto.TabIndex = 8;
+            this.lblNombreCompleto.Text = "Nombre Completo:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(829, 548);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 18);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Pregunta de emergencia";
+            // 
+            // tbPreguntaEmergencia
+            // 
+            this.tbPreguntaEmergencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
+            this.tbPreguntaEmergencia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
+            this.tbPreguntaEmergencia.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.tbPreguntaEmergencia.BorderSize = 2;
+            this.tbPreguntaEmergencia.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbPreguntaEmergencia.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPreguntaEmergencia.ForeColor = System.Drawing.Color.DimGray;
+            this.tbPreguntaEmergencia.Location = new System.Drawing.Point(627, 591);
+            this.tbPreguntaEmergencia.Margin = new System.Windows.Forms.Padding(6);
+            this.tbPreguntaEmergencia.MaxLength = 32767;
+            this.tbPreguntaEmergencia.Multiline = false;
+            this.tbPreguntaEmergencia.Name = "tbPreguntaEmergencia";
+            this.tbPreguntaEmergencia.Padding = new System.Windows.Forms.Padding(10);
+            this.tbPreguntaEmergencia.PasswordChar = false;
+            this.tbPreguntaEmergencia.Size = new System.Drawing.Size(604, 39);
+            this.tbPreguntaEmergencia.TabIndex = 19;
+            this.tbPreguntaEmergencia.Texts = "";
+            this.tbPreguntaEmergencia.UnderlinedStyle = true;
+            this.tbPreguntaEmergencia._TextChanged += new System.EventHandler(this.customTextBox1__TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(429, 591);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(188, 39);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "¿Cual fue el nombre de tu primera mascota?";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // btnCambiarContraseña
+            // 
+            this.btnCambiarContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
+            this.btnCambiarContraseña.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCambiarContraseña.FlatAppearance.BorderSize = 0;
+            this.btnCambiarContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCambiarContraseña.ForeColor = System.Drawing.Color.White;
+            this.btnCambiarContraseña.Location = new System.Drawing.Point(429, 689);
+            this.btnCambiarContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCambiarContraseña.Name = "btnCambiarContraseña";
+            this.btnCambiarContraseña.Size = new System.Drawing.Size(174, 47);
+            this.btnCambiarContraseña.TabIndex = 21;
+            this.btnCambiarContraseña.Text = "Cambiar Contraseña";
+            this.btnCambiarContraseña.UseVisualStyleBackColor = false;
+            this.btnCambiarContraseña.Click += new System.EventHandler(this.btnCambiarContraseña_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::HuellasDeEsperanzaC_.Properties.Resources.Huellas_Esperanza_LogoIcono;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // button11
             // 
@@ -177,39 +510,6 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(110)))), ((int)(((byte)(125)))));
-            this.panel1.Controls.Add(this.btnCerrarSesion);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.btnConfiguracion);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 760);
-            this.panel1.TabIndex = 15;
-            // 
-            // btnCerrarSesion
-            // 
-            this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.btnCerrarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-            this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
-            this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(185, 62);
-            this.btnCerrarSesion.TabIndex = 4;
-            this.btnCerrarSesion.Text = "Cerrar Sesión";
-            this.btnCerrarSesion.UseVisualStyleBackColor = false;
-            this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
-            // 
             // button8
             // 
             this.button8.FlatAppearance.BorderSize = 0;
@@ -220,14 +520,6 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.button8.Size = new System.Drawing.Size(47, 43);
             this.button8.TabIndex = 1;
             this.button8.UseVisualStyleBackColor = true;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.panel4.Location = new System.Drawing.Point(3, 331);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(15, 67);
-            this.panel4.TabIndex = 3;
             // 
             // btnConfiguracion
             // 
@@ -317,233 +609,9 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(445, 230);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(196, 23);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Correo Electrónico:";
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.tbEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
-            this.tbEmail.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.tbEmail.BorderSize = 2;
-            this.tbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbEmail.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.tbEmail.Location = new System.Drawing.Point(608, 205);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(6);
-            this.tbEmail.MaxLength = 32767;
-            this.tbEmail.Multiline = false;
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Padding = new System.Windows.Forms.Padding(10);
-            this.tbEmail.PasswordChar = false;
-            this.tbEmail.Size = new System.Drawing.Size(623, 44);
-            this.tbEmail.TabIndex = 2;
-            this.tbEmail.Texts = "";
-            this.tbEmail.UnderlinedStyle = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(441, 52);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 46);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Editar Perfil";
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(1112, 615);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(116, 47);
-            this.btnGuardar.TabIndex = 7;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(440, 400);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(109, 23);
-            this.lblDireccion.TabIndex = 9;
-            this.lblDireccion.Text = "Dirección:";
-            this.lblDireccion.Click += new System.EventHandler(this.lblDireccion_Click);
-            // 
-            // tbNombreCompleto
-            // 
-            this.tbNombreCompleto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.tbNombreCompleto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
-            this.tbNombreCompleto.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.tbNombreCompleto.BorderSize = 2;
-            this.tbNombreCompleto.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbNombreCompleto.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNombreCompleto.ForeColor = System.Drawing.Color.DimGray;
-            this.tbNombreCompleto.Location = new System.Drawing.Point(608, 140);
-            this.tbNombreCompleto.Margin = new System.Windows.Forms.Padding(6);
-            this.tbNombreCompleto.MaxLength = 32767;
-            this.tbNombreCompleto.Multiline = false;
-            this.tbNombreCompleto.Name = "tbNombreCompleto";
-            this.tbNombreCompleto.Padding = new System.Windows.Forms.Padding(10);
-            this.tbNombreCompleto.PasswordChar = false;
-            this.tbNombreCompleto.Size = new System.Drawing.Size(620, 44);
-            this.tbNombreCompleto.TabIndex = 1;
-            this.tbNombreCompleto.Texts = "";
-            this.tbNombreCompleto.UnderlinedStyle = true;
-            // 
-            // lblNumeroTelefono
-            // 
-            this.lblNumeroTelefono.AutoSize = true;
-            this.lblNumeroTelefono.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroTelefono.Location = new System.Drawing.Point(445, 356);
-            this.lblNumeroTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNumeroTelefono.Name = "lblNumeroTelefono";
-            this.lblNumeroTelefono.Size = new System.Drawing.Size(100, 23);
-            this.lblNumeroTelefono.TabIndex = 10;
-            this.lblNumeroTelefono.Text = "Teléfono:";
-            this.lblNumeroTelefono.Click += new System.EventHandler(this.lblNumeroTelefono_Click);
-            // 
-            // tbDireccion
-            // 
-            this.tbDireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.tbDireccion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
-            this.tbDireccion.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.tbDireccion.BorderSize = 2;
-            this.tbDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbDireccion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbDireccion.ForeColor = System.Drawing.Color.DimGray;
-            this.tbDireccion.Location = new System.Drawing.Point(608, 400);
-            this.tbDireccion.Margin = new System.Windows.Forms.Padding(6);
-            this.tbDireccion.MaxLength = 32767;
-            this.tbDireccion.Multiline = true;
-            this.tbDireccion.Name = "tbDireccion";
-            this.tbDireccion.Padding = new System.Windows.Forms.Padding(10);
-            this.tbDireccion.PasswordChar = false;
-            this.tbDireccion.Size = new System.Drawing.Size(623, 83);
-            this.tbDireccion.TabIndex = 5;
-            this.tbDireccion.Texts = "";
-            this.tbDireccion.UnderlinedStyle = true;
-            // 
-            // lblNumeroCedula
-            // 
-            this.lblNumeroCedula.AutoSize = true;
-            this.lblNumeroCedula.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroCedula.Location = new System.Drawing.Point(445, 291);
-            this.lblNumeroCedula.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNumeroCedula.Name = "lblNumeroCedula";
-            this.lblNumeroCedula.Size = new System.Drawing.Size(84, 23);
-            this.lblNumeroCedula.TabIndex = 11;
-            this.lblNumeroCedula.Text = "Cédula:";
-            this.lblNumeroCedula.Click += new System.EventHandler(this.lblNumeroCedula_Click);
-            // 
-            // tbNumeroTelefono
-            // 
-            this.tbNumeroTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.tbNumeroTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
-            this.tbNumeroTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.tbNumeroTelefono.BorderSize = 2;
-            this.tbNumeroTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbNumeroTelefono.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNumeroTelefono.ForeColor = System.Drawing.Color.DimGray;
-            this.tbNumeroTelefono.Location = new System.Drawing.Point(608, 335);
-            this.tbNumeroTelefono.Margin = new System.Windows.Forms.Padding(6);
-            this.tbNumeroTelefono.MaxLength = 32767;
-            this.tbNumeroTelefono.Multiline = false;
-            this.tbNumeroTelefono.Name = "tbNumeroTelefono";
-            this.tbNumeroTelefono.Padding = new System.Windows.Forms.Padding(10);
-            this.tbNumeroTelefono.PasswordChar = false;
-            this.tbNumeroTelefono.Size = new System.Drawing.Size(623, 44);
-            this.tbNumeroTelefono.TabIndex = 4;
-            this.tbNumeroTelefono.Texts = "";
-            this.tbNumeroTelefono.UnderlinedStyle = true;
-            // 
-            // tbNumeroCedula
-            // 
-            this.tbNumeroCedula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.tbNumeroCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
-            this.tbNumeroCedula.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.tbNumeroCedula.BorderSize = 2;
-            this.tbNumeroCedula.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbNumeroCedula.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbNumeroCedula.ForeColor = System.Drawing.Color.DimGray;
-            this.tbNumeroCedula.Location = new System.Drawing.Point(608, 270);
-            this.tbNumeroCedula.Margin = new System.Windows.Forms.Padding(6);
-            this.tbNumeroCedula.MaxLength = 32767;
-            this.tbNumeroCedula.Multiline = false;
-            this.tbNumeroCedula.Name = "tbNumeroCedula";
-            this.tbNumeroCedula.Padding = new System.Windows.Forms.Padding(10);
-            this.tbNumeroCedula.PasswordChar = false;
-            this.tbNumeroCedula.Size = new System.Drawing.Size(623, 44);
-            this.tbNumeroCedula.TabIndex = 3;
-            this.tbNumeroCedula.Texts = "";
-            this.tbNumeroCedula.UnderlinedStyle = true;
-            // 
-            // tbOcupacion
-            // 
-            this.tbOcupacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.tbOcupacion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(136)))), ((int)(((byte)(115)))));
-            this.tbOcupacion.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(94)))), ((int)(((byte)(78)))));
-            this.tbOcupacion.BorderSize = 2;
-            this.tbOcupacion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbOcupacion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbOcupacion.ForeColor = System.Drawing.Color.DimGray;
-            this.tbOcupacion.Location = new System.Drawing.Point(608, 522);
-            this.tbOcupacion.Margin = new System.Windows.Forms.Padding(6);
-            this.tbOcupacion.MaxLength = 32767;
-            this.tbOcupacion.Multiline = false;
-            this.tbOcupacion.Name = "tbOcupacion";
-            this.tbOcupacion.Padding = new System.Windows.Forms.Padding(10);
-            this.tbOcupacion.PasswordChar = false;
-            this.tbOcupacion.Size = new System.Drawing.Size(623, 44);
-            this.tbOcupacion.TabIndex = 6;
-            this.tbOcupacion.Texts = "";
-            this.tbOcupacion.UnderlinedStyle = true;
-            // 
-            // lblOcupacion
-            // 
-            this.lblOcupacion.AutoSize = true;
-            this.lblOcupacion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOcupacion.Location = new System.Drawing.Point(445, 543);
-            this.lblOcupacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblOcupacion.Name = "lblOcupacion";
-            this.lblOcupacion.Size = new System.Drawing.Size(119, 23);
-            this.lblOcupacion.TabIndex = 12;
-            this.lblOcupacion.Text = "Ocupación:";
-            this.lblOcupacion.Click += new System.EventHandler(this.lblOcupacion_Click);
-            // 
-            // lblNombreCompleto
-            // 
-            this.lblNombreCompleto.AutoSize = true;
-            this.lblNombreCompleto.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreCompleto.Location = new System.Drawing.Point(445, 161);
-            this.lblNombreCompleto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombreCompleto.Name = "lblNombreCompleto";
-            this.lblNombreCompleto.Size = new System.Drawing.Size(192, 23);
-            this.lblNombreCompleto.TabIndex = 8;
-            this.lblNombreCompleto.Text = "Nombre Completo:";
-            // 
             // ConfiguracionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.ClientSize = new System.Drawing.Size(1311, 760);
@@ -557,10 +625,10 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -600,5 +668,9 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         private Button button11;
         private Button button10;
         private Button button9;
+        private CustomUserControls.CustomTextBox tbPreguntaEmergencia;
+        private Label label4;
+        private Label label1;
+        private CustomUserControls.RoundButton btnCambiarContraseña;
     }
 }
