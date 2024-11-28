@@ -101,8 +101,8 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             // Asignar imagen predeterminada si no se selecciona una imagen
             if (string.IsNullOrEmpty(rutaImagenSeleccionada))
             {
-                string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
-                rutaImagenSeleccionada = Path.Combine(projectDirectory, "Resources\\icons8-pets-50.png");
+                MessageBox.Show("Por favor, seleccione una imagen para la mascota.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             Mascota mascota = new Mascota
