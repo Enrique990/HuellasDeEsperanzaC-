@@ -29,7 +29,9 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void UserProfile_Load(object sender, EventArgs e)
         {
-
+            cbRazaPerro.Visible = false;
+            cbRazaGato.Visible = false;
+            cbRazaConejo.Visible = false;
         }
 
         private void privacidadToolStripMenuItem_Click(object sender, EventArgs e)
@@ -68,10 +70,12 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
             // Validar campos requeridos
             if (string.IsNullOrEmpty(tbNombreMascota.Texts) ||
-                string.IsNullOrEmpty(tbTipoMascota.Texts) ||
-                string.IsNullOrEmpty(tbSexoMascota.Texts) ||
-                string.IsNullOrEmpty(tbRazaMascota.Texts) ||
-                string.IsNullOrEmpty(tbDescripcionMascota.Texts))
+            string.IsNullOrEmpty(cbEspecie.Text) ||
+            string.IsNullOrEmpty(cbSexo.Text) ||
+            (cbEspecie.SelectedItem.ToString() == "Perro" && string.IsNullOrEmpty(cbRazaPerro.Text)) ||
+            (cbEspecie.SelectedItem.ToString() == "Gato" && string.IsNullOrEmpty(cbRazaGato.Text)) ||
+            (cbEspecie.SelectedItem.ToString() == "Conejo" && string.IsNullOrEmpty(cbRazaConejo.Text)) ||
+            string.IsNullOrEmpty(tbDescripcionMascota.Texts))
             {
                 MessageBox.Show("Por favor, rellene todos los campos requeridos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -87,9 +91,9 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             Mascota mascota = new Mascota
             {
                 Nombre = tbNombreMascota.Texts,
-                Especie = tbTipoMascota.Texts,
-                Sexo = tbSexoMascota.Texts,
-                Raza = tbRazaMascota.Texts,
+                Especie = cbEspecie.Text,
+                Sexo = cbSexo.Text,
+                Raza = cbEspecie.SelectedItem.ToString() == "Perro" ? cbRazaPerro.Text : cbEspecie.SelectedItem.ToString() == "Gato" ? cbRazaGato.Text : cbEspecie.SelectedItem.ToString() == "Conejo" ? cbRazaConejo.Text : string.Empty,
                 FechaNacimiento = dtFechaMascota.Value,
                 Descripcion = tbDescripcionMascota.Texts,
                 RutaImagen = rutaImagenSeleccionada
@@ -187,6 +191,27 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorAdopcionUser);
             configuracionForm.Show();
             this.Close();
+        }
+
+        private void cbEspecie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Ocultar todos los ComboBox de raza
+            cbRazaPerro.Visible = false;
+            cbRazaGato.Visible = false;
+
+            // Mostrar el ComboBox de raza correspondiente según la especie seleccionada
+            if (cbEspecie.SelectedItem.ToString() == "Perro")
+            {
+                cbRazaPerro.Visible = true;
+            }
+            else if (cbEspecie.SelectedItem.ToString() == "Gato")
+            {
+                cbRazaGato.Visible = true;
+            }
+            else if (cbEspecie.SelectedItem.ToString() == "Conejo")
+            {
+                cbRazaConejo.Visible = true;
+            }
         }
     }
 }

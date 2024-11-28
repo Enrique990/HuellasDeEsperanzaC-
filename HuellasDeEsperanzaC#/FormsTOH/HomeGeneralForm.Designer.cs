@@ -74,8 +74,9 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 760);
+            this.panel1.Size = new System.Drawing.Size(373, 935);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -87,9 +88,10 @@
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(93, 757);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(185, 62);
             this.btnCerrarSesion.TabIndex = 4;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
@@ -100,9 +102,10 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_info_32;
-            this.button8.Location = new System.Drawing.Point(12, 705);
+            this.button8.Location = new System.Drawing.Point(16, 868);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(47, 43);
+            this.button8.Size = new System.Drawing.Size(63, 53);
             this.button8.TabIndex = 1;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -110,9 +113,10 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.panel4.Location = new System.Drawing.Point(3, 39);
+            this.panel4.Location = new System.Drawing.Point(4, 48);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(15, 67);
+            this.panel4.Size = new System.Drawing.Size(20, 82);
             this.panel4.TabIndex = 3;
             // 
             // btnConfiguracion
@@ -124,9 +128,10 @@
             this.btnConfiguracion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.btnConfiguracion.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_settings_40;
             this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracion.Location = new System.Drawing.Point(30, 331);
+            this.btnConfiguracion.Location = new System.Drawing.Point(40, 407);
+            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConfiguracion.Name = "btnConfiguracion";
-            this.btnConfiguracion.Size = new System.Drawing.Size(247, 67);
+            this.btnConfiguracion.Size = new System.Drawing.Size(329, 82);
             this.btnConfiguracion.TabIndex = 6;
             this.btnConfiguracion.Text = "    Configuración";
             this.btnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -142,9 +147,10 @@
             this.button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.button6.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_animal_shelter_50;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(30, 258);
+            this.button6.Location = new System.Drawing.Point(40, 318);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(247, 67);
+            this.button6.Size = new System.Drawing.Size(329, 82);
             this.button6.TabIndex = 5;
             this.button6.Text = "   Ver Organizaciones";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -159,9 +165,10 @@
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.button3.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_pets_50;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(30, 185);
+            this.button3.Location = new System.Drawing.Point(40, 228);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(247, 67);
+            this.button3.Size = new System.Drawing.Size(329, 82);
             this.button3.TabIndex = 2;
             this.button3.Text = "   Agregar Mascotas";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -177,9 +184,10 @@
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.button2.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_heart_with_dog_paw_50__1_;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(30, 112);
+            this.button2.Location = new System.Drawing.Point(40, 138);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(247, 67);
+            this.button2.Size = new System.Drawing.Size(329, 82);
             this.button2.TabIndex = 1;
             this.button2.Text = "   Adoptar Mascotas";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -195,9 +203,10 @@
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.button1.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_home_40;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(30, 39);
+            this.button1.Location = new System.Drawing.Point(40, 48);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(247, 67);
+            this.button1.Size = new System.Drawing.Size(329, 82);
             this.button1.TabIndex = 0;
             this.button1.Text = "    Inicio";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -209,9 +218,10 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(240)))), ((int)(((byte)(197)))));
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(280, 0);
+            this.panel2.Location = new System.Drawing.Point(373, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1031, 36);
+            this.panel2.Size = new System.Drawing.Size(1375, 44);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
@@ -222,9 +232,10 @@
             this.panel6.Controls.Add(this.button10);
             this.panel6.Controls.Add(this.button9);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(884, 0);
+            this.panel6.Location = new System.Drawing.Point(1179, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(147, 36);
+            this.panel6.Size = new System.Drawing.Size(196, 44);
             this.panel6.TabIndex = 9;
             // 
             // button11
@@ -234,9 +245,10 @@
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_minimizar_32__1_;
-            this.button11.Location = new System.Drawing.Point(27, 0);
+            this.button11.Location = new System.Drawing.Point(36, 0);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(40, 36);
+            this.button11.Size = new System.Drawing.Size(53, 44);
             this.button11.TabIndex = 10;
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
@@ -248,9 +260,10 @@
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_maximizar_32__1_;
-            this.button10.Location = new System.Drawing.Point(67, 0);
+            this.button10.Location = new System.Drawing.Point(89, 0);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(40, 36);
+            this.button10.Size = new System.Drawing.Size(53, 44);
             this.button10.TabIndex = 9;
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
@@ -262,9 +275,10 @@
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Location = new System.Drawing.Point(107, 0);
+            this.button9.Location = new System.Drawing.Point(143, 0);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(40, 36);
+            this.button9.Size = new System.Drawing.Size(53, 44);
             this.button9.TabIndex = 8;
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
@@ -273,17 +287,19 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(192)))), ((int)(((byte)(184)))));
             this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(299, 0);
+            this.panel3.Location = new System.Drawing.Point(399, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(122, 116);
+            this.panel3.Size = new System.Drawing.Size(163, 143);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::HuellasDeEsperanzaC_.Properties.Resources.Huellas_Esperanza_LogoIcono;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 100);
+            this.pictureBox1.Size = new System.Drawing.Size(155, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -293,18 +309,21 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.label1.Location = new System.Drawing.Point(441, 52);
+            this.label1.Location = new System.Drawing.Point(588, 64);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 32);
+            this.label1.Size = new System.Drawing.Size(536, 41);
             this.label1.TabIndex = 3;
             this.label1.Text = "¡Bienvenidos a Huellas de Esperanza!";
             // 
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(409, 590);
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(545, 726);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(406, 134);
+            this.listBox1.Size = new System.Drawing.Size(540, 164);
             this.listBox1.TabIndex = 4;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -313,9 +332,10 @@
             this.panel5.Controls.Add(this.tutorialCard3);
             this.panel5.Controls.Add(this.tutorialCard2);
             this.panel5.Controls.Add(this.tutorialCard1);
-            this.panel5.Location = new System.Drawing.Point(409, 182);
+            this.panel5.Location = new System.Drawing.Point(545, 224);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(798, 360);
+            this.panel5.Size = new System.Drawing.Size(1064, 443);
             this.panel5.TabIndex = 5;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint_1);
             // 
@@ -327,10 +347,10 @@
             this.tutorialCard3.BorderSize = 0;
             this.tutorialCard3.Descripcion = "Encuentra a tu compañero perfecto entre nuestras mascotas en adopción.";
             this.tutorialCard3.Imagen = global::HuellasDeEsperanzaC_.Properties.Resources.iconoDonacionHD;
-            this.tutorialCard3.Location = new System.Drawing.Point(536, 30);
-            this.tutorialCard3.Margin = new System.Windows.Forms.Padding(4);
-            this.tutorialCard3.MaximumSize = new System.Drawing.Size(240, 300);
-            this.tutorialCard3.MinimumSize = new System.Drawing.Size(240, 300);
+            this.tutorialCard3.Location = new System.Drawing.Point(715, 37);
+            this.tutorialCard3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tutorialCard3.MaximumSize = new System.Drawing.Size(320, 369);
+            this.tutorialCard3.MinimumSize = new System.Drawing.Size(320, 369);
             this.tutorialCard3.Name = "tutorialCard3";
             this.tutorialCard3.Size = new System.Drawing.Size(240, 300);
             this.tutorialCard3.TabIndex = 2;
@@ -344,10 +364,10 @@
             this.tutorialCard2.BorderSize = 0;
             this.tutorialCard2.Descripcion = "Encuentra a tu compañero perfecto entre nuestras mascotas en adopción.";
             this.tutorialCard2.Imagen = global::HuellasDeEsperanzaC_.Properties.Resources.iconoVoluntariadoHD;
-            this.tutorialCard2.Location = new System.Drawing.Point(278, 30);
-            this.tutorialCard2.Margin = new System.Windows.Forms.Padding(4);
-            this.tutorialCard2.MaximumSize = new System.Drawing.Size(240, 300);
-            this.tutorialCard2.MinimumSize = new System.Drawing.Size(240, 300);
+            this.tutorialCard2.Location = new System.Drawing.Point(371, 37);
+            this.tutorialCard2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tutorialCard2.MaximumSize = new System.Drawing.Size(320, 369);
+            this.tutorialCard2.MinimumSize = new System.Drawing.Size(320, 369);
             this.tutorialCard2.Name = "tutorialCard2";
             this.tutorialCard2.Size = new System.Drawing.Size(240, 300);
             this.tutorialCard2.TabIndex = 1;
@@ -361,10 +381,10 @@
             this.tutorialCard1.BorderSize = 0;
             this.tutorialCard1.Descripcion = "Encuentra a tu compañero perfecto entre nuestras mascotas en adopción.";
             this.tutorialCard1.Imagen = ((System.Drawing.Image)(resources.GetObject("tutorialCard1.Imagen")));
-            this.tutorialCard1.Location = new System.Drawing.Point(20, 27);
-            this.tutorialCard1.Margin = new System.Windows.Forms.Padding(4);
-            this.tutorialCard1.MaximumSize = new System.Drawing.Size(240, 300);
-            this.tutorialCard1.MinimumSize = new System.Drawing.Size(240, 300);
+            this.tutorialCard1.Location = new System.Drawing.Point(27, 33);
+            this.tutorialCard1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tutorialCard1.MaximumSize = new System.Drawing.Size(320, 369);
+            this.tutorialCard1.MinimumSize = new System.Drawing.Size(320, 369);
             this.tutorialCard1.Name = "tutorialCard1";
             this.tutorialCard1.Size = new System.Drawing.Size(240, 300);
             this.tutorialCard1.TabIndex = 0;
@@ -375,9 +395,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.label2.Location = new System.Drawing.Point(354, 158);
+            this.label2.Location = new System.Drawing.Point(472, 194);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(908, 21);
+            this.label2.Size = new System.Drawing.Size(1172, 28);
             this.label2.TabIndex = 6;
             this.label2.Text = "\"Nuestra misión es conectar a animales necesitados con familias amorosas, y apoya" +
     "r a las organizaciones que los cuidan.\"";
@@ -387,18 +408,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.label3.Location = new System.Drawing.Point(405, 566);
+            this.label3.Location = new System.Drawing.Point(540, 697);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 21);
+            this.label3.Size = new System.Drawing.Size(185, 28);
             this.label3.TabIndex = 7;
             this.label3.Text = "Datos del Usuario:";
             // 
             // HomeGeneralForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
-            this.ClientSize = new System.Drawing.Size(1311, 760);
+            this.ClientSize = new System.Drawing.Size(1748, 935);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel5);
@@ -408,6 +430,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomeGeneralForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeGeneralForm";

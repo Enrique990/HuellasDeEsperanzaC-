@@ -90,7 +90,7 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Location = new System.Drawing.Point(70, 615);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(139, 50);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(185, 62);
             this.btnCerrarSesion.TabIndex = 4;
             this.btnCerrarSesion.Text = "Cerrar Sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
@@ -210,7 +210,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
             this.label1.Location = new System.Drawing.Point(441, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(421, 32);
+            this.label1.Size = new System.Drawing.Size(518, 41);
             this.label1.TabIndex = 6;
             this.label1.Text = "Mascotas Disponibles para Adoptar";
             // 
@@ -331,7 +331,7 @@
             this.card1.CardRaza = "Nombre de Mascota";
             this.card1.CardSexo = "Nombre de Mascota";
             this.card1.Location = new System.Drawing.Point(4, 4);
-            this.card1.Margin = new System.Windows.Forms.Padding(4);
+            this.card1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.card1.MascotaId = 0;
             this.card1.MaximumSize = new System.Drawing.Size(240, 300);
             this.card1.MinimumSize = new System.Drawing.Size(240, 300);
@@ -351,7 +351,7 @@
             this.card2.CardRaza = "Nombre de Mascota";
             this.card2.CardSexo = "Nombre de Mascota";
             this.card2.Location = new System.Drawing.Point(252, 4);
-            this.card2.Margin = new System.Windows.Forms.Padding(4);
+            this.card2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.card2.MascotaId = 0;
             this.card2.MaximumSize = new System.Drawing.Size(240, 300);
             this.card2.MinimumSize = new System.Drawing.Size(240, 300);
@@ -371,7 +371,7 @@
             this.card3.CardRaza = "Nombre de Mascota";
             this.card3.CardSexo = "Nombre de Mascota";
             this.card3.Location = new System.Drawing.Point(500, 4);
-            this.card3.Margin = new System.Windows.Forms.Padding(4);
+            this.card3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.card3.MascotaId = 0;
             this.card3.MaximumSize = new System.Drawing.Size(240, 300);
             this.card3.MinimumSize = new System.Drawing.Size(240, 300);
@@ -391,7 +391,7 @@
             this.card4.CardRaza = "Nombre de Mascota";
             this.card4.CardSexo = "Nombre de Mascota";
             this.card4.Location = new System.Drawing.Point(748, 4);
-            this.card4.Margin = new System.Windows.Forms.Padding(4);
+            this.card4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.card4.MascotaId = 0;
             this.card4.MaximumSize = new System.Drawing.Size(240, 300);
             this.card4.MinimumSize = new System.Drawing.Size(240, 300);
@@ -405,7 +405,7 @@
             // 
             // AdoptMascot
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.ClientSize = new System.Drawing.Size(1311, 760);
