@@ -65,11 +65,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 imagenMascota = Image.FromFile(rutaImagenPredeterminada);
             }
 
+            string edad = CalcularEdad(mascota.FechaNacimiento);
+
             Card card = new Card(usuarioActual.Id, mascota.Id)
             {
                 CardNombreMascota = mascota.Nombre,
                 CardRaza = mascota.Raza,
-                CardEdad = mascota.FechaNacimiento.ToString("dd/MM/yyyy"),
+                CardEdad = edad,
                 CardSexo = mascota.Sexo,
                 CardImagen = imagenMascota,
             };
@@ -77,6 +79,43 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             card.OnSelect += Card_OnSelect;
 
             flowLayoutPanel1.Controls.Add(card);
+        }
+
+        private string CalcularEdad(DateTime fechaNacimiento)
+        {
+            DateTime fechaActual = DateTime.Now;
+            int años = fechaActual.Year - fechaNacimiento.Year;
+            int meses = fechaActual.Month - fechaNacimiento.Month;
+            int dias = fechaActual.Day - fechaNacimiento.Day;
+
+            if (dias < 0)
+            {
+                meses--;
+                dias += DateTime.DaysInMonth(fechaNacimiento.Year, fechaNacimiento.Month);
+            }
+
+            if (meses < 0)
+            {
+                años--;
+                meses += 12;
+            }
+
+            if (años > 0)
+            {
+                return años == 1 ? "1 año" : $"{años} años";
+            }
+            else if (meses > 0)
+            {
+                return meses == 1 ? "1 mes" : $"{meses} meses";
+            }
+            else if (dias > 0)
+            {
+                return dias == 1 ? "1 día" : $"{dias} días";
+            }
+            else
+            {
+                return "Nacido hoy";
+            }
         }
 
         private void Card_OnSelect(object sender, EventArgs e)

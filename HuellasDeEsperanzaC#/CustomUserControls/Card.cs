@@ -246,5 +246,15 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
         {
 
         }
+
+        private void lblRaza_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
