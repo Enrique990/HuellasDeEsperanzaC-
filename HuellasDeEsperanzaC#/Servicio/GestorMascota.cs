@@ -11,21 +11,21 @@ namespace HuellasDeEsperanzaC_.Servicio
 {
     public class GestorMascota
     {
+        List<Mascota> mascotas = new List<Mascota>();
+
         public void RegistrarMascota(Mascota mascota, Form formulario, bool esEdicion = false)
         {
-            List<Mascota> mascotas = new List<Mascota>();
-            CargarDatosMascotas(mascotas);
+            mascotas.Clear();
+            CargarDatosMascotas();
 
             if (esEdicion)
             {
                 // Buscar y actualizar la mascota existente según los datos cargados
-                for (int i = 0; i < mascotas.Count; i++)
+                var mascotaExistente = mascotas.FirstOrDefault(m => m.Id == mascota.Id);
+                if (mascotaExistente != null)
                 {
-                    if (mascotas[i].Id == mascota.Id)
-                    {
-                        mascotas[i] = mascota;
-                        break;
-                    }
+                    int index = mascotas.IndexOf(mascotaExistente);
+                    mascotas[index] = mascota;
                 }
             }
             else
@@ -33,14 +33,7 @@ namespace HuellasDeEsperanzaC_.Servicio
                 // Asignar un nuevo ID a la mascota
                 if (mascotas.Count > 0)
                 {
-                    int maxId = 0;
-                    for (int i = 0; i < mascotas.Count; i++)
-                    {
-                        if (mascotas[i].Id > maxId)
-                        {
-                            maxId = mascotas[i].Id;
-                        }
-                    }
+                    int maxId = mascotas.Max(m => m.Id);
                     mascota.Id = maxId + 1;
                 }
                 else
@@ -50,21 +43,7 @@ namespace HuellasDeEsperanzaC_.Servicio
                 mascotas.Add(mascota);
             }
 
-            using (FileStream mArchivoEscritor = new FileStream("mascotas.dat", FileMode.Create, FileAccess.Write))
-            using (BinaryWriter Escritor = new BinaryWriter(mArchivoEscritor))
-            {
-                for (int i = 0; i < mascotas.Count; i++)
-                {
-                    Escritor.Write(mascotas[i].Id);
-                    Escritor.Write(mascotas[i].Nombre);
-                    Escritor.Write(mascotas[i].Especie);
-                    Escritor.Write(mascotas[i].Sexo);
-                    Escritor.Write(mascotas[i].Raza);
-                    Escritor.Write(mascotas[i].FechaNacimiento.ToBinary());
-                    Escritor.Write(mascotas[i].Descripcion);
-                    Escritor.Write(mascotas[i].RutaImagen ?? string.Empty);
-                }
-            }
+            EscribirArchivoMascotas();
 
             string mensaje;
             string titulo;
@@ -83,7 +62,51 @@ namespace HuellasDeEsperanzaC_.Servicio
             MetroFramework.MetroMessageBox.Show(formulario, mensaje, titulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public void CargarDatosMascotas(List<Mascota> mascotas)
+        public Mascota BuscarMascotaPorID(int id)
+        {
+            return mascotas.FirstOrDefault(m => m.Id == id);
+        }
+
+        public Mascota BuscarMascotaPorNombre(string nombre)
+        {
+            return mascotas.FirstOrDefault(m => string.Equals(m.Nombre, nombre, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public Mascota BuscarMascotaPorRaza(string raza)
+        {
+            return mascotas.FirstOrDefault(m => string.Equals(m.Raza, raza, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public Mascota BuscarMascotaPorSexo(string sexo)
+        {
+            return mascotas.FirstOrDefault(m => string.Equals(m.Sexo, sexo, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public Mascota BuscarMascotaPorEspecie(string especie)
+        {
+            return mascotas.FirstOrDefault(m => string.Equals(m.Especie, especie, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public void EscribirArchivoMascotas()
+        {
+            using (FileStream mArchivoEscritor = new FileStream("mascotas.dat", FileMode.Create, FileAccess.Write))
+            using (BinaryWriter Escritor = new BinaryWriter(mArchivoEscritor))
+            {
+                for (int i = 0; i < mascotas.Count; i++)
+                {
+                    Escritor.Write(mascotas[i].Id);
+                    Escritor.Write(mascotas[i].Nombre);
+                    Escritor.Write(mascotas[i].Especie);
+                    Escritor.Write(mascotas[i].Sexo);
+                    Escritor.Write(mascotas[i].Raza);
+                    Escritor.Write(mascotas[i].FechaNacimiento.ToBinary());
+                    Escritor.Write(mascotas[i].Descripcion);
+                    Escritor.Write(mascotas[i].RutaImagen ?? string.Empty);
+                }
+            }
+        }
+
+        public void CargarDatosMascotas()
         {
             mascotas.Clear();
 
@@ -158,6 +181,11 @@ namespace HuellasDeEsperanzaC_.Servicio
             }
 
             return string.Empty;
+        }
+
+        public List<Mascota> GetListaMascotas()
+        {
+            return mascotas;
         }
     }
 }

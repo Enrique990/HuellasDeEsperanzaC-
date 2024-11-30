@@ -97,7 +97,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
             GestorMascota gestorMascota = new GestorMascota();
             List<Mascota> mascotas = new List<Mascota>();
-            gestorMascota.CargarDatosMascotas(mascotas);
+            gestorMascota.CargarDatosMascotas();
 
             bool esEdicion = false;
             for (int i = 0; i < mascotas.Count; i++)

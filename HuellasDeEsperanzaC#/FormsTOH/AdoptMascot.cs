@@ -37,7 +37,9 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
             List<Mascota> mascotas = new List<Mascota>();
             GestorMascota gestorMascota = new GestorMascota();
-            gestorMascota.CargarDatosMascotas(mascotas);
+            gestorMascota.CargarDatosMascotas();
+
+            mascotas = gestorMascota.GetListaMascotas();
 
             for (int i = 0; i < mascotas.Count; i++)
             {
@@ -83,14 +85,14 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         private void Card_OnSelect(object sender, EventArgs e)
         {
             Card selectedCard = sender as Card;
-            if (selectedCard != null)
+            /*if (selectedCard != null)
             {
                 // Crear una nueva solicitud de adopción
-                gestorAdopcionUser.CrearSolicitudAdopcion(usuarioActual.Id, selectedCard.MascotaId);
+                //gestorAdopcionUser.CrearSolicitudAdopcion(usuarioActual.Id, selectedCard.MascotaId);
 
                 // Mostrar un mensaje de éxito
-                MessageBox.Show("Solicitud de adopción creada con éxito.");
-            }
+                
+            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)

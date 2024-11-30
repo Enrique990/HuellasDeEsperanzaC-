@@ -13,100 +13,31 @@ namespace HuellasDeEsperanzaC_.Servicio
 {
     public class GestorUsuario
     {
-        // Registro
+        List<Usuario> usuarios = new List<Usuario>();
 
         public void RegistrarUsuario(Usuario usuario, Form formulario, GestorAdopcion gestorAdopcion, bool esEdicion = false)
         {
-            List<Usuario> usuarios = new List<Usuario>();
-            CargarDatosUsuarios(usuarios);
+            usuarios.Clear();
+            CargarDatosUsuarios();
 
             if (esEdicion)
             {
                 // Buscar y actualizar el usuario existente según los datos cargados
-                for (int i = 0; i < usuarios.Count; i++)
+                var usuarioExistente = usuarios.FirstOrDefault(u => u.Id == usuario.Id);
+                if (usuarioExistente != null)
                 {
-                    if (usuarios[i].Id == usuario.Id)
-                    {
-                        usuarios[i] = usuario;
-                        break;
-                    }
+                    int index = usuarios.IndexOf(usuarioExistente);
+                    usuarios[index] = usuario;
                 }
             }
             else
             {
                 // Asignar un Id único al nuevo usuario
-                if (usuarios.Count > 0)
-                {
-                    int maxId = 0;
-                    for (int i = 0; i < usuarios.Count; i++)
-                    {
-                        if (usuarios[i].Id > maxId)
-                        {
-                            maxId = usuarios[i].Id;
-                        }
-                    }
-                    usuario.Id = maxId + 1;
-                }
-                else
-                {
-                    usuario.Id = 1;
-                }
+                usuario.Id = usuarios.Any() ? usuarios.Max(u => u.Id) + 1 : 1;
                 usuarios.Add(usuario);
             }
 
-            using (FileStream mArchivoEscritor = new FileStream("datos.dat", FileMode.Create, FileAccess.Write))
-            using (BinaryWriter Escritor = new BinaryWriter(mArchivoEscritor))
-            {
-                for (int i = 0; i < usuarios.Count; i++)
-                {
-                    Escritor.Write(usuarios[i].Id);
-
-                    if (usuarios[i].NombreCompleto != null)
-                        Escritor.Write(usuarios[i].NombreCompleto);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].CorreoElectronico != null)
-                        Escritor.Write(usuarios[i].CorreoElectronico);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].HashContrasena != null)
-                        Escritor.Write(usuarios[i].HashContrasena);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].Direccion != null)
-                        Escritor.Write(usuarios[i].Direccion);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].NumeroTelefono != null)
-                        Escritor.Write(usuarios[i].NumeroTelefono);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].Descripcion != null)
-                        Escritor.Write(usuarios[i].Descripcion);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].NumeroCedula != null)
-                        Escritor.Write(usuarios[i].NumeroCedula);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].Ocupacion != null)
-                        Escritor.Write(usuarios[i].Ocupacion);
-                    else
-                        Escritor.Write(string.Empty);
-
-                    if (usuarios[i].Tipo.ToString() != null)
-                        Escritor.Write(usuarios[i].Tipo.ToString());
-                    else
-                        Escritor.Write(string.Empty);
-                }
-            }
+            GuardarArchivoUsuario();
 
             string mensaje;
             string titulo;
@@ -124,12 +55,34 @@ namespace HuellasDeEsperanzaC_.Servicio
             formulario.Hide();
         }
 
+        public void GuardarArchivoUsuario()
+        {
+            using (FileStream mArchivoEscritor = new FileStream("datos.dat", FileMode.Create, FileAccess.Write))
+            using (BinaryWriter Escritor = new BinaryWriter(mArchivoEscritor))
+            {
+                usuarios.ForEach(usuario =>
+                {
+                    Escritor.Write(usuario.Id);
+                    Escritor.Write(usuario.NombreCompleto ?? string.Empty);
+                    Escritor.Write(usuario.CorreoElectronico ?? string.Empty);
+                    Escritor.Write(usuario.HashContrasena ?? string.Empty);
+                    Escritor.Write(usuario.Direccion ?? string.Empty);
+                    Escritor.Write(usuario.NumeroTelefono ?? string.Empty);
+                    Escritor.Write(usuario.Descripcion ?? string.Empty);
+                    Escritor.Write(usuario.NumeroCedula ?? string.Empty);
+                    Escritor.Write(usuario.Ocupacion ?? string.Empty);
+                    Escritor.Write(usuario.Tipo.ToString() ?? string.Empty);
+                });
+            }
+
+        }
+
         public void ActualizarUsuario(Usuario usuario, Form formulario, GestorAdopcion gestorAdopcion)
         {
             RegistrarUsuario(usuario, formulario, gestorAdopcion, true);
         }
 
-        public void CargarDatosUsuarios(List<Usuario> usuarios)
+        public void CargarDatosUsuarios()
         {
             usuarios.Clear();
 
@@ -165,20 +118,33 @@ namespace HuellasDeEsperanzaC_.Servicio
 
         public void VerificarUsuario(string correoVerificar, string contrasenaVerificar, List<Usuario> usuarios, Form formulario, GestorAdopcion gestorAdopcion)
         {
-            for (int i = 0; i < usuarios.Count; i++)
+            var usuario = usuarios.FirstOrDefault(u => u.CorreoElectronico == correoVerificar && u.VerificarContraseña(contrasenaVerificar));
+            if (usuario != null)
             {
-                if (usuarios[i].CorreoElectronico == correoVerificar && usuarios[i].VerificarContraseña(contrasenaVerificar))
-                {
-                    HomeGeneralForm Home = new HomeGeneralForm(usuarios[i], gestorAdopcion);
-                    Home.Show();
-                    //HomeAdminForm homeAdminForm = new HomeAdminForm(usuarios[i], gestorAdopcion);
-                    //homeAdminForm.Show();
-                    formulario.Hide();
-                    return;
-                }
+                //HomeGeneralForm Home = new HomeGeneralForm(usuario, gestorAdopcion);
+                //Home.Show();
+                HomeAdminForm homeAdminForm = new HomeAdminForm(usuario, gestorAdopcion);
+                homeAdminForm.Show();
+                formulario.Hide();
+                return;
             }
 
             MetroFramework.MetroMessageBox.Show(formulario, "Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public Usuario BuscarUsuarioPorID(int id)
+        {
+            return usuarios.FirstOrDefault(u => u.Id == id);
+        }
+
+        public Usuario BuscarUsuarioPorCorreo(string correo)
+        {
+            return usuarios.FirstOrDefault(u => string.Equals(u.CorreoElectronico, correo, StringComparison.OrdinalIgnoreCase));
+        }
+
+        public List<Usuario> GetListaUsuarios()
+        {
+            return usuarios;
         }
     }
 }

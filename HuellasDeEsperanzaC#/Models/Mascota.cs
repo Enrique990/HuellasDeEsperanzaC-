@@ -13,22 +13,7 @@ namespace HuellasDeEsperanzaC_.Models
         public string Raza { get; set; }
         public string Sexo { get; set; }
         public DateTime FechaNacimiento { get; set; }
-
-        private int? EdadTemp;
-
-        public int Edad
-        {
-            get
-            {
-                // Si se asignó un valor manual, usarlo; de lo contrario, calcular automáticamente
-                return EdadTemp.HasValue ? EdadTemp.Value : CalcularEdad();
-            }
-            set
-            {
-                // Permitir asignar un valor explícito
-                EdadTemp = value;
-            }
-        }
+        public int Edad { get; set; }
 
         public string Especie { get; set; }
         public string Tamaño { get; set; }
@@ -43,6 +28,7 @@ namespace HuellasDeEsperanzaC_.Models
             Raza = string.Empty;
             Sexo = string.Empty;
             FechaNacimiento = DateTime.MinValue;
+            Edad = 0;
             Especie = string.Empty;
             Tamaño = string.Empty;
             Descripcion = string.Empty;

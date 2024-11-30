@@ -96,38 +96,16 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 }
 
                 // Manejar valores nulos y formatear datos
-                for (int i = 0; i < mascotasDisponibles.Count; i++)
+                foreach (var mascota in mascotasDisponibles)
                 {
-                    Mascota mascota = mascotasDisponibles[i];
-
                     // Validar propiedades
-                    if (mascota.FechaNacimiento == DateTime.MinValue)
-                    {
-                        mascota.FechaNacimiento = DateTime.Now; // Asignar fecha actual si no está definida
-                    }
+                    mascota.FechaNacimiento = (mascota.FechaNacimiento == DateTime.MinValue) ? DateTime.Now : mascota.FechaNacimiento;
 
-                    // Asegurarse de que la edad esté calculada o asignada
-                    int edadCalculada = mascota.CalcularEdad();
+                    mascota.Edad = mascota.CalcularEdad();
 
-                    if (edadCalculada < 0 || edadCalculada > 50) // Validar edades poco probables
-                    {
-                        mascota.Edad = -1; // Edad inválida
-                    }
-
-                    if (mascota.Tamaño == null)
-                    {
-                        mascota.Tamaño = "Sin tamaño"; // Asignar valor por defecto si es null
-                    }
-
-                    if (mascota.OrganizacionId == 0)
-                    {
-                        mascota.OrganizacionId = -1; // Asignar valor por defecto si es 0
-                    }
-
-                    if (!mascota.EstaAdoptado)
-                    {
-                        mascota.EstaAdoptado = false; // Asegurar que tenga un valor booleano predeterminado
-                    }
+                    mascota.Tamaño = string.IsNullOrEmpty(mascota.Tamaño) ? "Sin tamaño" : mascota.Tamaño;
+                    mascota.OrganizacionId = (mascota.OrganizacionId == 0) ? -1 : mascota.OrganizacionId;
+                    mascota.EstaAdoptado = mascota.EstaAdoptado ? true : false;
                 }
 
                 // Crear una fuente de datos para el ReportViewer
