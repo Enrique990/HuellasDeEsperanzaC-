@@ -60,26 +60,53 @@ namespace HuellasDeEsperanzaC_.Servicio
                 return;
             }
 
-            using (FileStream mArchivoLector = new FileStream("datos.dat", FileMode.Open, FileAccess.Read))
-            using (BinaryReader Lector = new BinaryReader(mArchivoLector))
+            try
             {
-                while (mArchivoLector.Position < mArchivoLector.Length)
+                using (FileStream mArchivoLector = new FileStream("datos.dat", FileMode.Open, FileAccess.Read))
+                using (BinaryReader Lector = new BinaryReader(mArchivoLector))
                 {
-                    Usuario usuario = new Usuario
+                    while (mArchivoLector.Position < mArchivoLector.Length)
                     {
-                        NombreCompleto = Lector.ReadString(),
-                        CorreoElectronico = Lector.ReadString(),
-                        HashContrasena = Lector.ReadString(),
-                        Direccion = Lector.ReadString(),
-                        NumeroTelefono = Lector.ReadString(),
-                        Descripcion = Lector.ReadString(),
-                        NumeroCedula = Lector.ReadString(),
-                        Ocupacion = Lector.ReadString(),
-                        Tipo = (TipoUsuario)Enum.Parse(typeof(TipoUsuario), Lector.ReadString())
-                    };
+                        try
+                        {
+                            Usuario usuario = new Usuario
+                            {
+                                NombreCompleto = Lector.ReadString(),
+                                CorreoElectronico = Lector.ReadString(),
+                                HashContrasena = Lector.ReadString(),
+                                Direccion = Lector.ReadString(),
+                                NumeroTelefono = Lector.ReadString(),
+                                Descripcion = Lector.ReadString(),
+                                NumeroCedula = Lector.ReadString(),
+                                Ocupacion = Lector.ReadString(),
+                                PreguntaEmergencia = Lector.ReadString()
+                            };
 
-                    usuarios.Add(usuario);
+                            string tipoUsuarioStr = Lector.ReadString();
+                            if (Enum.TryParse(tipoUsuarioStr, true, out TipoUsuario tipoUsuario))
+                            {
+                                usuario.Tipo = (TipoUsuario)tipoUsuario;
+                            }
+                            else
+                            {
+                                // Manejar el caso en que el valor no es válido
+                                usuario.Tipo = TipoUsuario.Comun; // Asumiendo que Default es un valor válido en el enum
+                            }
+
+                            usuarios.Add(usuario);
+                        }
+                        catch (Exception ex)
+                        {
+                            // Manejar errores específicos de análisis de datos
+                            MessageBox.Show($"Error al cargar un usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                // Manejar errores de lectura del archivo
+                MessageBox.Show($"Error al leer el archivo de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -98,6 +125,7 @@ namespace HuellasDeEsperanzaC_.Servicio
                     Escritor.Write(usuarios[i].Descripcion ?? string.Empty);
                     Escritor.Write(usuarios[i].NumeroCedula ?? string.Empty);
                     Escritor.Write(usuarios[i].Ocupacion ?? string.Empty);
+                    Escritor.Write(usuarios[i].PreguntaEmergencia ?? string.Empty);
                     Escritor.Write(usuarios[i].Tipo.ToString() ?? string.Empty);
                 }
             }

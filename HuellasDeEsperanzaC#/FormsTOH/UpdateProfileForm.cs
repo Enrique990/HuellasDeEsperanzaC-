@@ -35,6 +35,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             tbNumeroTelefono.Texts = usuarioActual.NumeroTelefono;
             tbNumeroCedula.Texts = usuarioActual.NumeroCedula;
             tbOcupacion.Texts = usuarioActual.Ocupacion;
+            tbPreguntaEmergencia.Texts = usuarioActual.PreguntaEmergencia;
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -45,13 +46,15 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             string numeroTelefono = tbNumeroTelefono.Texts.Trim();
             string numeroCedula = tbNumeroCedula.Texts.Trim();
             string ocupacion = tbOcupacion.Texts;
+            string preguntaEmergencia = tbPreguntaEmergencia.Texts;
 
             if (string.IsNullOrEmpty(nombreCompleto) &&
                 string.IsNullOrEmpty(correo) &&
                 string.IsNullOrEmpty(direccion) &&
                 string.IsNullOrEmpty(numeroTelefono) &&
                 string.IsNullOrEmpty(numeroCedula) &&
-                string.IsNullOrEmpty(ocupacion))
+                string.IsNullOrEmpty(ocupacion) &&
+                string.IsNullOrEmpty(preguntaEmergencia))
             {
                 MetroFramework.MetroMessageBox.Show(this, "No hay cambios para guardar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -65,12 +68,12 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             {
                 MetroFramework.MetroMessageBox.Show(this, "El correo electrónico ingresado no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }else if (!Regex.IsMatch(nombreCompleto, @"^[a-zA-Z\s]+$"))
+            }
+            else if (!Regex.IsMatch(nombreCompleto, @"^[a-zA-Z\s]+$"))
             {
                 MetroFramework.MetroMessageBox.Show(this, "El nombre solo puede contener letras y espacios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
 
             bool hayCambios = false;
 
@@ -78,9 +81,11 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 direccion != usuarioActual.Direccion ||
                 numeroTelefono != usuarioActual.NumeroTelefono ||
                 numeroCedula != usuarioActual.NumeroCedula ||
-                ocupacion != usuarioActual.Ocupacion)
+                ocupacion != usuarioActual.Ocupacion ||
+                preguntaEmergencia != usuarioActual.PreguntaEmergencia)
             {
                 usuarioActual.CompletarPerfil(nombreCompleto, direccion, numeroTelefono, numeroCedula, ocupacion);
+                usuarioActual.PreguntaEmergencia = preguntaEmergencia;
                 hayCambios = true;
             }
 
@@ -90,12 +95,11 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 hayCambios = true;
             }
 
-            if(!hayCambios)
+            if (!hayCambios)
             {
                 MetroFramework.MetroMessageBox.Show(this, "No hay cambios para guardar.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-
 
             GestorUsuario gestorUsuario = new GestorUsuario();
             gestorUsuario.ActualizarUsuario(usuarioActual, this, gestorAdopcionUser);
@@ -220,7 +224,8 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void btnCambiarContraseña_Click(object sender, EventArgs e)
         {
-            NewPassword newPasswordForm = new NewPassword(usuarioActual);
+            ForgotPassword forgotPasswordForm = new ForgotPassword();
+            NewPassword newPasswordForm = new NewPassword(usuarioActual, forgotPasswordForm);
             newPasswordForm.Show();
             this.Close();
         }

@@ -21,6 +21,7 @@ namespace HuellasDeEsperanzaC_.Models
         public string NombreUsuario { get; set; }
         public string CorreoElectronico { get; set; }
         public string HashContrasena { get; set; }
+        public string PreguntaEmergencia { get; set; }
         public string NombreCompleto { get; set; }
         public string Direccion { get; set; }
         public string NumeroTelefono { get; set; }
