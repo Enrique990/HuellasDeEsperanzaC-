@@ -525,3 +525,4 @@ C:\Users\Lenovo\Downloads\HuellasDeEsperanzaC-\HuellasDeEsperanzaC-\HuellasDeEsp
 C:\Users\Lenovo\Downloads\HuellasDeEsperanzaC-\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasD.21EB94C9.Up2Date
 C:\Users\Lenovo\Downloads\HuellasDeEsperanzaC-\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC#.exe
 C:\Users\Lenovo\Downloads\HuellasDeEsperanzaC-\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC#.pdb
+C:\Users\Lenovo\Downloads\HuellasDeEsperanzaC-\HuellasDeEsperanzaC-\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.CustomUserControls.WaitingCard.resources

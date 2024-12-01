@@ -42,14 +42,7 @@ namespace HuellasDeEsperanzaC_.Servicio
             SolicitudAdopcion nuevaSolicitud = new SolicitudAdopcion();
             if (solicitudes.Count > 0)
             {
-                int maxId = 0;
-                for (int i = 0; i < solicitudes.Count; i++)
-                {
-                    if (solicitudes[i].Id > maxId)
-                    {
-                        maxId = solicitudes[i].Id;
-                    }
-                }
+                int maxId = solicitudes.Max(s => s.Id);
                 nuevaSolicitud.Id = maxId + 1;
             }
             else
@@ -63,7 +56,6 @@ namespace HuellasDeEsperanzaC_.Servicio
 
             solicitudes.Add(nuevaSolicitud);
             GuardarDatosSolicitudes();
-            MessageBox.Show("Solicitud de adopción creada con éxito.");
         }
 
         public List<Mascota> ObtenerMascotasDisponibles()
@@ -165,17 +157,10 @@ namespace HuellasDeEsperanzaC_.Servicio
             }
         }
 
-        private bool UsuarioPendienteAdopcion(int usuarioId)
+        public bool UsuarioPendienteAdopcion(int usuarioId)
         {
-            for (int i = 0; i < solicitudes.Count; i++)
-            {
-                if (solicitudes[i].UsuarioId == usuarioId && solicitudes[i].Estado == EstadoSolicitud.Pendiente)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }   
+            return solicitudes.Any(s => s.UsuarioId == usuarioId && s.Estado == EstadoSolicitud.Pendiente);
+        }
 
         private void CargarDatosMascotas()
         {

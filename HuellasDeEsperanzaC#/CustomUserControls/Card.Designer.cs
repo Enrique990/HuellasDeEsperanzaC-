@@ -37,8 +37,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.circlePictureBox1 = new HuellasDeEsperanzaC_.CustomUserControls.CirclePictureBox();
             this.lblNombreMascota = new System.Windows.Forms.Label();
+            this.circlePictureBox1 = new HuellasDeEsperanzaC_.CustomUserControls.CirclePictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.circlePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -137,6 +137,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Raza:";
             // 
+            // lblNombreMascota
+            // 
+            this.lblNombreMascota.AutoSize = true;
+            this.lblNombreMascota.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreMascota.Location = new System.Drawing.Point(32, 142);
+            this.lblNombreMascota.Name = "lblNombreMascota";
+            this.lblNombreMascota.Size = new System.Drawing.Size(171, 18);
+            this.lblNombreMascota.TabIndex = 0;
+            this.lblNombreMascota.Text = "Nombre de Mascota";
+            // 
             // circlePictureBox1
             // 
             this.circlePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("circlePictureBox1.Image")));
@@ -147,16 +157,6 @@
             this.circlePictureBox1.TabIndex = 1;
             this.circlePictureBox1.TabStop = false;
             this.circlePictureBox1.Click += new System.EventHandler(this.circlePictureBox1_Click);
-            // 
-            // lblNombreMascota
-            // 
-            this.lblNombreMascota.AutoSize = true;
-            this.lblNombreMascota.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreMascota.Location = new System.Drawing.Point(32, 142);
-            this.lblNombreMascota.Name = "lblNombreMascota";
-            this.lblNombreMascota.Size = new System.Drawing.Size(171, 18);
-            this.lblNombreMascota.TabIndex = 0;
-            this.lblNombreMascota.Text = "Nombre de Mascota";
             // 
             // Card
             // 

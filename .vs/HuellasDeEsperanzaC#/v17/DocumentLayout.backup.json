@@ -3,8 +3,68 @@
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\servicio\\gestoradopcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\formstoh\\generalwaitinglistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\generalwaitinglistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\servicio\\gestoradopcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\servicio\\gestoradopcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\formstoh\\generalwaitinglistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\generalwaitinglistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\formstoh\\adoptmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\adoptmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\customusercontrols\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\customusercontrols\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\formstoh\\adoptmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\adoptmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\formstoh\\adminaddmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\adminaddmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\models\\solicitudadopcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\models\\solicitudadopcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\formstoh\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\formstoh\\addmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\addmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\customusercontrols\\waitingcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\customusercontrols\\waitingcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\formstoh\\adminaddmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\adminaddmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\customusercontrols\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\customusercontrols\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\customusercontrols\\waitingcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\customusercontrols\\waitingcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\servicio\\gestorusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\servicio\\gestorusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\formstoh\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\formstoh\\waitinglistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,48 +75,36 @@
       "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\waitinglistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\formstoh\\homeadminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\customusercontrols\\waitingcard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\customusercontrols\\waitingcard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\customusercontrols\\card.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\customusercontrols\\card.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\customusercontrols\\tutorialcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\customusercontrols\\tutorialcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\formstoh\\homeadminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\homeadminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\formstoh\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\servicio\\gestorusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\servicio\\gestorusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\formstoh\\homeadminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\formstoh\\homeadminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\homeadminform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\formstoh\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\formstoh\\addmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\addmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\models\\mascota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\models\\mascota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\models\\mascota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\datasets\\dsmascotas.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\datasets\\dsmascotas.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}",
       "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\datasets\\dsmascotas.xsd||{07AC752B-D2B0-4DCD-AD9C-237BF561A30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\formstoh\\adminaddmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\adminaddmascot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\huellasdeesperanzac#\\servicio\\gestormascota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\servicio\\gestormascota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\lenovo\\downloads\\huellasdeesperanzac-\\huellasdeesperanzac-\\huellasdeesperanzac#\\customusercontrols\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\customusercontrols\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,17 +114,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 536,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 4,
               "Title": "Card.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\Card.cs",
               "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\CustomUserControls\\Card.cs",
               "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\Card.cs",
               "RelativeToolTip": "HuellasDeEsperanzaC#\\CustomUserControls\\Card.cs",
-              "ViewState": "AgIAAKgAAAAAAAAAAAAUwLcAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAALAAAAAAAAAAAAAQwLYAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T16:39:08.086Z",
               "IsPinned": true,
@@ -84,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AddMascot.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\AddMascot.cs",
               "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\AddMascot.cs",
@@ -121,84 +169,87 @@
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DsMascotas.xsd",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\DataSets\\DsMascotas.xsd",
-              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\DataSets\\DsMascotas.xsd",
-              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\DataSets\\DsMascotas.xsd",
-              "RelativeToolTip": "HuellasDeEsperanzaC#\\DataSets\\DsMascotas.xsd",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
-              "WhenOpened": "2024-11-30T05:15:33.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Mascota.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Models\\Mascota.cs",
-              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\Models\\Mascota.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Models\\Mascota.cs",
-              "RelativeToolTip": "HuellasDeEsperanzaC#\\Models\\Mascota.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA4wB4AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T05:14:57.558Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "HomeAdminForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs",
-              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs [Dise\u00F1o]",
+              "Title": "AdoptMascot.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\AdoptMascot.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\AdoptMascot.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\AdoptMascot.cs",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\AdoptMascot.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowG0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T05:09:00.758Z",
+              "WhenOpened": "2024-11-30T19:30:36.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GeneralWaitingListForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\GeneralWaitingListForm.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\GeneralWaitingListForm.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\GeneralWaitingListForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\GeneralWaitingListForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T18:23:46.063Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GeneralWaitingListForm.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\GeneralWaitingListForm.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\GeneralWaitingListForm.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\GeneralWaitingListForm.cs",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\GeneralWaitingListForm.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAgwGMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:41:29.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GestorAdopcion.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Servicio\\GestorAdopcion.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\Servicio\\GestorAdopcion.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Servicio\\GestorAdopcion.cs",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\Servicio\\GestorAdopcion.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAhwIIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T21:22:13.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "HomeAdminForm.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs",
-              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs",
-              "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs",
-              "ViewState": "AgIAAGEAAAAAAAAAAAAkwGcAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T05:06:44.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GestorMascota.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Servicio\\GestorMascota.cs",
-              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\Servicio\\GestorMascota.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Servicio\\GestorMascota.cs",
-              "RelativeToolTip": "HuellasDeEsperanzaC#\\Servicio\\GestorMascota.cs",
-              "ViewState": "AgIAAK4AAAAAAAAAAAAkwLwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T21:17:36.698Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AdminAddMascot.cs",
+              "Title": "AdminAddMascot.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\AdminAddMascot.cs",
               "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\AdminAddMascot.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\AdminAddMascot.cs",
-              "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\AdminAddMascot.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAASwIkAAAAuAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\AdminAddMascot.cs [Dise\u00F1o]",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\AdminAddMascot.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T05:35:04.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T00:01:09.72Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "AdoptMascot.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\AdoptMascot.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\AdoptMascot.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\AdoptMascot.cs [Dise\u00F1o]",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\AdoptMascot.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:30:28.217Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "LoginForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\LoginForm.cs",
               "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\LoginForm.cs",
@@ -210,33 +261,83 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GestorAdopcion.cs",
-              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Servicio\\GestorAdopcion.cs",
-              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\Servicio\\GestorAdopcion.cs",
-              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Servicio\\GestorAdopcion.cs",
-              "RelativeToolTip": "HuellasDeEsperanzaC#\\Servicio\\GestorAdopcion.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAASwHAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "SolicitudAdopcion.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Models\\SolicitudAdopcion.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\Models\\SolicitudAdopcion.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Models\\SolicitudAdopcion.cs",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\Models\\SolicitudAdopcion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T21:22:13.975Z",
+              "WhenOpened": "2024-12-01T14:12:27.798Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
+              "Title": "WaitingCard.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.cs",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:20:48.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AdminAddMascot.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\AdminAddMascot.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\AdminAddMascot.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\AdminAddMascot.cs",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\AdminAddMascot.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAApwKUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T05:35:04.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Card.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\Card.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\CustomUserControls\\Card.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\Card.cs [Dise\u00F1o]",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\CustomUserControls\\Card.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T18:24:00.388Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "WaitingCard.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.cs [Dise\u00F1o]",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:16:14.183Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "GestorUsuario.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Servicio\\GestorUsuario.cs",
               "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\Servicio\\GestorUsuario.cs",
               "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Servicio\\GestorUsuario.cs",
               "RelativeToolTip": "HuellasDeEsperanzaC#\\Servicio\\GestorUsuario.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAADwv34AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAAAHYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T03:01:02.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\LoginForm.cs",
               "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\LoginForm.cs",
@@ -249,20 +350,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 16,
               "Title": "WaitingListForm.cs",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\WaitingListForm.cs",
               "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\WaitingListForm.cs",
               "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\WaitingListForm.cs",
               "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\WaitingListForm.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAApwCsAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAJUAAAAAAAAAAADwv6oAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T00:01:57.527Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 17,
               "Title": "WaitingListForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\WaitingListForm.cs",
               "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\WaitingListForm.cs",
@@ -271,6 +372,107 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T23:54:56.559Z",
               "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "WaitingCard.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.Designer.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.Designer.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.Designer.cs",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.Designer.cs",
+              "ViewState": "AgIAAN4AAAAAAAAAAAAowOMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:16:30.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Card.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\Card.Designer.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\CustomUserControls\\Card.Designer.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\Card.Designer.cs",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\CustomUserControls\\Card.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:21:55.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TutorialCard.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\TutorialCard.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\CustomUserControls\\TutorialCard.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\CustomUserControls\\TutorialCard.cs [Dise\u00F1o]",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\CustomUserControls\\TutorialCard.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T19:13:57.691Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DsMascotas.xsd",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\DataSets\\DsMascotas.xsd",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\DataSets\\DsMascotas.xsd",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\DataSets\\DsMascotas.xsd",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\DataSets\\DsMascotas.xsd",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003579|",
+              "WhenOpened": "2024-11-30T05:15:33.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Mascota.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Models\\Mascota.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\Models\\Mascota.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Models\\Mascota.cs",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\Models\\Mascota.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAcwB4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T05:14:57.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "HomeAdminForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T05:09:00.758Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "HomeAdminForm.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\HomeAdminForm.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAkwGcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T05:06:44.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "GestorMascota.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Servicio\\GestorMascota.cs",
+              "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\Servicio\\GestorMascota.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\Downloads\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC-\\HuellasDeEsperanzaC#\\Servicio\\GestorMascota.cs",
+              "RelativeToolTip": "HuellasDeEsperanzaC#\\Servicio\\GestorMascota.cs",
+              "ViewState": "AgIAAK4AAAAAAAAAAAAkwLwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T21:17:36.698Z",
+              "EditorCaption": ""
             }
           ]
         }

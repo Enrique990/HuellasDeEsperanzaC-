@@ -160,5 +160,10 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             homeAdminForm.Show();
             this.Close();
         }
+
+        private void AdminAddMascot_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

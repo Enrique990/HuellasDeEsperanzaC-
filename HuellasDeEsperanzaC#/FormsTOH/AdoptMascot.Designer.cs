@@ -49,20 +49,20 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.card1 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card2 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card3 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
             this.card4 = new HuellasDeEsperanzaC_.CustomUserControls.Card();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -336,13 +336,9 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // panel5
+            // timer1
             // 
-            this.panel5.Controls.Add(this.flowLayoutPanel1);
-            this.panel5.Location = new System.Drawing.Point(299, 152);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1000, 571);
-            this.panel5.TabIndex = 8;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // flowLayoutPanel1
             // 
@@ -376,6 +372,7 @@
             this.card1.Name = "card1";
             this.card1.Size = new System.Drawing.Size(240, 300);
             this.card1.TabIndex = 0;
+            this.card1.Load += new System.EventHandler(this.card1_Load);
             // 
             // card2
             // 
@@ -434,9 +431,13 @@
             this.card4.Size = new System.Drawing.Size(240, 300);
             this.card4.TabIndex = 3;
             // 
-            // timer1
+            // panel5
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.panel5.Controls.Add(this.flowLayoutPanel1);
+            this.panel5.Location = new System.Drawing.Point(299, 152);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1000, 571);
+            this.panel5.TabIndex = 8;
             // 
             // AdoptMascot
             // 
@@ -462,8 +463,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -486,16 +487,16 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private CustomUserControls.Card card1;
         private CustomUserControls.Card card2;
         private CustomUserControls.Card card3;
         private CustomUserControls.Card card4;
+        private System.Windows.Forms.Panel panel5;
     }
 }

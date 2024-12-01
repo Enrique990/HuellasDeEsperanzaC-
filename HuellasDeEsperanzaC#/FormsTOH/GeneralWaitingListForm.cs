@@ -1,13 +1,11 @@
-﻿using HuellasDeEsperanzaC_.Models;
+﻿using HuellasDeEsperanzaC_.CustomUserControls;
+using HuellasDeEsperanzaC_.Models;
 using HuellasDeEsperanzaC_.Servicio;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace HuellasDeEsperanzaC_.FormsTOH
@@ -24,6 +22,12 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.gestorAdopcionUser = gestorAdopcion;
         }
 
+        private void GeneralWaitingListForm_Load(object sender, EventArgs e)
+        {
+            gestorAdopcionUser.RecargarDatosSolicitudes();
+            CargarTodasLasSolicitudesEnEspera();
+        }
+
         private void CargarTodasLasSolicitudesEnEspera()
         {
             List<SolicitudAdopcion> solicitudesEnEspera = gestorAdopcionUser.ObtenerSolicitudesEnEspera();
@@ -31,50 +35,95 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             if (solicitudesEnEspera.Count > 0)
             {
                 // Limpiar cualquier contenido previo en el control que muestra las solicitudes
-                listBox1.Items.Clear();
+                flowLayoutPanel1.Controls.Clear();
 
-                for (int i = 0; i < solicitudesEnEspera.Count; i++)
+                // Agrupar las solicitudes por usuario
+                var solicitudesAgrupadasPorUsuario = solicitudesEnEspera.GroupBy(s => s.UsuarioId);
+
+                foreach (var grupo in solicitudesAgrupadasPorUsuario)
                 {
-                    SolicitudAdopcion solicitud = solicitudesEnEspera[i];
-                    Mascota mascota = gestorAdopcionUser.ObtenerMascotaPorId(solicitud.MascotaId);
-                    Usuario usuario = gestorAdopcionUser.ObtenerUsuarioPorId(solicitud.UsuarioId);
+                    Usuario usuario = gestorAdopcionUser.ObtenerUsuarioPorId(grupo.Key);
 
                     if (usuario == null)
                     {
-                        MessageBox.Show("Error: No se pudo encontrar el usuario con ID " + solicitud.UsuarioId, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MetroFramework.MetroMessageBox.Show(this,
+                            "Error: No se pudo encontrar el usuario con ID " + grupo.Key,
+                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         continue;
                     }
 
-                    if (mascota == null)
+                    foreach (var solicitud in grupo)
                     {
-                        MessageBox.Show("Error: No se pudo encontrar la mascota con ID " + solicitud.MascotaId, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        continue;
-                    }
+                        Mascota mascota = gestorAdopcionUser.ObtenerMascotaPorId(solicitud.MascotaId);
 
-                    string item = "Solicitud ID: " + solicitud.Id + ", Usuario: " + usuario.NombreUsuario + ", Mascota: " + mascota.Nombre + ", Fecha: " + solicitud.FechaSolicitud.ToString("dd/MM/yyyy") + ", Estado: " + solicitud.Estado;
-                    listBox1.Items.Add(item);
+                        if (mascota == null)
+                        {
+                            MetroFramework.MetroMessageBox.Show(this,
+                                "Error: No se pudo encontrar la mascota con ID " + solicitud.MascotaId,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            continue;
+                        }
+
+                        WaitingCard waitingCard = new WaitingCard(solicitud.Id)
+                        {
+                            NombreMascota = mascota.Nombre,
+                            RazaMascota = mascota.Raza,
+                            SexoMascota = mascota.Sexo,
+                            ImagenMascota = CargarImagenMascota(mascota.RutaImagen),
+                            NombreSolicitante = usuario.NombreCompleto,
+                            EmailSolicitante = usuario.CorreoElectronico,
+                            TelefonoSolicitante = usuario.NumeroTelefono
+                        };
+
+                        flowLayoutPanel1.Controls.Add(waitingCard);
+                    }
                 }
 
-                if (listBox1.Items.Count == 0)
+                if (flowLayoutPanel1.Controls.Count == 0)
                 {
-                    MessageBox.Show("No hay solicitudes de adopción en espera", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroFramework.MetroMessageBox.Show(this,
+                        "No hay solicitudes de adopción en espera",
+                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Solicitudes en espera cargadas correctamente", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MetroFramework.MetroMessageBox.Show(this,
+                        "Solicitudes en espera cargadas correctamente",
+                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                MessageBox.Show("No hay solicitudes de adopción en espera", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MetroFramework.MetroMessageBox.Show(this,
+                    "No hay solicitudes de adopción en espera",
+                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-
-        private void GeneralWaitingListForm_Load(object sender, EventArgs e)
+        private Image CargarImagenMascota(string rutaImagen)
         {
-            CargarTodasLasSolicitudesEnEspera();
+            try
+            {
+                string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName;
+                string fullPath = Path.Combine(projectDirectory, rutaImagen);
+                if (string.IsNullOrEmpty(rutaImagen) || !System.IO.File.Exists(fullPath))
+                {
+                    throw new System.IO.FileNotFoundException();
+                }
+
+                return Image.FromFile(fullPath);
+            }
+            catch (Exception)
+            {
+                // Ruta de la imagen predeterminada
+                string rutaImagenPredeterminada = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\icons8-pets-50.png");
+                return Image.FromFile(rutaImagenPredeterminada);
+            }
         }
 
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+           
+        }
     }
 }

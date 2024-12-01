@@ -85,14 +85,30 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         private void Card_OnSelect(object sender, EventArgs e)
         {
             Card selectedCard = sender as Card;
-            /*if (selectedCard != null)
-            {
-                // Crear una nueva solicitud de adopción
-                //gestorAdopcionUser.CrearSolicitudAdopcion(usuarioActual.Id, selectedCard.MascotaId);
 
-                // Mostrar un mensaje de éxito
-                
-            }*/
+            if (selectedCard != null)
+            {
+                // Recargar las solicitudes desde el gestor
+                gestorAdopcionUser.RecargarDatosSolicitudes();
+
+                // Verificar si el usuario tiene solicitudes pendientes
+                if (gestorAdopcionUser.UsuarioPendienteAdopcion(usuarioActual.Id))
+                {
+                    MetroFramework.MetroMessageBox.Show(this,
+                        "Ya tienes una solicitud de adopción pendiente. No puedes solicitar otra mascota hasta que se procese.",
+                        "Solicitud no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Salir si ya hay una solicitud pendiente
+                }
+
+                // Crear la solicitud de adopción
+                gestorAdopcionUser.CrearSolicitudAdopcion(usuarioActual.Id, selectedCard.MascotaId);
+
+                // Mensaje de éxito
+                MetroFramework.MetroMessageBox.Show(this,
+                    "¡Solicitud de adopción enviada con éxito!",
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -177,6 +193,11 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorAdopcionUser);
             configuracionForm.Show();
             this.Hide();
+        }
+
+        private void card1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

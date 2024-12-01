@@ -76,6 +76,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomUserControls\WaitingCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomUserControls\WaitingCard.Designer.cs">
+      <DependentUpon>WaitingCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomUserControls\Card.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     <Compile Include="Servicio\GestorMascota.cs" />
     <Compile Include="Servicio\GestorUsuario.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="CustomUserControls\WaitingCard.resx">
+      <DependentUpon>WaitingCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomUserControls\Card.resx">
       <DependentUpon>Card.cs</DependentUpon>
     </EmbeddedResource>

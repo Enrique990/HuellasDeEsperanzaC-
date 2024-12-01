@@ -603,6 +603,7 @@
             this.Name = "AdminAddMascot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminAddMascot";
+            this.Load += new System.EventHandler(this.AdminAddMascot_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

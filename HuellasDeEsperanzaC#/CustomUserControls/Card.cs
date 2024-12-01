@@ -181,7 +181,6 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
         private void roundButton1_Click(object sender, EventArgs e)
         {
             OnSelect?.Invoke(this, e);
-            gestorAdopcion.CrearSolicitudAdopcion(usuarioId, MascotaId);
         }
 
         public string CardNombreMascota
