@@ -129,18 +129,21 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             Card selectedCard = sender as Card;
             if (selectedCard != null)
             {
-                Mascota mascota = new Mascota
-                {
-                    Id = selectedCard.MascotaId,
-                    Nombre = selectedCard.CardNombreMascota,
-                    Raza = selectedCard.CardRaza,
-                    Sexo = selectedCard.CardSexo,
-                    FechaNacimiento = DateTime.Parse(selectedCard.CardEdad),
-                    RutaImagen = selectedCard.CardImagen.ToString()
-                };
+                // Obtener la mascota utilizando el MascotaId
+                GestorMascota gestorMascota = new GestorMascota();
+                List<Mascota> mascotas = new List<Mascota>();
+                gestorMascota.CargarDatosMascotas(mascotas);
 
-                usuarioActual.MascotasAdoptadas.Add(mascota);
-                MessageBox.Show("Solicitud de adopción creada con éxito.");
+                Mascota mascota = mascotas.FirstOrDefault(m => m.Id == selectedCard.MascotaId);
+                if (mascota != null)
+                {
+                    usuarioActual.MascotasAdoptadas.Add(mascota);
+                    MessageBox.Show("Mascota adoptada con éxito.");
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró la mascota.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 

@@ -51,6 +51,7 @@
             this.tutorialCard2 = new HuellasDeEsperanzaC_.CustomUserControls.TutorialCard();
             this.tutorialCard1 = new HuellasDeEsperanzaC_.CustomUserControls.TutorialCard();
             this.label2 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -390,12 +391,22 @@
             this.label2.Text = "\"Nuestra misión es conectar a animales necesitados con familias amorosas, y apoya" +
     "r a las organizaciones que los cuidan.\"";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(545, 722);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(400, 196);
+            this.listBox1.TabIndex = 7;
+            // 
             // HomeGeneralForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.ClientSize = new System.Drawing.Size(1748, 935);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
@@ -443,5 +454,6 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

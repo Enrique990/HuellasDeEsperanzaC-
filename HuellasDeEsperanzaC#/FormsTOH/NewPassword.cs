@@ -19,7 +19,6 @@ namespace HuellasDeEsperanzaC_.FormsTOH
     {
         private Usuario usuarioActual;
         private GestorAdopcion gestorAdopcionUser;
-        private ForgotPassword forgotPasswordForm;
 
         public NewPassword(Usuario usuario, ForgotPassword forgotPasswordForm)
         {
@@ -60,30 +59,23 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void roundButton1_Click_1(object sender, EventArgs e)
         {
-            string contraseñaActual = tbContraseñaActual.Texts.Trim();
-            string nuevaContraseña = tbNuevaContraseña.Texts.Trim();
-            string confirmarContraseña = tbConfirmarContraseña.Texts.Trim();
-
-            // Verificar si la contraseña actual coincide con el hash almacenado
+            string contraseñaActual = tbContraseñaActual.Texts;
+            string nuevaContraseña = tbNuevaContraseña.Texts;
+            string confirmarContraseña = tbConfirmarContraseña.Texts;
             if (!usuarioActual.VerificarContraseña(contraseñaActual))
             {
-                MessageBox.Show("La contraseña actual o el código de verificación es incorrecto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La contraseña actual es incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (nuevaContraseña != confirmarContraseña)
+            if (nuevaContraseña != confirmarContraseña)
             {
                 MessageBox.Show("La nueva contraseña y la confirmación no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            else if (usuarioActual.HashContrasena == contraseñaActual)
-            {
-                usuarioActual.EstablecerContraseña(nuevaContraseña);
-
-                GestorUsuario gestorUsuario = new GestorUsuario();
-                gestorUsuario.ActualizarUsuario(usuarioActual, this, gestorAdopcionUser);
-
-                MessageBox.Show("Contraseña actualizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            usuarioActual.EstablecerContraseña(nuevaContraseña);
+            GestorUsuario gestorUsuario = new GestorUsuario();
+            gestorUsuario.ActualizarUsuario(usuarioActual, this, gestorAdopcionUser);
+            MessageBox.Show("Contraseña actualizada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnRecuperarContraseña_Click(object sender, EventArgs e)

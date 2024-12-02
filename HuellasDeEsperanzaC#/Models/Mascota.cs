@@ -21,6 +21,8 @@ namespace HuellasDeEsperanzaC_.Models
         public bool EstaAdoptado { get; set; }
         public int OrganizacionId { get; set; }
 
+        public List<Usuario> Solicitantes { get; set; }
+
         public Mascota()
         {
             Nombre = string.Empty;
@@ -33,6 +35,7 @@ namespace HuellasDeEsperanzaC_.Models
             RutaImagen = string.Empty;
             EstaAdoptado = false;
             OrganizacionId = 0;
+            Solicitantes = new List<Usuario>();
         }
 
         public int CalcularEdad()

@@ -92,7 +92,6 @@
             this.btnRecuperarContraseña.TabIndex = 5;
             this.btnRecuperarContraseña.Text = "Recuperar contraseña";
             this.btnRecuperarContraseña.UseVisualStyleBackColor = false;
-            this.btnRecuperarContraseña.Visible = false;
             this.btnRecuperarContraseña.Click += new System.EventHandler(this.btnRecuperarContraseña_Click);
             // 
             // label1
