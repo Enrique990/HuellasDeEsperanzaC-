@@ -71,9 +71,9 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
         {
             this.AutoSize = false;
             this.AutoScaleMode = AutoScaleMode.None;
-            this.Size = new Size(574, 192);
-            this.MinimumSize = new Size(574, 192);
-            this.MaximumSize = new Size(574, 192);
+            this.Size = new Size(466, 156);
+            this.MinimumSize = new Size(466, 156);
+            this.MaximumSize = new Size(466, 156);
 
             this.panel1.AutoSize = false;
             this.panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left;
@@ -144,12 +144,12 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
         protected override void OnResize(EventArgs e)
         {
             base.OnResize(e);
-            this.Size = new Size(574, 192);
+            this.Size = new Size(5466, 156);
         }
 
         protected override void SetBoundsCore(int x, int y, int width, int height, BoundsSpecified specified)
         {
-            base.SetBoundsCore(x, y, 574, 192, specified);
+            base.SetBoundsCore(x, y, 466, 156, specified);
         }
 
         protected override void OnPaint(PaintEventArgs pevent)

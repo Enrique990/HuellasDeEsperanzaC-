@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\etaln\\Documents\\Programacion\\HuellasDeEsperanzaC#\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\etaln\\Documents\\Programacion\\HuellasDeEsperanzaC#\\huellasdeesperanzac#\\customusercontrols\\waitingcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\etaln\\documents\\programacion\\huellasdeesperanzac#\\huellasdeesperanzac#\\customusercontrols\\waitingcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\customusercontrols\\waitingcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -75,7 +75,7 @@
       "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\formstoh\\adminhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|c:\\users\\etaln\\documents\\programacion\\huellasdeesperanzac#\\huellasdeesperanzac#\\customusercontrols\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|C:\\Users\\etaln\\Documents\\Programacion\\HuellasDeEsperanzaC#\\huellasdeesperanzac#\\customusercontrols\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{46EE7BF8-2AF7-4C4D-B49F-F5AC286BE65D}|HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#.csproj|solutionrelative:huellasdeesperanzac#\\customusercontrols\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -154,7 +154,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 30,
+          "SelectedChildIndex": 29,
           "Children": [
             {
               "$type": "Document",
@@ -216,8 +216,7 @@
               "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\LoginForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T16:55:12.761Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -230,8 +229,7 @@
               "ViewState": "AgIAABwAAAAAAAAAAAAswDAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T18:27:33.62Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -268,8 +266,7 @@
               "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\HomeGeneralForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T16:55:12.08Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -282,8 +279,7 @@
               "ViewState": "AgIAADkAAAAAAAAAAAAmwE8AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T18:27:41.043Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -295,8 +291,7 @@
               "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\AdoptMascot.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T16:55:11.263Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -309,8 +304,7 @@
               "ViewState": "AgIAAHAAAAAAAAAAAAAEwCYAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T18:27:53.219Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -372,8 +366,7 @@
               "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\AdminHome.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T16:23:47.326Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -386,8 +379,7 @@
               "ViewState": "AgIAAAUAAAAAAAAAAIAwwBIAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T16:33:53.258Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -399,8 +391,7 @@
               "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\AdminWaitingList.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T16:53:39.033Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -413,12 +404,7 @@
               "ViewState": "AgIAACwAAAAAAAAAAAAnwEMAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T16:53:52.787Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -493,7 +479,7 @@
               "RelativeDocumentMoniker": "HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.cs",
               "ToolTip": "C:\\Users\\etaln\\Documents\\Programacion\\HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.cs",
               "RelativeToolTip": "HuellasDeEsperanzaC#\\CustomUserControls\\WaitingCard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJcAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAAAOkAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T01:02:22.647Z",
               "EditorCaption": ""
@@ -519,8 +505,7 @@
               "ToolTip": "C:\\Users\\etaln\\Documents\\Programacion\\HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#\\CustomUserControls\\CustomTextBox.cs [Dise\u00F1o]",
               "RelativeToolTip": "HuellasDeEsperanzaC#\\CustomUserControls\\CustomTextBox.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T18:09:11.242Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-12-01T18:09:11.242Z"
             },
             {
               "$type": "Document",
@@ -532,8 +517,7 @@
               "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\AdminHome.Designer.cs",
               "ViewState": "AgIAAIEBAAAAAAAAAAAAAJ0BAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T16:54:47.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T16:54:47.934Z"
             },
             {
               "$type": "Document",
@@ -545,8 +529,7 @@
               "RelativeToolTip": "HuellasDeEsperanzaC#\\FormsTOH\\AdminWaitingList.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T16:54:42.029Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T16:54:42.029Z"
             },
             {
               "$type": "Document",
@@ -557,8 +540,7 @@
               "ToolTip": "C:\\Users\\etaln\\Documents\\Programacion\\HuellasDeEsperanzaC#\\HuellasDeEsperanzaC#\\CustomUserControls\\Card.cs [Design]",
               "RelativeToolTip": "HuellasDeEsperanzaC#\\CustomUserControls\\Card.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T21:39:15.671Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-11-21T21:39:15.671Z"
             },
             {
               "$type": "Document",
@@ -570,8 +552,7 @@
               "RelativeToolTip": "HuellasDeEsperanzaC#\\CustomUserControls\\Card.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T22:34:36.427Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T22:34:36.427Z"
             },
             {
               "$type": "Document",
@@ -595,8 +576,7 @@
               "RelativeToolTip": "HuellasDeEsperanzaC#\\Models\\Usuario.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAiwIEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T01:14:27.346Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T01:14:27.346Z"
             },
             {
               "$type": "Document",
@@ -608,8 +588,7 @@
               "RelativeToolTip": "HuellasDeEsperanzaC#\\Servicio\\GestorMascota.cs",
               "ViewState": "AgIAAG0AAAAAAAAAAAAowHMAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T16:56:06.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T16:56:06.209Z"
             },
             {
               "$type": "Document",
@@ -621,8 +600,7 @@
               "RelativeToolTip": "HuellasDeEsperanzaC#\\Servicio\\GestorAdopcion.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAB0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-21T21:41:21.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-21T21:41:21.494Z"
             },
             {
               "$type": "Document",
@@ -634,8 +612,7 @@
               "RelativeToolTip": "HuellasDeEsperanzaC#\\Servicio\\GestorUsuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T14:26:51.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-25T14:26:51.6Z"
             }
           ]
         }
