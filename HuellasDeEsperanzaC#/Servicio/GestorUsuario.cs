@@ -68,54 +68,29 @@ namespace HuellasDeEsperanzaC_.Servicio
                 return;
             }
 
-            try
+            using (FileStream mArchivoLector = new FileStream("datos.dat", FileMode.Open, FileAccess.Read))
+            using (BinaryReader Lector = new BinaryReader(mArchivoLector))
             {
-                using (FileStream mArchivoLector = new FileStream("datos.dat", FileMode.Open, FileAccess.Read))
-                using (BinaryReader Lector = new BinaryReader(mArchivoLector))
+                while (mArchivoLector.Position < mArchivoLector.Length)
                 {
-                    while (mArchivoLector.Position < mArchivoLector.Length)
+                    Usuario usuario = new Usuario
                     {
-                        try
-                        {
-                            Usuario usuario = new Usuario
-                            {
-                                Id = Lector.ReadInt32(),
-                                NombreCompleto = Lector.ReadString(),
-                                CorreoElectronico = Lector.ReadString(),
-                                HashContrasena = Lector.ReadString(),
-                                Direccion = Lector.ReadString(),
-                                NumeroTelefono = Lector.ReadString(),
-                                Descripcion = Lector.ReadString(),
-                                NumeroCedula = Lector.ReadString(),
-                                Ocupacion = Lector.ReadString(),
-                                PreguntaEmergencia = Lector.ReadString()
-                            };
+                        Id = Lector.ReadInt32(),
+                        NombreCompleto = Lector.ReadString(),
+                        CorreoElectronico = Lector.ReadString(),
+                        HashContrasena = Lector.ReadString(),
+                        Direccion = Lector.ReadString(),
+                        NumeroTelefono = Lector.ReadString(),
+                        Descripcion = Lector.ReadString(),
+                        NumeroCedula = Lector.ReadString(),
+                        Ocupacion = Lector.ReadString(),
+                        PreguntaEmergencia = Lector.ReadString(),
+                        Tipo = (TipoUsuario)Enum.Parse(typeof(TipoUsuario), Lector.ReadString())
+                        // Perfil Completo : BOOL
+                    };
 
-                            string tipoUsuarioStr = Lector.ReadString();
-                            if (Enum.TryParse(tipoUsuarioStr, true, out TipoUsuario tipoUsuario))
-                            {
-                                usuario.Tipo = (TipoUsuario)tipoUsuario;
-                            }
-                            else
-                            {
-                                // Manejar el caso en que el valor no es válido
-                                usuario.Tipo = TipoUsuario.Comun; // Asumiendo que Default es un valor válido en el enum
-                            }
-
-                            usuarios.Add(usuario);
-                        }
-                        catch (Exception ex)
-                        {
-                            // Manejar errores específicos de análisis de datos
-                            MessageBox.Show($"Error al cargar un usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
+                    usuarios.Add(usuario);
                 }
-            }
-            catch (Exception ex)
-            {
-                // Manejar errores de lectura del archivo
-                MessageBox.Show($"Error al leer el archivo de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -182,6 +157,11 @@ namespace HuellasDeEsperanzaC_.Servicio
                 // Manejar errores de lectura del archivo
                 MessageBox.Show($"Error al leer el archivo de datos: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public List<Usuario> GetListaUsuarios()
+        {
+            return usuarios;
         }
 
         private void GuardarUsuarios()

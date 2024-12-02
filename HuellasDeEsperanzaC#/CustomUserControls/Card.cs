@@ -76,10 +76,6 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
                 CardSexo = mascota.Sexo;
                 CardImagen = CargarImagenMascota(mascota.RutaImagen);
             }
-            else
-            {
-                MessageBox.Show($"No se encontró la mascota con ID {MascotaId}");
-            }
         }
 
         private Image CargarImagenMascota(string rutaImagen)
@@ -190,27 +186,6 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
 
         private void roundButton1_Click(object sender, EventArgs e)
         {
-            // Verificar si el usuario ya ha adoptado la mascota
-            var solicitudesUsuario = gestorAdopcion.ObtenerSolicitudesPorUsuario(usuarioId);
-            if (solicitudesUsuario.Any(s => s.MascotaId == MascotaId && s.Estado == EstadoSolicitud.Pendiente))
-            {
-                MessageBox.Show("Ya ha adoptado esta mascota.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Verificar si el usuario tiene menos de 3 mascotas en espera
-            if (solicitudesUsuario.Count(s => s.Estado == EstadoSolicitud.Pendiente) >= 3)
-            {
-                MessageBox.Show("No puede adoptar más de 3 mascotas a la vez.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-
-            // Crear solicitud de adopción
-            gestorAdopcion.CrearSolicitudAdopcion(usuarioId, MascotaId);
-            MessageBox.Show("Mascota adoptada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Notificar al formulario de lista de espera
             OnSelect?.Invoke(this, e);
         }
 

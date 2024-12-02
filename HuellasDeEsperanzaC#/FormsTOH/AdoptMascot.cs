@@ -36,7 +36,9 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
             List<Mascota> mascotas = new List<Mascota>();
             GestorMascota gestorMascota = new GestorMascota();
-            gestorMascota.CargarDatosMascotas(mascotas);
+            gestorMascota.CargarDatosMascotas();
+
+            mascotas = gestorMascota.GetListaMascotas();
 
             for (int i = 0; i < mascotas.Count; i++)
             {
@@ -120,30 +122,30 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void Card_OnSelect(object sender, EventArgs e)
         {
-            if (usuarioActual.MascotasAdoptadas.Count >= 3)
-            {
-                MessageBox.Show("No puedes adoptar más de 3 mascotas.", "Límite de adopciones", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             Card selectedCard = sender as Card;
+
             if (selectedCard != null)
             {
-                // Obtener la mascota utilizando el MascotaId
-                GestorMascota gestorMascota = new GestorMascota();
-                List<Mascota> mascotas = new List<Mascota>();
-                gestorMascota.CargarDatosMascotas(mascotas);
+                // Recargar las solicitudes desde el gestor
+                gestorAdopcionUser.RecargarDatosSolicitudes();
 
-                Mascota mascota = mascotas.FirstOrDefault(m => m.Id == selectedCard.MascotaId);
-                if (mascota != null)
+                // Verificar si el usuario tiene solicitudes pendientes
+                if (gestorAdopcionUser.UsuarioPendienteAdopcion(usuarioActual.Id))
                 {
-                    usuarioActual.MascotasAdoptadas.Add(mascota);
-                    MessageBox.Show("Mascota adoptada con éxito.");
+                    MetroFramework.MetroMessageBox.Show(this,
+                        "Ya tienes una solicitud de adopción pendiente. No puedes solicitar otra mascota hasta que se procese.",
+                        "Solicitud no permitida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Salir si ya hay una solicitud pendiente
                 }
-                else
-                {
-                    MessageBox.Show("No se encontró la mascota.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+
+                // Crear la solicitud de adopción
+                gestorAdopcionUser.CrearSolicitudAdopcion(usuarioActual.Id, selectedCard.MascotaId);
+
+                // Mensaje de éxito
+                MetroFramework.MetroMessageBox.Show(this,
+                    "¡Solicitud de adopción enviada con éxito!",
+                    "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
         }
 
