@@ -18,6 +18,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
     public partial class WaitingListForm : Form
     {
         private Usuario usuarioActual;
+        private GestorUsuario gestorUsuario;
         private GestorAdopcion gestorAdopcionUser;
 
         public WaitingListForm(Usuario usuario, GestorAdopcion gestorAdopcion)
@@ -117,7 +118,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
-            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorAdopcionUser);
+            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorUsuario, gestorAdopcionUser);
             configuracionForm.Show();
             this.Close();
         }

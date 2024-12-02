@@ -12,18 +12,44 @@ using System.Windows.Forms;
 using HuellasDeEsperanzaC_.FormsTOH;
 using HuellasDeEsperanzaC_.Models;
 using HuellasDeEsperanzaC_.Servicio;
+using MetroFramework;
 
 namespace HuellasDeEsperanzaC_.FormsTOH
 {
     public partial class RegisterForm : Form
     {
+        GestorUsuario gestorUsuario = new GestorUsuario();
+
         public RegisterForm()
         {
             InitializeComponent();
+            ConfigurarFormularioInicial();
             this.ActiveControl = tbNombreCompleto;
-            this.Size = new Size(902, 430);
-            roundButton1.Location = new Point(710, 332);
-            
+        }
+
+        private void ConfigurarFormularioInicial()
+        {
+            // Inicialmente, ocultamos los campos adicionales para organizaciones
+            MostrarCamposOrganizacion(false);
+            AjustarTamañoFormulario(false);
+        }
+
+        private void MostrarCamposOrganizacion(bool mostrar)
+        {
+            lblORA1.Visible = mostrar;
+            lblORA2.Visible = mostrar;
+            lblORA3.Visible = mostrar;
+            tbDireccion.Visible = mostrar;
+            tbTelefono.Visible = mostrar;
+            tbDescripcion.Visible = mostrar;
+
+            // Ajustar la posición del botón de registro dependiendo de si mostramos los campos adicionales
+            roundButton1.Location = mostrar ? new Point(710, 569) : new Point(710, 332);
+        }
+
+        private void AjustarTamañoFormulario(bool esOrganizacion)
+        {
+            this.Size = esOrganizacion ? new Size(902, 653) : new Size(902, 430);
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)
@@ -43,28 +69,9 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (isORA.Checked)
-            {
-                this.Size = new Size(902, 653);
-                lblORA1.Visible = true;
-                lblORA2.Visible = true;
-                lblORA3.Visible = true;
-                tbOra1.Visible = true;
-                tbOra2.Visible = true;
-                tbOra3.Visible = true;
-                roundButton1.Location = new Point(710, 569);
-            }
-            else
-            {
-                this.Size = new Size(902, 430);
-                lblORA1.Visible = false;
-                lblORA2.Visible = false;
-                lblORA3.Visible = false;
-                tbOra1.Visible = false;
-                tbOra2.Visible = false;
-                tbOra3.Visible = false;
-                roundButton1.Location = new Point(710, 332);
-            }
+            bool esOrganizacion = cbEsORA.Checked;
+            MostrarCamposOrganizacion(esOrganizacion);
+            AjustarTamañoFormulario(esOrganizacion);
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -79,44 +86,55 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void roundButton1_Click(object sender, EventArgs e)
         {
-            // TODO: Verificar si usuario existe
+            try
+            {
+                // Crear el nuevo usuario
+                Usuario nuevoUsuario = new Usuario
+                {
+                    CorreoElectronico = tbEmail.Texts.Trim(),
+                    Tipo = cbEsORA.Checked ? TipoUsuario.Organizacion : TipoUsuario.Comun
+                };
 
-            Usuario usuario = new Usuario();
-            GestorAdopcion gestorAdopcion = new GestorAdopcion();
-            GestorUsuario GestorUsuario = new GestorUsuario();
+                // Asignar datos comunes o específicos según el tipo
+                if (nuevoUsuario.Tipo == TipoUsuario.Comun)
+                {
+                    nuevoUsuario.NombreCompleto = tbNombreCompleto.Texts.Trim();
+                }
+                else if (nuevoUsuario.Tipo == TipoUsuario.Organizacion)
+                {
+                    nuevoUsuario.NombreOrganizacion = tbNombreCompleto.Texts.Trim();
+                    nuevoUsuario.Direccion = tbDireccion.Texts.Trim();
+                    nuevoUsuario.NumeroTelefono = tbTelefono.Texts.Trim();
+                    nuevoUsuario.Descripcion = tbDescripcion.Texts.Trim();
+                }
 
-            usuario.NombreCompleto = tbNombreCompleto.Texts;
-            usuario.CorreoElectronico = tbEmail.Texts;
-            usuario.EstablecerContraseña(tbPass.Texts);
+                // Establecer la contraseña encriptada
+                nuevoUsuario.EstablecerContraseña(tbPass.Texts.Trim());
 
-            if (isORA.Checked)
-            {
-                usuario.Direccion = tbOra1.Texts;
-                usuario.NumeroTelefono = tbOra2.Texts;
-                usuario.Descripcion = tbOra3.Texts;
-                usuario.Tipo = TipoUsuario.Organizacion;
-            }
-            else
-            {
-                usuario.Direccion = string.Empty;
-                usuario.NumeroTelefono = string.Empty;
-                usuario.Descripcion = string.Empty;
-                usuario.Tipo = TipoUsuario.Comun;
-            }
+                // Validar y registrar el usuario
+                if (!gestorUsuario.ValidarRegistroUsuario(nuevoUsuario))
+                {
+                    MetroFramework.MetroMessageBox.Show(this, "Por favor complete todos los campos correctamente.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
-            if (usuario.NombreCompleto == "" || usuario.CorreoElectronico == "" || usuario.HashContrasena == "")
-            {
-                MetroFramework.MetroMessageBox.Show(this, "Por favor llene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                gestorUsuario.RegistrarUsuario(nuevoUsuario, this, new GestorAdopcion());
+
+                // Redirigir al formulario principal
+                HomeGeneralForm homeForm = new HomeGeneralForm(nuevoUsuario, new GestorAdopcion());
+                homeForm.Show();
+                this.Hide();
             }
-            else if (isORA.Checked && (usuario.Direccion == "" || usuario.NumeroTelefono == "" || usuario.Descripcion == ""))
+            catch (ArgumentException ex)
             {
-                MetroFramework.MetroMessageBox.Show(this, "Por favor llene todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroFramework.MetroMessageBox.Show(this, ex.Message, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else
+            catch (Exception ex)
             {
-                GestorUsuario.RegistrarUsuario(usuario, this, gestorAdopcion);
+                MetroFramework.MetroMessageBox.Show(this, $"Ocurrió un error al registrar el usuario: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void roundButton2_Click(object sender, EventArgs e)
         {
@@ -143,14 +161,14 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void isORA_Click(object sender, EventArgs e)
         {
-            tbOra1.Focus();
+            tbDireccion.Focus();
         }
 
         private void tbOra2_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                tbOra3.Focus();
+                tbDescripcion.Focus();
             }
         }
 
@@ -174,7 +192,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                tbOra2.Focus();
+                tbTelefono.Focus();
             }
         }
 

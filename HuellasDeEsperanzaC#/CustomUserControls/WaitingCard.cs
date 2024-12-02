@@ -11,8 +11,6 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
 {
     public partial class WaitingCard : UserControl
     {
-        public event EventHandler OnSelect = null;
-
         private int borderRadius = 30;
         private int borderSize = 0;
         private Color borderColor = Color.White;
@@ -80,7 +78,7 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
                 if (usuario != null)
                 {
                     NombreSolicitante = usuario.NombreCompleto;
-                    EmailSolicitante = usuario.NombreUsuario;
+                    EmailSolicitante = usuario.CorreoElectronico;
                     TelefonoSolicitante = usuario.NumeroTelefono;
                 }
             }

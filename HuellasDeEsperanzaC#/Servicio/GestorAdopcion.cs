@@ -1,4 +1,5 @@
 ﻿using HuellasDeEsperanzaC_.Models;
+using MetroFramework;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -31,11 +32,20 @@ namespace HuellasDeEsperanzaC_.Servicio
             CargarDatosUsuarios();
         }
 
-        public void CrearSolicitudAdopcion(int usuarioId, int mascotaId)
+        public void CrearSolicitudAdopcion(int usuarioId, int mascotaId, Form formulario)
         {
+            GestorUsuario gestorUsuario = new GestorUsuario();
+            gestorUsuario.CargarDatosUsuarios();
+
+            if (!gestorUsuario.EsPerfilCompleto(usuarioId))
+            {
+                MetroMessageBox.Show(formulario, "Tu perfil no está completo. Por favor, completa tu perfil antes de solicitar una adopción.", "Perfil incompleto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (UsuarioPendienteAdopcion(usuarioId))
             {
-                MessageBox.Show("Ya tienes una solicitud de adopción pendiente.", "Adopción pendiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MetroMessageBox.Show(formulario, "Ya tienes una solicitud de adopción pendiente.", "Adopción pendiente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -49,6 +59,7 @@ namespace HuellasDeEsperanzaC_.Servicio
             {
                 nuevaSolicitud.Id = 1;
             }
+
             nuevaSolicitud.UsuarioId = usuarioId;
             nuevaSolicitud.MascotaId = mascotaId;
             nuevaSolicitud.FechaSolicitud = DateTime.Now;
@@ -56,6 +67,9 @@ namespace HuellasDeEsperanzaC_.Servicio
 
             solicitudes.Add(nuevaSolicitud);
             GuardarDatosSolicitudes();
+
+            // Mensaje de éxito
+            MetroMessageBox.Show(formulario, "Tu solicitud de adopción ha sido enviada exitosamente.", "Solicitud enviada", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public List<Mascota> ObtenerMascotasDisponibles()

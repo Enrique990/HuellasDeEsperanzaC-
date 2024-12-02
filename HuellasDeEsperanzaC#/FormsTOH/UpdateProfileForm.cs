@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,12 +17,15 @@ namespace HuellasDeEsperanzaC_.FormsTOH
     public partial class ConfiguracionForm : Form
     {
         private Usuario usuarioActual;
-        private GestorAdopcion gestorAdopcionUser;  
+        private GestorUsuario gestorUsuario;
+        private GestorAdopcion gestorAdopcionUser;
 
-        public ConfiguracionForm(Usuario usuario, GestorAdopcion gestorAdopcion)
+
+        public ConfiguracionForm(Usuario usuario, GestorUsuario gestorUsuario, GestorAdopcion gestorAdopcion)
         {
             InitializeComponent();
             this.usuarioActual = usuario;
+            this.gestorUsuario = gestorUsuario;
             this.gestorAdopcionUser = gestorAdopcion;
             MostrarDatosUsuario();
         }
@@ -56,6 +60,12 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 return;
             }
 
+            if (!ValidarUsuario(correo, numeroTelefono))
+            {
+                MetroFramework.MetroMessageBox.Show(this, "Los datos ingresados no son válidos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             bool hayCambios = false;
 
             if (nombreCompleto != usuarioActual.NombreCompleto ||
@@ -64,7 +74,11 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 numeroCedula != usuarioActual.NumeroCedula ||
                 ocupacion != usuarioActual.Ocupacion)
             {
-                usuarioActual.CompletarPerfil(nombreCompleto, direccion, numeroTelefono, numeroCedula, ocupacion);
+                usuarioActual.NombreCompleto = nombreCompleto;
+                usuarioActual.Direccion = direccion;
+                usuarioActual.NumeroTelefono = numeroTelefono;
+                usuarioActual.NumeroCedula = numeroCedula;
+                usuarioActual.Ocupacion = ocupacion;
                 hayCambios = true;
             }
 
@@ -80,11 +94,87 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 return;
             }
 
-            GestorUsuario gestorUsuario = new GestorUsuario();
-            gestorUsuario.ActualizarUsuario(usuarioActual, this, gestorAdopcionUser);
+            try
+            {
+                gestorUsuario.ActualizarUsuarioExistente(usuarioActual);
+                gestorUsuario.GuardarArchivoUsuario();
+                MetroFramework.MetroMessageBox.Show(this, "Perfil actualizado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MetroFramework.MetroMessageBox.Show(this, $"Ocurrió un error al actualizar el perfil: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             this.Close();
         }
+
+        private bool ValidarUsuario(string correo, string numeroTelefono)
+        {
+            // Validar formato de correo electrónico
+            if (!Regex.IsMatch(correo, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+            {
+                return false;
+            }
+
+            // Validar formato de número de teléfono
+            if (!string.IsNullOrWhiteSpace(numeroTelefono) &&
+                !Regex.IsMatch(numeroTelefono, @"^\d{4}-\d{4}$"))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        // private bool ValidarUsuario(Usuario usuario)
+        // {
+        //     // Validar campos comunes a todos los usuarios
+        //     if (string.IsNullOrWhiteSpace(usuario.CorreoElectronico) ||
+        //         string.IsNullOrWhiteSpace(usuario.HashContrasena))
+        //     {
+        //         return false;
+        //     }
+
+        //     // Validar formato de correo electrónico
+        //     if (!Regex.IsMatch(usuario.CorreoElectronico, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
+        //     {
+        //         return false;
+        //     }
+
+        //     // Validar longitud de la contraseña
+        //     if (usuario.HashContrasena.Length > 11)
+        //     {
+        //         return false;
+        //     }
+
+        //     // Validar formato de número de teléfono
+        //     if (!string.IsNullOrWhiteSpace(usuario.NumeroTelefono) &&
+        //         !Regex.IsMatch(usuario.NumeroTelefono, @"^\d{4}-\d{4}$"))
+        //     {
+        //         return false;
+        //     }
+
+        //     // Validar campos específicos según el tipo de usuario
+        //     if (usuario.Tipo == TipoUsuario.Comun)
+        //     {
+        //         if (string.IsNullOrWhiteSpace(usuario.NombreCompleto))
+        //         {
+        //             return false;
+        //         }
+        //     }
+        //     else if (usuario.Tipo == TipoUsuario.Organizacion)
+        //     {
+        //         if (string.IsNullOrWhiteSpace(usuario.NombreOrganizacion) ||
+        //             string.IsNullOrWhiteSpace(usuario.Direccion) ||
+        //             string.IsNullOrWhiteSpace(usuario.NumeroTelefono) ||
+        //             string.IsNullOrWhiteSpace(usuario.Descripcion))
+        //         {
+        //             return false;
+        //         }
+        //     }
+
+        //     return true;
+        // }
 
         private void btnRegresar_Click(object sender, EventArgs e)
         {
@@ -139,6 +229,19 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         private void lblNumeroCedula_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

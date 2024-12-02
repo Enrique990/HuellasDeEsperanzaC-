@@ -17,6 +17,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
     public partial class HomeAdminForm : Form
     {
         private Usuario usuarioActual;
+        private GestorUsuario gestorUsuario;
         private GestorAdopcion gestorAdopcionUser;
 
         public HomeAdminForm(Usuario usuario, GestorAdopcion gestorAdopcion)
@@ -79,7 +80,9 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            AdminAddMascot adminAddMascot = new AdminAddMascot(usuarioActual, gestorAdopcionUser);
+            adminAddMascot.Show();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -164,7 +167,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
-            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorAdopcionUser);
+            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorUsuario, gestorAdopcionUser);
             configuracionForm.Show();
             this.Hide();
         }

@@ -17,6 +17,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
     {
         private Usuario usuarioActual;
         private GestorAdopcion gestorAdopcionUser;
+        private GestorUsuario gestorUsuario;
 
         public HomeGeneralForm(Usuario usuario, GestorAdopcion gestorAdopcion)
         {
@@ -59,20 +60,27 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         public void showUsuario()
         {
             listBox1.Items.Clear();
-            listBox1.Items.Add(usuarioActual.NombreCompleto);
-            listBox1.Items.Add(usuarioActual.CorreoElectronico);
-            listBox1.Items.Add(usuarioActual.Tipo);
-            listBox1.Items.Add(usuarioActual.Direccion);
-            listBox1.Items.Add(usuarioActual.NumeroTelefono);
-            if (usuarioActual.NumeroCedula != null)
+
+            if (usuarioActual.Tipo == TipoUsuario.Comun || usuarioActual.Tipo == TipoUsuario.Administrador)
             {
-                listBox1.Items.Add(usuarioActual.NumeroCedula);
+                listBox1.Items.Add(usuarioActual.NombreCompleto ?? "Nombre no disponible");
+                listBox1.Items.Add(usuarioActual.NumeroCedula ?? "Cédula no disponible");
+                listBox1.Items.Add(usuarioActual.Ocupacion ?? "Ocupación no disponible");
+                listBox1.Items.Add("Mascotas Adoptadas: " + usuarioActual.MascotasAdoptadas.Count);
+                listBox1.Items.Add("Actividades Inscritas: " + usuarioActual.ActividadesInscritas.Count);
             }
-            if (usuarioActual.Ocupacion != null)
+            else if (usuarioActual.Tipo == TipoUsuario.Organizacion)
             {
-                listBox1.Items.Add(usuarioActual.Ocupacion);
+                listBox1.Items.Add(usuarioActual.NombreOrganizacion ?? "Nombre de la organización no disponible");
+                listBox1.Items.Add(usuarioActual.Descripcion ?? "Descripción no disponible");
+                listBox1.Items.Add("Mascotas Ofrecidas para Adopción: " + usuarioActual.MascotasOfrecidasParaAdopcion.Count);
+                listBox1.Items.Add("Actividades Organizadas: " + usuarioActual.ActividadesOrganizadas.Count);
             }
-            listBox1.Items.Add(usuarioActual.Descripcion);
+
+            listBox1.Items.Add(usuarioActual.CorreoElectronico ?? "Correo no disponible");
+            listBox1.Items.Add(usuarioActual.Direccion ?? "Dirección no disponible");
+            listBox1.Items.Add(usuarioActual.NumeroTelefono ?? "Teléfono no disponible");
+            listBox1.Items.Add(usuarioActual.Tipo.ToString());
         }
 
         private void HomeGeneralForm_Load(object sender, EventArgs e)
@@ -134,7 +142,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
 
         private void btnConfiguracion_Click_1(object sender, EventArgs e)
         {
-            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorAdopcionUser);
+            ConfiguracionForm configuracionForm = new ConfiguracionForm(usuarioActual, gestorUsuario, gestorAdopcionUser);
             configuracionForm.Show();
             this.Hide();
         }
