@@ -28,8 +28,8 @@ namespace HuellasDeEsperanzaC_.Servicio
             mascotas = new List<Mascota>();
             usuarios = new List<Usuario>();
             CargarDatosSolicitudes();
-            gestorMascota.CargarDatosMascotas();
-            gestorUsuario.CargarDatosUsuarios();
+            CargarDatosMascotas();
+            CargarDatosUsuarios();
         }
 
         public void CrearSolicitudAdopcion(int usuarioId, int mascotaId)
@@ -156,6 +156,30 @@ namespace HuellasDeEsperanzaC_.Servicio
                     solicitudes.Add(solicitud);
                 }
             }
+        }
+
+        public List<SolicitudAdopcion> ObtenerSolicitudesEnEspera()
+        {
+            return solicitudes.Where(solicitud => solicitud.Estado == EstadoSolicitud.Pendiente).ToList();
+        }
+
+        private void CargarDatosMascotas()
+        {
+            GestorMascota gestorMascota = new GestorMascota();
+            gestorMascota.CargarDatosMascotas();
+            mascotas = gestorMascota.GetListaMascotas();
+        }
+
+        private void CargarDatosUsuarios()
+        {
+            GestorUsuario gestorUsuario = new GestorUsuario();
+            gestorUsuario.CargarDatosUsuarios();
+            usuarios = gestorUsuario.GetListaUsuarios();
+        }
+
+        public SolicitudAdopcion ObtenerPrimeraSolicitudEnEsperaPorUsuario(int usuarioId)
+        {
+            return solicitudes.FirstOrDefault(solicitud => solicitud.UsuarioId == usuarioId && solicitud.Estado == EstadoSolicitud.Pendiente);
         }
 
         public void RecargarDatosSolicitudes()

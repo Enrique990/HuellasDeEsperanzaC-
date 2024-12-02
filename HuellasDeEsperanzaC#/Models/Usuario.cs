@@ -108,15 +108,12 @@ namespace HuellasDeEsperanzaC_.Models
 
             try
             {
-                // Normalizar el dominio
                 correo = Regex.Replace(correo, @"(@)(.+)$", DomainMapper, RegexOptions.None, TimeSpan.FromMilliseconds(200));
 
-                // Examinar el dominio y normalizarlo
                 string DomainMapper(Match match)
                 {
                     var idn = new IdnMapping();
 
-                    // Usar la clase IdnMapping para convertir nombres de dominio Unicode a ASCII
                     string domainName = idn.GetAscii(match.Groups[2].Value);
 
                     return match.Groups[1].Value + domainName;
