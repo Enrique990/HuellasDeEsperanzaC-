@@ -241,5 +241,10 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
         {
             OnAccept?.Invoke(this, solicitudId);
         }
+
+        private void btnRechazar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

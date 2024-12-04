@@ -162,16 +162,17 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(247)))), ((int)(((byte)(244)))));
-            this.button3.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_pets_50;
+            this.button3.Image = global::HuellasDeEsperanzaC_.Properties.Resources.icons8_animal_folder_50;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(40, 228);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(329, 82);
             this.button3.TabIndex = 2;
-            this.button3.Text = "   Agregar Mascotas";
+            this.button3.Text = "   Ver reportes";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -308,7 +309,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.label1.Location = new System.Drawing.Point(588, 64);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(536, 41);
+            this.label1.Size = new System.Drawing.Size(437, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "¡Bienvenidos a Huellas de Esperanza!";
             // 
@@ -317,12 +318,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(466, 174);
+            this.label2.Location = new System.Drawing.Point(518, 183);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(546, 46);
+            this.label2.Size = new System.Drawing.Size(439, 37);
             this.label2.TabIndex = 4;
             this.label2.Text = "Crear a un nuevo administrador";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tbCorreo
             // 
@@ -333,14 +335,14 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.tbCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tbCorreo.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbCorreo.ForeColor = System.Drawing.Color.DimGray;
-            this.tbCorreo.Location = new System.Drawing.Point(674, 263);
+            this.tbCorreo.Location = new System.Drawing.Point(795, 303);
             this.tbCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.tbCorreo.MaxLength = 32767;
             this.tbCorreo.Multiline = false;
             this.tbCorreo.Name = "tbCorreo";
             this.tbCorreo.Padding = new System.Windows.Forms.Padding(7);
             this.tbCorreo.PasswordChar = false;
-            this.tbCorreo.Size = new System.Drawing.Size(327, 38);
+            this.tbCorreo.Size = new System.Drawing.Size(327, 33);
             this.tbCorreo.TabIndex = 7;
             this.tbCorreo.Texts = "";
             this.tbCorreo.UnderlinedStyle = true;
@@ -354,14 +356,14 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.customTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.customTextBox1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.customTextBox1.Location = new System.Drawing.Point(674, 349);
+            this.customTextBox1.Location = new System.Drawing.Point(795, 389);
             this.customTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.customTextBox1.MaxLength = 32767;
             this.customTextBox1.Multiline = false;
             this.customTextBox1.Name = "customTextBox1";
             this.customTextBox1.Padding = new System.Windows.Forms.Padding(7);
             this.customTextBox1.PasswordChar = false;
-            this.customTextBox1.Size = new System.Drawing.Size(327, 38);
+            this.customTextBox1.Size = new System.Drawing.Size(327, 33);
             this.customTextBox1.TabIndex = 8;
             this.customTextBox1.Texts = "";
             this.customTextBox1.UnderlinedStyle = true;
@@ -373,7 +375,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.roundButton1.FlatAppearance.BorderSize = 0;
             this.roundButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.roundButton1.ForeColor = System.Drawing.Color.White;
-            this.roundButton1.Location = new System.Drawing.Point(856, 429);
+            this.roundButton1.Location = new System.Drawing.Point(977, 469);
             this.roundButton1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.roundButton1.Name = "roundButton1";
             this.roundButton1.Size = new System.Drawing.Size(145, 60);
@@ -386,10 +388,10 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             // 
             this.lblNombreCompleto.AutoSize = true;
             this.lblNombreCompleto.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreCompleto.Location = new System.Drawing.Point(470, 278);
+            this.lblNombreCompleto.Location = new System.Drawing.Point(591, 318);
             this.lblNombreCompleto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombreCompleto.Name = "lblNombreCompleto";
-            this.lblNombreCompleto.Size = new System.Drawing.Size(196, 23);
+            this.lblNombreCompleto.Size = new System.Drawing.Size(153, 18);
             this.lblNombreCompleto.TabIndex = 10;
             this.lblNombreCompleto.Text = "Correo Electrónico:";
             // 
@@ -397,10 +399,10 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(470, 364);
+            this.label3.Location = new System.Drawing.Point(591, 404);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 23);
+            this.label3.Size = new System.Drawing.Size(101, 18);
             this.label3.TabIndex = 11;
             this.label3.Text = "Contraseña:";
             // 

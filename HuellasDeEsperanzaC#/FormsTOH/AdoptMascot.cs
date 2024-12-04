@@ -145,7 +145,6 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 MetroFramework.MetroMessageBox.Show(this,
                     "¡Solicitud de adopción enviada con éxito!",
                     "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
         }
 

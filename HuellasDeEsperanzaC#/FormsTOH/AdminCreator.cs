@@ -1,5 +1,6 @@
 ﻿using HuellasDeEsperanzaC_.Models;
 using HuellasDeEsperanzaC_.Servicio;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -100,6 +101,26 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         }
 
         private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GestorMascota gestorMascota = new GestorMascota();
+            gestorMascota.CargarDatosMascotas();
+
+            ReportDataSource reportDataSource = new ReportDataSource("DsDatos", gestorMascota.GetListaMascotas());
+
+            AdminReports adminReports = new AdminReports();
+            adminReports.reportViewer1.LocalReport.DataSources.Clear();
+            adminReports.reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+            adminReports.reportViewer1.LocalReport.ReportEmbeddedResource = "HuellasDeEsperanzaC_.Reportes.RptMascotas.rdlc";
+            adminReports.reportViewer1.RefreshReport();
+            adminReports.ShowDialog();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

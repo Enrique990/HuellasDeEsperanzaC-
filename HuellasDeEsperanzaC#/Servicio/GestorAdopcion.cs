@@ -89,14 +89,12 @@ namespace HuellasDeEsperanzaC_.Servicio
 
         public void RechazarSolicitud(int solicitudId, Usuario administrador, string motivo)
         {
-            for (int i = 0; i < solicitudes.Count; i++)
+            var solicitud = solicitudes.FirstOrDefault(s => s.Id == solicitudId);
+            if (solicitud != null)
             {
-                if (solicitudes[i].Id == solicitudId)
-                {
-                    solicitudes[i].RechazarSolicitud(administrador, motivo);
-                    GuardarDatosSolicitudes();
-                    break;
-                }
+                solicitud.Estado = EstadoSolicitud.Rechazada;
+                solicitud.RechazarSolicitud(administrador, motivo);
+                GuardarDatosSolicitudes();
             }
         }
 

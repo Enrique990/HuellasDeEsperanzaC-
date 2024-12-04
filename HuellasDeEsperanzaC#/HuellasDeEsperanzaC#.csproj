@@ -103,6 +103,14 @@
     <Compile Include="CustomUserControls\WaitingCard.Designer.cs">
       <DependentUpon>WaitingCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="DS\DsDatos.cs">
+      <DependentUpon>DsDatos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\DsDatos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsDatos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormsTOH\AdminCreator.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +122,12 @@
     </Compile>
     <Compile Include="FormsTOH\AdminHome.Designer.cs">
       <DependentUpon>AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsTOH\AdminReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormsTOH\AdminReports.Designer.cs">
+      <DependentUpon>AdminReports.cs</DependentUpon>
     </Compile>
     <Compile Include="FormsTOH\AdminWaitingList.cs">
       <SubType>Form</SubType>
@@ -203,6 +217,9 @@
     <EmbeddedResource Include="FormsTOH\AdminHome.resx">
       <DependentUpon>AdminHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormsTOH\AdminReports.resx">
+      <DependentUpon>AdminReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormsTOH\AdminWaitingList.resx">
       <DependentUpon>AdminWaitingList.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,6 +257,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\RptMascotas.rdlc" />
+    <None Include="DS\DsDatos.xsc">
+      <DependentUpon>DsDatos.xsd</DependentUpon>
+    </None>
+    <None Include="DS\DsDatos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsDatos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DS\DsDatos.xss">
+      <DependentUpon>DsDatos.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

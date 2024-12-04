@@ -267,3 +267,4 @@ C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\
 C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.AdminCreator.resources
+C:\Users\etaln\Documents\Programacion\HuellasDeEsperanzaC#\HuellasDeEsperanzaC#\obj\Debug\HuellasDeEsperanzaC_.FormsTOH.AdminReports.resources

@@ -1,6 +1,7 @@
 ﻿using HuellasDeEsperanzaC_.CustomUserControls;
 using HuellasDeEsperanzaC_.Models;
 using HuellasDeEsperanzaC_.Servicio;
+using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,30 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.gestorAdopcionUser = gestorAdopcion;
             this.gestorUsuario = gestorusuario;
             this.gestorUsuario.CargarDatosUsuarios();
+        }
+
+        private void btnRechazar_Click(object sender, EventArgs e)
+        {
+            // Lógica para rechazar la solicitud
+            int solicitudId = ObtenerSolicitudIdSeleccionada(); // Método para obtener el ID de la solicitud seleccionada
+            if (solicitudId != -1)
+            {
+                gestorAdopcionUser.RechazarSolicitud(solicitudId, usuarioActual, "Solicitud rechazada por el administrador.");
+                MessageBox.Show("La solicitud ha sido rechazada.", "Solicitud rechazada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                RecargarListaSolicitudes(); // Método para recargar la lista de solicitudes
+            }
+        }
+
+        private int ObtenerSolicitudIdSeleccionada()
+        {
+            // Implementa la lógica para obtener el ID de la solicitud seleccionada
+            // Esto puede variar dependiendo de cómo estés mostrando las solicitudes en tu formulario
+            return -1; // Retorna -1 si no hay ninguna solicitud seleccionada
+        }
+
+        private void RecargarListaSolicitudes()
+        {
+            // Implementa la lógica para recargar la lista de solicitudes
         }
 
         private void CargarTodasLasSolicitudesEnEspera()
@@ -176,6 +201,21 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             AdminCreator creator = new AdminCreator();
             creator.Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GestorMascota gestorMascota = new GestorMascota();
+            gestorMascota.CargarDatosMascotas();
+
+            ReportDataSource reportDataSource = new ReportDataSource("DsDatos", gestorMascota.GetListaMascotas());
+
+            AdminReports adminReports = new AdminReports();
+            adminReports.reportViewer1.LocalReport.DataSources.Clear();
+            adminReports.reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+            adminReports.reportViewer1.LocalReport.ReportEmbeddedResource = "HuellasDeEsperanzaC_.Reportes.RptMascotas.rdlc";
+            adminReports.reportViewer1.RefreshReport();
+            adminReports.ShowDialog();
         }
     }
 }
