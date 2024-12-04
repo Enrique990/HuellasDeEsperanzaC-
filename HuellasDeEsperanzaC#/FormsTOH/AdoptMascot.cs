@@ -149,6 +149,18 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             }
         }
 
+        public void EliminarMascotaDeVista(int mascotaId)
+        {
+            foreach (Control control in flowLayoutPanel1.Controls)
+            {
+                if (control is Card card && card.MascotaId == mascotaId)
+                {
+                    flowLayoutPanel1.Controls.Remove(control);
+                    break;
+                }
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             HomeGeneralForm homeGeneralForm = new HomeGeneralForm(usuarioActual, gestorAdopcionUser);

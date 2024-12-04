@@ -51,7 +51,6 @@
             this.tutorialCard2 = new HuellasDeEsperanzaC_.CustomUserControls.TutorialCard();
             this.tutorialCard1 = new HuellasDeEsperanzaC_.CustomUserControls.TutorialCard();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -311,7 +310,7 @@
             this.label1.Location = new System.Drawing.Point(588, 64);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 32);
+            this.label1.Size = new System.Drawing.Size(536, 41);
             this.label1.TabIndex = 3;
             this.label1.Text = "¡Bienvenidos a Huellas de Esperanza!";
             // 
@@ -386,19 +385,10 @@
             this.label2.Location = new System.Drawing.Point(472, 194);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(908, 21);
+            this.label2.Size = new System.Drawing.Size(1172, 28);
             this.label2.TabIndex = 6;
             this.label2.Text = "\"Nuestra misión es conectar a animales necesitados con familias amorosas, y apoya" +
     "r a las organizaciones que los cuidan.\"";
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(545, 722);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(400, 196);
-            this.listBox1.TabIndex = 7;
             // 
             // HomeGeneralForm
             // 
@@ -406,7 +396,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(210)))), ((int)(((byte)(178)))));
             this.ClientSize = new System.Drawing.Size(1748, 935);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label1);
@@ -454,6 +443,5 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.ListBox listBox1;
     }
 }

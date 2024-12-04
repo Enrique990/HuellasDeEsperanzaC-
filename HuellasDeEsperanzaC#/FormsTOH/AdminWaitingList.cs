@@ -36,7 +36,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             if (solicitudesEnEspera.Count > 0)
             {
                 // Limpiar cualquier contenido previo en el control que muestra las solicitudes
-                panel5.Controls.Clear();
+                flowLayoutPanel1.Controls.Clear();
 
                 // Agrupar las solicitudes por usuario
                 var solicitudesAgrupadasPorUsuario = solicitudesEnEspera.GroupBy(s => s.UsuarioId);
@@ -74,23 +74,11 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                             TelefonoSolicitante = usuario.NumeroTelefono
                         };
 
-                        panel5.Controls.Add(waitingCard);
+                        waitingCard.OnAccept += WaitingCard_OnAccept;
+
+                        flowLayoutPanel1.Controls.Add(waitingCard);
                     }
                 }
-
-                if (panel5.Controls.Count == 0)
-                {
-                    MetroFramework.MetroMessageBox.Show(this,
-                        "No hay solicitudes de adopción en espera",
-                        "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                
-            }
-            else
-            {
-                MetroFramework.MetroMessageBox.Show(this,
-                    "No hay solicitudes de adopción en espera",
-                    "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -115,9 +103,35 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             }
         }
 
+        private void WaitingCard_OnAccept(object sender, int solicitudId)
+        {
+            // Obtener la solicitud y la mascota
+            SolicitudAdopcion solicitud = gestorAdopcionUser.ObtenerPrimeraSolicitudEnEsperaPorUsuario(solicitudId);
+            Mascota mascota = gestorAdopcionUser.ObtenerMascotaPorId(solicitud.MascotaId);
+
+            // Aprobar la solicitud
+            gestorAdopcionUser.AprobarSolicitud(solicitudId, usuarioActual);
+
+            // Eliminar la mascota de la vista de todos los usuarios
+            AdoptMascot adoptMascotForm = Application.OpenForms.OfType<AdoptMascot>().FirstOrDefault();
+            adoptMascotForm?.EliminarMascotaDeVista(mascota.Id);
+
+            // Permitir que los usuarios que querían adoptar esta mascota puedan adoptar otra
+            foreach (var usuario in gestorUsuario.GetListaUsuarios())
+            {
+                if (gestorAdopcionUser.UsuarioPendienteAdopcion(usuario.Id))
+                {
+                    gestorAdopcionUser.RechazarSolicitud(solicitudId, usuarioActual, "La mascota ha sido adoptada por otro usuario.");
+                }
+            }
+
+            // Eliminar la card de la lista de espera
+            flowLayoutPanel1.Controls.Remove((Control)sender);
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            AdminHome adminHomet = new AdminHome();
+            AdminHome adminHomet = new AdminHome(usuarioActual, gestorAdopcionUser);
             adminHomet.Show();
             this.Hide();
         }
@@ -155,6 +169,13 @@ namespace HuellasDeEsperanzaC_.FormsTOH
         {
             gestorAdopcionUser.RecargarDatosSolicitudes();
             CargarTodasLasSolicitudesEnEspera();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AdminCreator creator = new AdminCreator();
+            creator.Show();
+            this.Hide();
         }
     }
 }

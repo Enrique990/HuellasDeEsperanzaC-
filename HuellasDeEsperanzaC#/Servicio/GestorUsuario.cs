@@ -15,7 +15,7 @@ namespace HuellasDeEsperanzaC_.Servicio
     {
         List<Usuario> usuarios = new List<Usuario>();
 
-        string CorreoA = "Admin@gmail.com";
+        string CorreoA = "admin";
         string Clave = "123";
 
         public GestorUsuario()
@@ -173,19 +173,32 @@ namespace HuellasDeEsperanzaC_.Servicio
         {
             for (int i = 0; i < usuarios.Count; i++)
             {
-                if (usuarios[i].CorreoElectronico == correoVerificar && usuarios[i].VerificarContraseña(contrasenaVerificar))
+                Usuario usuarioActual = usuarios[i];
+
+                if (correoVerificar == CorreoA && contrasenaVerificar == Clave)
                 {
-                    HomeGeneralForm Home = new HomeGeneralForm(usuarios[i], gestorAdopcion);
-                    Home.Show();
-                    formulario.Hide();
-                    return;
-                }else if(correoVerificar == CorreoA && contrasenaVerificar == Clave)
-                {
-                    AdminHome adminHome = new AdminHome();
+                    AdminHome adminHome = new AdminHome(usuarioActual, gestorAdopcion);
                     adminHome.Show();
+                }
+                else if(usuarios[i].CorreoElectronico == correoVerificar && usuarios[i].VerificarContraseña(contrasenaVerificar))
+                {
+                    
+
+                    if (usuarios[i].Tipo == TipoUsuario.Administrador)
+                    {
+                        AdminHome adminHome = new AdminHome(usuarioActual, gestorAdopcion);
+                        adminHome.Show();
+                    }
+                    else
+                    {
+                        HomeGeneralForm home = new HomeGeneralForm(usuarios[i], gestorAdopcion);
+                        home.Show();
+                    }
                     formulario.Hide();
                     return;
+
                 }
+
             }
 
             MetroFramework.MetroMessageBox.Show(formulario, "Usuario o contraseña incorrectos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

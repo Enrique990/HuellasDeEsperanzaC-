@@ -11,6 +11,8 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
 {
     public partial class WaitingCard : UserControl
     {
+        public event EventHandler<int> OnAccept;
+
         private void circlePictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -18,7 +20,7 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
 
         private void roundButton1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -233,6 +235,11 @@ namespace HuellasDeEsperanzaC_.CustomUserControls
         {
             get { return lblTelefonoSolicitante.Text; }
             set { lblTelefonoSolicitante.Text = value; }
+        }
+
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            OnAccept?.Invoke(this, solicitudId);
         }
     }
 }

@@ -23,7 +23,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             InitializeComponent();
             this.usuarioActual = usuario;
             this.gestorAdopcionUser = gestorAdopcion;
-            showUsuario();
+            //showUsuario();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
             this.Close();
         }
 
-        public void showUsuario()
+        /*public void showUsuario()
         {
             listBox1.Items.Clear();
             listBox1.Items.Add(usuarioActual.Id);
@@ -73,7 +73,7 @@ namespace HuellasDeEsperanzaC_.FormsTOH
                 listBox1.Items.Add(usuarioActual.Ocupacion);
             }
             listBox1.Items.Add(usuarioActual.Descripcion);
-        }
+        }*/
 
         private void HomeGeneralForm_Load(object sender, EventArgs e)
         {
